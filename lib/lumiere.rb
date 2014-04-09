@@ -27,7 +27,7 @@ module Lumiere
 
   def self.fetch_description(video)
     remote_structure = remote_structure(video.api_url)
-    remote_structure[:entry][:description][:$t]
+    remote_structure[:entry][:"media$group"][:"media$description"][:$t]
   end
 
   private
