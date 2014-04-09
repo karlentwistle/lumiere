@@ -16,13 +16,6 @@ module Lumiere
     end
 
     describe "#title" do
-      it "returns the video title" do
-        allow(Lumiere).to receive(:fetch_title) { 'Title of Video' }
-        expect(YouTube.new('VIDEO_ID').title).to eql('Title of Video')
-      end
-    end
-
-    describe "#title" do
       let(:title) { 'Title of Video' }
       it "returns the video title" do
         allow(Lumiere).to receive(:fetch_title) { title }
