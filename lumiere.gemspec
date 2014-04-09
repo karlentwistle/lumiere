@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Lumiere::VERSION
   spec.authors       = ["Karl Entwistle"]
   spec.email         = ["karl.entwistle@unboxedconsulting.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{lumiere}
+  spec.description   = %q{lumiere}
   spec.homepage      = ""
   spec.license       = "MIT"
 
