@@ -25,6 +25,11 @@ module Lumiere
     remote_structure[:entry][:title][:$t]
   end
 
+  def self.fetch_description(video)
+    remote_structure = remote_structure(video.api_url)
+    remote_structure[:entry][:description][:$t]
+  end
+
   private
 
   def self.remote_structure(api_url)
@@ -49,6 +54,10 @@ module Lumiere
 
     def title
       Lumiere.fetch_title(self)
+    end
+
+    def description
+      Lumiere.fetch_description(self)
     end
   end
 
