@@ -2,30 +2,33 @@ require 'spec_helper'
 
 describe Lumiere do
 
+  let(:description) { 'Description of my awesome Video' }
+  let(:title) { 'Title of my awesome Video' }
+  let(:remote_structure) {
+    {
+      entry: {
+        title: {'$t'.to_sym => title},
+        'media$group'.to_sym => {
+          'media$description'.to_sym => {
+            '$t'.to_sym => description
+          }
+        }
+      }
+    }
+  }
+
   describe ".fetch_title" do
-    let(:title) { 'Title of my awesome Video' }
     it "returns a videos title" do
       video = double(api_url: 'video_hosts_api_url')
-      response = {entry: { title: {'$t'.to_sym => title}}}
-      expect(Lumiere).to receive(:remote_structure) { response }
+      expect(Lumiere).to receive(:remote_structure) { remote_structure }
       expect(Lumiere.fetch_title(video)).to eql(title)
     end
   end
 
   describe ".fetch_description" do
-    let(:description) { 'Description of my awesome Video' }
     it "returns a videos description" do
       video = double(api_url: 'video_hosts_api_url')
-      response = {
-        entry: {
-          'media$group'.to_sym => {
-            'media$description'.to_sym => {
-              '$t'.to_sym => description
-            }
-          }
-        }
-      }
-      expect(Lumiere).to receive(:remote_structure) { response }
+      expect(Lumiere).to receive(:remote_structure) { remote_structure }
       expect(Lumiere.fetch_description(video)).to eql(description)
     end
   end
