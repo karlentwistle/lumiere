@@ -5,18 +5,16 @@ require 'json'
 
 module Lumiere
 
-  def self.fetch_title(id)
-    JSON.parse(response(id))["entry"]["title"]["$t"]
+  def self.fetch_title(video)
+    structure = response(video.api_url)
+    structure[:entry][:title]["$t"]
   end
 
   private
 
-  def self.response(id)
-    method = 'http://'
-    base = 'gdata.youtube.com'
-    path = "/feeds/api/videos/#{id}?v=2&alt=json"
-    url = method << base << path
-    open(url).read
+  def self.response(api_url)
+    raw_response = open(api_url).read
+    JSON.parse(raw_response)
   end
 
   class YouTube
@@ -26,8 +24,12 @@ module Lumiere
       @id = id
     end
 
+    def api_url
+      "http://gdata.youtube.com/feeds/api/videos/#{@id}?v=2&alt=json"
+    end
+
     def title
-      Lumiere.fetch_title(@id)
+      Lumiere.fetch_title(self)
     end
   end
 
