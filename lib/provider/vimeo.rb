@@ -9,11 +9,9 @@ class Vimeo
     "http://vimeo.com/api/v2/video/#{id}.json"
   end
 
-  def title
-    Lumiere.fetch(self) { |rs| rs['title'] }
-  end
-
-  def description
-    Lumiere.fetch(self) { |rs| rs['description'] }
+  %w(title description).each do |meth|
+    define_method(meth) do
+      Lumiere.fetch(self){ |rs| rs[meth] }
+    end
   end
 end
