@@ -6,22 +6,8 @@ Dir[File.dirname(__FILE__) + '/provider/*.rb'].each {|file| require file }
 
 module Lumiere
 
-  def self.fetch_title(video)
-    remote_structure = remote_structure(video.api_url)
-    if video.class == Vimeo
-      remote_structure['title']
-    else
-      remote_structure['entry']['title']['$t']
-    end
-  end
-
-  def self.fetch_description(video)
-    remote_structure = remote_structure(video.api_url)
-    if video.class == Vimeo
-      remote_structure['description']
-    else
-      remote_structure['entry']['media$group']['media$description']['$t']
-    end
+  def self.fetch(video, &block)
+    block.call(remote_structure(video.api_url))
   end
 
   private

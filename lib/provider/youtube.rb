@@ -10,10 +10,10 @@ class YouTube
   end
 
   def title
-    Lumiere.fetch_title(self)
+    Lumiere.fetch(self) { |rs| rs['entry']['title']['$t'] }
   end
 
   def description
-    Lumiere.fetch_description(self)
+    Lumiere.fetch(self) { |rs| rs['entry']['media$group']['media$description']['$t'] }
   end
 end

@@ -10,10 +10,10 @@ class Vimeo
   end
 
   def title
-    Lumiere.fetch_title(self)
+    Lumiere.fetch(self) { |rs| rs['title'] }
   end
 
   def description
-    Lumiere.fetch_description(self)
+    Lumiere.fetch(self) { |rs| rs['description'] }
   end
 end
