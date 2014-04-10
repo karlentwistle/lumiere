@@ -6,11 +6,11 @@ describe Lumiere do
   let(:title) { 'Title of my awesome Video' }
   let(:remote_structure) {
     {
-      entry: {
-        title: {'$t'.to_sym => title},
-        'media$group'.to_sym => {
-          'media$description'.to_sym => {
-            '$t'.to_sym => description
+      'entry' => {
+        'title' => {'$t' => title},
+        'media$group' => {
+          'media$description' => {
+            '$t' => description
           }
         }
       }
