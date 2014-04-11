@@ -16,4 +16,9 @@ class YouTube
   def description
     Lumiere.fetch(self) { |rs| rs['entry']['media$group']['media$description']['$t'] }
   end
+
+  def duration
+    Lumiere.fetch(self) { |rs| rs["entry"]["media$group"]["yt$duration"]["seconds"].to_i }
+  end
+
 end

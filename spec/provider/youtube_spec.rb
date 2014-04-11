@@ -4,6 +4,7 @@ module Lumiere
   describe YouTube do
     let(:description) { 'Description of my awesome Video' }
     let(:title) { 'Title of my awesome Video' }
+    let(:duration) { 35 }
     let(:remote_structure) {
       {
         'entry' => {
@@ -11,6 +12,9 @@ module Lumiere
           'media$group' => {
             'media$description' => {
               '$t' => description
+            },
+            'yt$duration' => {
+              'seconds' => "#{duration}"
             }
           }
         }
@@ -41,6 +45,14 @@ module Lumiere
         expect(YouTube.new('VIDEO_ID').description).to eql(description)
       end
     end
+
+    describe "#duration" do
+      it "returns the video duration" do
+        Lumiere.stub(:remote_structure) { remote_structure }
+        expect(YouTube.new('VIDEO_ID').duration).to eql(duration)
+      end
+    end
+
 
   end
 
