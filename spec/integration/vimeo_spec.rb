@@ -10,6 +10,9 @@ module Lumiere
         expect(video.description).to eql("Alan Watts&#13;<br />\n&#13;<br />\n&#13;<br />\nSo true.&#13;")
         expect(video.duration).to eql(141)
         expect(video.accessible?).to eql(true)
+        expect(video.thumbnail_small).to eql('http://i.vimeocdn.com/video/9464045_100x75.jpg')
+        expect(video.thumbnail_medium).to eql('http://i.vimeocdn.com/video/9464045_200x150.jpg')
+        expect(video.thumbnail_large).to eql('http://i.vimeocdn.com/video/9464045_640.jpg')
       end
     end
   end

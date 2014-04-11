@@ -4,13 +4,19 @@ module Lumiere
   describe Vimeo do
     let(:description) { 'Description of my awesome Video' }
     let(:title) { 'Title of my awesome Video' }
+    let(:thumbnail_small) { 'Thumbnail Small' }
+    let(:thumbnail_medium) { 'Thumbnail Medium' }
+    let(:thumbnail_large) { 'Thumbnail Large' }
     let(:duration) { 35 }
     let(:remote_structure) {
       [
         {
           'title' => title,
           'description' => description,
-          'duration' => duration
+          'duration' => duration,
+          'thumbnail_small' => thumbnail_small,
+          'thumbnail_medium' => thumbnail_medium,
+          'thumbnail_large' => thumbnail_large,
         }
       ]
     }
@@ -50,6 +56,23 @@ module Lumiere
       end
     end
 
+    describe "#thumbnail_small" do
+      it "returns the video thumbnail_small" do
+        expect(video.thumbnail_small).to eql(thumbnail_small)
+      end
+    end
+
+    describe "#thumbnail_medium" do
+      it "returns the video thumbnail_medium" do
+        expect(video.thumbnail_medium).to eql(thumbnail_medium)
+      end
+    end
+
+    describe "#thumbnail_large" do
+      it "returns the video thumbnail_large" do
+        expect(video.thumbnail_large).to eql(thumbnail_large)
+      end
+    end
   end
 
 end

@@ -13,6 +13,9 @@ class Vimeo < Lumiere::Provider
     title: lambda { |rs| rs[0]['title'] },
     description: lambda { |rs| rs[0]['description'] },
     duration: lambda { |rs| rs[0]['duration'].to_i },
+    thumbnail_small: lambda { |rs| rs[0]['thumbnail_small'] },
+    thumbnail_medium: lambda { |rs| rs[0]['thumbnail_medium'] },
+    thumbnail_large: lambda { |rs| rs[0]['thumbnail_large'] },
   }
 
   REMOTE_MAP.each do |meth_name, remote_location|
