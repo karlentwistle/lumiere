@@ -12,7 +12,7 @@ class YouTube < Lumiere::Provider
   REMOTE_MAP = {
     title: lambda { |rs| rs['entry']['title']['$t'] },
     description: lambda { |rs| rs['entry']['media$group']['media$description']['$t'] },
-    duration: lambda { |rs| rs["entry"]["media$group"]["yt$duration"]["seconds"].to_i },
+    duration: lambda { |rs| rs['entry']['media$group']['yt$duration']['seconds'].to_i },
   }
 
   REMOTE_MAP.each do |meth_name, remote_location|
