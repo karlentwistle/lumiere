@@ -31,7 +31,7 @@ module Lumiere
       expect(Vimeo.new(1).id).to eql(1)
     end
 
-    describe ".api_url" do
+    describe "#api_url" do
       it "returns the url of the Vimeo api" do
         expect(Vimeo.new('VIDEO_ID').api_url).
           to eql('http://vimeo.com/api/v2/video/VIDEO_ID.json')

@@ -39,7 +39,7 @@ module Lumiere
       expect(YouTube.new(1).id).to eql(1)
     end
 
-    describe ".api_url" do
+    describe "#api_url" do
       it "returns the url of the YouTube api" do
         expect(YouTube.new('VIDEO_ID').api_url).
           to eql('http://gdata.youtube.com/feeds/api/videos/VIDEO_ID?v=2&alt=json')
