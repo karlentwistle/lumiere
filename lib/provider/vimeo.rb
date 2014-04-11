@@ -9,6 +9,10 @@ class Vimeo < Lumiere::Provider
     "http://vimeo.com/api/v2/video/#{id}.json"
   end
 
+  def embed_url
+    "http://player.vimeo.com/video/#{id}"
+  end
+
   REMOTE_MAP = {
     title: lambda { |rs| rs[0]['title'] },
     description: lambda { |rs| rs[0]['description'] },

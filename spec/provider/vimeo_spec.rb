@@ -38,6 +38,12 @@ module Lumiere
       end
     end
 
+    describe "#embed_url" do
+      it "returns the embed_url" do
+        expect(video.embed_url).to eql('http://player.vimeo.com/video/VIDEO_ID')
+      end
+    end
+
     describe "#title" do
       it "returns the video title" do
         expect(video.title).to eql(title)

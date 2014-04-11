@@ -9,6 +9,10 @@ class YouTube < Lumiere::Provider
     "http://gdata.youtube.com/feeds/api/videos/#{@id}?v=2&alt=json"
   end
 
+  def embed_url
+    "http://www.youtube.com/embed/#{id}"
+  end
+
   REMOTE_MAP = {
     title: lambda { |rs| rs['entry']['title']['$t'] },
     description: lambda { |rs| rs['entry']['media$group']['media$description']['$t'] },
