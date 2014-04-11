@@ -11,7 +11,7 @@ class Vimeo
 
   %w(title description).each do |meth|
     define_method(meth) do
-      Lumiere.fetch(self){ |rs| rs[meth] }
+      Lumiere.fetch(self){ |rs| rs[0][meth] }
     end
   end
 end

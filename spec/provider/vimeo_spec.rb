@@ -5,10 +5,10 @@ module Lumiere
     let(:description) { 'Description of my awesome Video' }
     let(:title) { 'Title of my awesome Video' }
     let(:remote_structure) {
-      {
+      [{
         'title' => title,
         'description' => description
-      }
+      }]
     }
 
     it "stores id" do

@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/video/4268592.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Fri, 11 Apr 2014 10:16:51 GMT
+      Expires:
+      - Fri, 11 Apr 2014 10:17:51 GMT
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - "\"7ffbcf041ef10c3bcd727eab7b4273ae\""
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3596'
+      X-Ratelimit-Reset:
+      - '1397213915'
+      Last-Modified:
+      - Fri, 11 Apr 2014 09:10:04 GMT
+      X-Ua-Compatible:
+      - IE=edge
+      X-Dns-Prefetch-Control:
+      - 'on'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '477'
+      Accept-Ranges:
+      - bytes
+      X-Varnish:
+      - '159864428'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - 10.90.128.147
+    body:
+      encoding: UTF-8
+      string: "[{\"id\":4268592,\"title\":\"Alan Watts\",\"description\":\"Alan Watts&#13;<br
+        \\/>\\n&#13;<br \\/>\\n&#13;<br \\/>\\nSo true.&#13;\",\"url\":\"http:\\/\\/vimeo.com\\/4268592\",\"upload_date\":\"2009-04-21
+        20:22:09\",\"thumbnail_small\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_100x75.jpg\",\"thumbnail_medium\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_200x150.jpg\",\"thumbnail_large\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_640.jpg\",\"user_id\":1630647,\"user_name\":\"Sky
+        K\",\"user_url\":\"http:\\/\\/vimeo.com\\/user1630647\",\"user_portrait_small\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_30x30.png&s=30\",\"user_portrait_medium\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_75x75.png&s=75\",\"user_portrait_large\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_100x100.png&s=100\",\"user_portrait_huge\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_300x300.png&s=300\",\"stats_number_of_likes\":45,\"stats_number_of_plays\":12113,\"stats_number_of_comments\":4,\"duration\":141,\"width\":320,\"height\":240,\"tags\":\"\",\"embed_privacy\":\"anywhere\"}]"
+    http_version: 
+  recorded_at: Fri, 11 Apr 2014 10:16:10 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/video/4268592.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '5'
+      Date:
+      - Fri, 11 Apr 2014 10:23:46 GMT
+      Expires:
+      - Fri, 11 Apr 2014 10:24:46 GMT
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - "\"7ffbcf041ef10c3bcd727eab7b4273ae\""
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3595'
+      X-Ratelimit-Reset:
+      - '1397213915'
+      Last-Modified:
+      - Fri, 11 Apr 2014 09:10:04 GMT
+      X-Ua-Compatible:
+      - IE=edge
+      X-Dns-Prefetch-Control:
+      - 'on'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '477'
+      Accept-Ranges:
+      - bytes
+      X-Varnish:
+      - '2218019046'
+      X-Varnish-Cache:
+      - '0'
+      Nncoection:
+      - close
+      X-Vserver:
+      - 10.90.128.196
+    body:
+      encoding: UTF-8
+      string: "[{\"id\":4268592,\"title\":\"Alan Watts\",\"description\":\"Alan Watts&#13;<br
+        \\/>\\n&#13;<br \\/>\\n&#13;<br \\/>\\nSo true.&#13;\",\"url\":\"http:\\/\\/vimeo.com\\/4268592\",\"upload_date\":\"2009-04-21
+        20:22:09\",\"thumbnail_small\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_100x75.jpg\",\"thumbnail_medium\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_200x150.jpg\",\"thumbnail_large\":\"http:\\/\\/i.vimeocdn.com\\/video\\/9464045_640.jpg\",\"user_id\":1630647,\"user_name\":\"Sky
+        K\",\"user_url\":\"http:\\/\\/vimeo.com\\/user1630647\",\"user_portrait_small\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_30x30.png&s=30\",\"user_portrait_medium\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_75x75.png&s=75\",\"user_portrait_large\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_100x100.png&s=100\",\"user_portrait_huge\":\"http:\\/\\/www.gravatar.com\\/avatar\\/84126b3da124d3ac4bcc2cece422f421?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-green_300x300.png&s=300\",\"stats_number_of_likes\":45,\"stats_number_of_plays\":12113,\"stats_number_of_comments\":4,\"duration\":141,\"width\":320,\"height\":240,\"tags\":\"\",\"embed_privacy\":\"anywhere\"}]"
+    http_version: 
+  recorded_at: Fri, 11 Apr 2014 10:23:08 GMT
+recorded_with: VCR 2.8.0
