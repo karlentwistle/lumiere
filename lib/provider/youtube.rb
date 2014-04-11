@@ -21,4 +21,8 @@ class YouTube
     Lumiere.fetch(self) { |rs| rs["entry"]["media$group"]["yt$duration"]["seconds"].to_i }
   end
 
+  def accessible?
+    code = Net::HTTP.get_response(URI(api_url)).code
+    !%w[403 404].include?(code)
+  end
 end
