@@ -1,4 +1,4 @@
-class Vimeo
+class Vimeo < Lumiere::Provider
   attr_accessor :id
 
   def initialize(id)
@@ -17,7 +17,7 @@ class Vimeo
 
   REMOTE_MAP.each do |meth_name, remote_location|
     define_method(meth_name) do
-      Lumiere.fetch(self) { |rs| remote_location.call(rs) }
+      fetch { |rs| remote_location.call(rs) }
     end
   end
 end

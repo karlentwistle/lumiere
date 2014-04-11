@@ -9,6 +9,7 @@ module Lumiere
         expect(video.title).to eql('Alan Watts')
         expect(video.description).to eql("Alan Watts&#13;<br />\n&#13;<br />\n&#13;<br />\nSo true.&#13;")
         expect(video.duration).to eql(141)
+        expect(video.accessible?).to eql(true)
       end
     end
   end

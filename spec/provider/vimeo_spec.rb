@@ -15,6 +15,12 @@ module Lumiere
       ]
     }
 
+    subject(:video) { Vimeo.new('VIDEO_ID') }
+
+    before do
+      video.stub(:remote_structure) { remote_structure }
+    end
+
     it "stores id" do
       expect(Vimeo.new(1).id).to eql(1)
     end
@@ -28,22 +34,19 @@ module Lumiere
 
     describe "#title" do
       it "returns the video title" do
-        Lumiere.stub(:remote_structure) { remote_structure }
-        expect(Vimeo.new('VIDEO_ID').title).to eql(title)
+        expect(video.title).to eql(title)
       end
     end
 
     describe "#description" do
       it "returns the video description" do
-        Lumiere.stub(:remote_structure) { remote_structure }
-        expect(Vimeo.new('VIDEO_ID').description).to eql(description)
+        expect(video.description).to eql(description)
       end
     end
 
     describe "#duration" do
       it "returns the video duration" do
-        Lumiere.stub(:remote_structure) { remote_structure }
-        expect(Vimeo.new('VIDEO_ID').duration).to eql(duration)
+        expect(video.duration).to eql(duration)
       end
     end
 

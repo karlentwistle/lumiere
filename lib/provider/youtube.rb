@@ -1,4 +1,4 @@
-class YouTube
+class YouTube < Lumiere::Provider
   attr_accessor :id
 
   def initialize(id)
@@ -17,12 +17,7 @@ class YouTube
 
   REMOTE_MAP.each do |meth_name, remote_location|
     define_method(meth_name) do
-      Lumiere.fetch(self) { |rs| remote_location.call(rs) }
+      fetch { |rs| remote_location.call(rs) }
     end
-  end
-
-  def accessible?
-    code = Net::HTTP.get_response(URI(api_url)).code
-    !%w[403 404].include?(code)
   end
 end
