@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Lumiere
   describe Vimeo, :vcr do
-    subject(:video) { Vimeo.new('4268592') }
+    subject(:video) { Elluminate.new('https://vimeo.com/4268592') }
 
     context "4268592" do
       it do

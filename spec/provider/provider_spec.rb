@@ -4,6 +4,29 @@ module Lumiere
   describe Provider do
     subject(:provider) { Provider.new }
 
+    describe ".delegate" do
+      context "YouTube URL" do
+        let(:url) { 'www.youtube.com' }
+        let(:youtube) { double }
+        it "sets 'delegate' instance variable with new YouTube" do
+          expect(YouTube).to receive(:useable?).with(url) { true }
+          expect(YouTube).to receive(:new).with(url) { youtube }
+          expect(Provider.delegate(url)).to eql(youtube)
+        end
+      end
+
+      context "Vimeo URL" do
+        let(:url) { 'www.vimeo.com' }
+        let(:vimeo) { double }
+        it "sets 'delegate' instance variable with new Vimeo" do
+          allow(YouTube).to receive(:useable?).with(url) { false }
+          expect(Vimeo).to receive(:useable?).with(url) { true }
+          expect(Vimeo).to receive(:new).with(url) { vimeo }
+          expect(Provider.delegate(url)).to eql(vimeo)
+        end
+      end
+    end
+
     describe "#accessible?" do
       let(:api_url) { 'http://www.example.com/VIDEO-ID/remote_structure.json' }
       before do

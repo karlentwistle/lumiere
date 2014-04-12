@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Lumiere
   describe YouTube, :vcr do
-    subject(:video) { YouTube.new('NwRuI0yjreQ') }
+    subject(:video) { Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ') }
 
     context "NwRuI0yjreQ" do
       it do

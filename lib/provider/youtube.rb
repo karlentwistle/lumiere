@@ -1,26 +1,45 @@
 class YouTube < Lumiere::Provider
-  attr_accessor :id
+  attr_accessor :url
 
   def self.useable?(url)
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
-    uri.host == 'www.youtube.com' || 'youtube.com' || 'youtu.be'
+    case uri.host
+    when 'www.youtube.com'
+      true
+    when 'youtube.com'
+      true
+    when 'youtu.be'
+      true
+    else
+      false
+    end
   end
 
-  def initialize(id)
-    @id = id
+  def initialize(url)
+    @url = url
+  end
+
+  def video_id
+    uri = URI.parse(url)
+    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    if uri.query
+      uri.query.sub("v=", '')
+    else
+      uri.path.delete('/')
+    end
   end
 
   def api_url
-    "http://gdata.youtube.com/feeds/api/videos/#{@id}?v=2&alt=json"
+    "http://gdata.youtube.com/feeds/api/videos/#{video_id}?v=2&alt=json"
   end
 
   def embed_url
-    "http://www.youtube.com/embed/#{id}"
+    "http://www.youtube.com/embed/#{video_id}"
   end
 
   def embed_code
-    "<iframe src=\"//www.youtube.com/embed/#{id}\" frameborder=\"0\" allowfullscreen></iframe>"
+    "<iframe src=\"//www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
   def title

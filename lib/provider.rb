@@ -1,6 +1,14 @@
 module Lumiere
   class Provider
 
+    def self.delegate(url)
+      if YouTube.useable?(url)
+        YouTube.new(url)
+      elsif Vimeo.useable?(url)
+        Vimeo.new(url)
+      end
+    end
+
     def fetch
       remote_structure(api_url)
     end

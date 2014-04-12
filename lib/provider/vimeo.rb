@@ -1,26 +1,39 @@
 class Vimeo < Lumiere::Provider
-  attr_accessor :id
+  attr_accessor :url
 
   def self.useable?(url)
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
-    uri.host == 'www.vimeo.com' || 'vimeo.com'
+    case uri.host
+    when 'www.vimeo.com'
+      true
+    when 'vimeo.com'
+      true
+    else
+      false
+    end
   end
 
-  def initialize(id)
-    @id = id
+  def initialize(url)
+    @url = url
+  end
+
+  def video_id
+    uri = URI.parse(url)
+    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri.path.delete('/')
   end
 
   def api_url
-    "http://vimeo.com/api/v2/video/#{id}.json"
+    "http://vimeo.com/api/v2/video/#{video_id}.json"
   end
 
   def embed_url
-    "http://player.vimeo.com/video/#{id}"
+    "http://player.vimeo.com/video/#{video_id}"
   end
 
   def embed_code
-    "<iframe src=\"//player.vimeo.com/video/#{id}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "<iframe src=\"//player.vimeo.com/video/#{video_id}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
   end
 
   def title
