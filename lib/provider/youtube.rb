@@ -1,7 +1,7 @@
 class YouTube < Lumiere::Provider
   attr_accessor :id
 
-  def self.usable?(url)
+  def self.useable?(url)
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
     uri.host == 'www.youtube.com' || 'youtube.com' || 'youtu.be'

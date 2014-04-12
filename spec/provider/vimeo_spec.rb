@@ -40,7 +40,7 @@ module Lumiere
         context "valid" do
           context "#{url}" do
             it "returns true" do
-              expect(Vimeo.usable?(url)).to be_true
+              expect(Vimeo.useable?(url)).to be_true
             end
           end
         end
