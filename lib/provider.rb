@@ -2,7 +2,7 @@ module Lumiere
   class Provider
 
     def fetch
-      yield remote_structure(api_url)
+      remote_structure(api_url)
     end
 
     def accessible?

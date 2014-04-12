@@ -23,18 +23,27 @@ class Vimeo < Lumiere::Provider
     "<iframe src=\"//player.vimeo.com/video/#{id}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
   end
 
-  REMOTE_MAP = {
-    title: lambda { |rs| rs[0]['title'] },
-    description: lambda { |rs| rs[0]['description'] },
-    duration: lambda { |rs| rs[0]['duration'].to_i },
-    thumbnail_small: lambda { |rs| rs[0]['thumbnail_small'] },
-    thumbnail_medium: lambda { |rs| rs[0]['thumbnail_medium'] },
-    thumbnail_large: lambda { |rs| rs[0]['thumbnail_large'] },
-  }
+  def title
+    fetch[0]['title']
+  end
 
-  REMOTE_MAP.each do |meth_name, remote_location|
-    define_method(meth_name) do
-      fetch { |rs| remote_location.call(rs) }
-    end
+  def description
+    fetch[0]['description']
+  end
+
+  def duration
+    fetch[0]['duration']
+  end
+
+  def thumbnail_small
+    fetch[0]['thumbnail_small']
+  end
+
+  def thumbnail_medium
+    fetch[0]['thumbnail_medium']
+  end
+
+  def thumbnail_large
+    fetch[0]['thumbnail_large']
   end
 end

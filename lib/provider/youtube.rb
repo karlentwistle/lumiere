@@ -23,18 +23,27 @@ class YouTube < Lumiere::Provider
     "<iframe src=\"//www.youtube.com/embed/#{id}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
-  REMOTE_MAP = {
-    title: lambda { |rs| rs['entry']['title']['$t'] },
-    description: lambda { |rs| rs['entry']['media$group']['media$description']['$t'] },
-    duration: lambda { |rs| rs['entry']['media$group']['yt$duration']['seconds'].to_i },
-    thumbnail_small: lambda { |rs| rs['entry']['media$group']['media$thumbnail'][0]['url'] },
-    thumbnail_medium: lambda { |rs| rs['entry']['media$group']['media$thumbnail'][1]['url'] },
-    thumbnail_large: lambda { |rs| rs['entry']['media$group']['media$thumbnail'][2]['url'] },
-  }
+  def title
+    fetch['entry']['title']['$t']
+  end
 
-  REMOTE_MAP.each do |meth_name, remote_location|
-    define_method(meth_name) do
-      fetch { |rs| remote_location.call(rs) }
-    end
+  def description
+    fetch['entry']['media$group']['media$description']['$t']
+  end
+
+  def duration
+    fetch['entry']['media$group']['yt$duration']['seconds'].to_i
+  end
+
+  def thumbnail_small
+    fetch['entry']['media$group']['media$thumbnail'][0]['url']
+  end
+
+  def thumbnail_medium
+    fetch['entry']['media$group']['media$thumbnail'][1]['url']
+  end
+
+  def thumbnail_large
+    fetch['entry']['media$group']['media$thumbnail'][2]['url']
   end
 end
