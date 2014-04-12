@@ -35,6 +35,30 @@ module Lumiere
       video.stub(:remote_structure) { remote_structure }
     end
 
+    describe ".useable?" do
+      valid_urls = [
+        'http://www.youtube.com/watch?v=Xp6CXF',
+        'https://www.youtube.com/watch?v=Xp6CXF',
+        'www.youtube.com/watch?v=Xp6CXF',
+        'http://youtube.com/watch?v=Xp6CXF',
+        'https://youtube.com/watch?v=Xp6CXF',
+        'youtube.com/watch?v=Xp6CXF',
+        'http://youtu.be/JM9NgvjjVng',
+        'https://youtu.be/JM9NgvjjVng',
+        'youtu.be/JM9NgvjjVng'
+      ]
+      valid_urls.each do |url|
+        context "valid" do
+          context "#{url}" do
+            it "returns true" do
+              expect(YouTube.usable?(url)).to be_true
+            end
+          end
+        end
+      end
+    end
+
+
     it "stores id" do
       expect(YouTube.new(1).id).to eql(1)
     end
