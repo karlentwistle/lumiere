@@ -52,6 +52,13 @@ module Lumiere
       end
     end
 
+    describe "#embed_code" do
+      it "returns the embed_code" do
+        expect(video.embed_code).
+          to eql('<iframe src="//www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>')
+      end
+    end
+
     describe "#title" do
       it "returns the video title" do
         expect(video.title).to eql(title)

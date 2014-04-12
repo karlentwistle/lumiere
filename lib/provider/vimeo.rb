@@ -13,6 +13,10 @@ class Vimeo < Lumiere::Provider
     "http://player.vimeo.com/video/#{id}"
   end
 
+  def embed_code
+    "<iframe src=\"//player.vimeo.com/video/#{id}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  end
+
   REMOTE_MAP = {
     title: lambda { |rs| rs[0]['title'] },
     description: lambda { |rs| rs[0]['description'] },

@@ -13,6 +13,10 @@ class YouTube < Lumiere::Provider
     "http://www.youtube.com/embed/#{id}"
   end
 
+  def embed_code
+    "<iframe src=\"//www.youtube.com/embed/#{id}\" frameborder=\"0\" allowfullscreen></iframe>"
+  end
+
   REMOTE_MAP = {
     title: lambda { |rs| rs['entry']['title']['$t'] },
     description: lambda { |rs| rs['entry']['media$group']['media$description']['$t'] },
