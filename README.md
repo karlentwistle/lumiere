@@ -2,5 +2,4 @@
 
 ## TODO
 * Add date methods to providers
-* Add a delegator class that will decide if I need YouTube or Vimeo
 * Add playlist support for YouTube / Vimeo
