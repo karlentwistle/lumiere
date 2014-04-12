@@ -9,8 +9,6 @@ class Vimeo < Lumiere::Provider
       true
     when 'vimeo.com'
       true
-    else
-      false
     end
   end
 
@@ -19,9 +17,7 @@ class Vimeo < Lumiere::Provider
   end
 
   def video_id
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
-    uri.path.delete('/')
+    @video_id ||= fetch_video_id
   end
 
   def api_url
@@ -58,5 +54,13 @@ class Vimeo < Lumiere::Provider
 
   def thumbnail_large
     fetch[0]['thumbnail_large']
+  end
+
+  private
+
+  def fetch_video_id
+    uri = URI.parse(url)
+    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri.path.delete('/')
   end
 end

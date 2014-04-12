@@ -11,8 +11,6 @@ class YouTube < Lumiere::Provider
       true
     when 'youtu.be'
       true
-    else
-      false
     end
   end
 
@@ -21,13 +19,7 @@ class YouTube < Lumiere::Provider
   end
 
   def video_id
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
-    if uri.query
-      uri.query.sub("v=", '')
-    else
-      uri.path.delete('/')
-    end
+    @video_id ||= fetch_video_id
   end
 
   def api_url
@@ -65,4 +57,17 @@ class YouTube < Lumiere::Provider
   def thumbnail_large
     fetch['entry']['media$group']['media$thumbnail'][2]['url']
   end
+
+  private
+
+  def fetch_video_id
+    uri = URI.parse(url)
+    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    if uri.query
+      uri.query.sub("v=", '')
+    else
+      uri.path.delete('/')
+    end
+  end
+
 end
