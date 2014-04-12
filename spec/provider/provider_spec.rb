@@ -2,15 +2,13 @@ require 'spec_helper'
 
 module Lumiere
   describe Provider do
-
-    let(:api_url) { 'http://www.example.com/VIDEO-ID/remote_structure.json' }
     subject(:provider) { Provider.new }
 
-    before do
-      provider.stub(api_url: api_url)
-    end
-
     describe "#accessible?" do
+      let(:api_url) { 'http://www.example.com/VIDEO-ID/remote_structure.json' }
+      before do
+        provider.stub(api_url: api_url)
+      end
       context "private video" do
         it "returns false" do
           stub_request(:any, api_url).to_return(status: 403)
