@@ -27,6 +27,26 @@ module Lumiere
       video.stub(:remote_structure) { remote_structure }
     end
 
+    describe ".useable?" do
+      valid_urls = [
+        'http://www.vimeo.com/898029',
+        'https://www.vimeo.com/898029',
+        'www.vimeo.com/898029',
+        'http://vimeo.com/898029',
+        'https://vimeo.com/898029',
+        'vimeo.com/898029',
+      ]
+      valid_urls.each do |url|
+        context "valid" do
+          context "#{url}" do
+            it "returns true" do
+              expect(Vimeo.usable?(url)).to be_true
+            end
+          end
+        end
+      end
+    end
+
     it "stores id" do
       expect(Vimeo.new(1).id).to eql(1)
     end
