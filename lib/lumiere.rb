@@ -2,7 +2,7 @@ require "lumiere/version"
 require 'open-uri'
 require 'net/http'
 require 'json'
-require 'provider'
+
 require_relative 'remote_response'
 require_relative 'provider'
 Lumiere::Provider::PROVIDERS.each do |provider|
