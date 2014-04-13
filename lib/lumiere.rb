@@ -4,8 +4,9 @@ require 'net/http'
 require 'pry'
 require 'json'
 require_relative 'provider'
-require_relative 'provider/youtube'
-require_relative 'provider/vimeo'
+Lumiere::Provider::PROVIDERS.each do |provider|
+  require_relative "provider/#{provider.downcase}"
+end
 
 class Elluminate
   extend Forwardable

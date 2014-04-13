@@ -25,6 +25,15 @@ module Lumiere
           expect(Provider.delegate(url)).to eql(vimeo)
         end
       end
+
+      context "Unsupported URL" do
+        let(:url) { 'unsupported' }
+        it "raises an exception" do
+          expect {
+            Provider.delegate(url)
+          }.to raise_exception("sorry Lumiere doesnt currently support that provider")
+        end
+      end
     end
 
     describe "#accessible?" do

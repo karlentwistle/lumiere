@@ -1,12 +1,17 @@
 module Lumiere
   class Provider
 
+    PROVIDERS = %w(YouTube Vimeo)
+
     def self.delegate(url)
-      if YouTube.useable?(url)
-        YouTube.new(url)
-      elsif Vimeo.useable?(url)
-        Vimeo.new(url)
+      PROVIDERS.each do |provider|
+        provider_class = Object.const_get(provider)
+        if provider_class.useable?(url)
+          return provider_class.new(url)
+        end
       end
+
+      raise "sorry Lumiere doesnt currently support that provider"
     end
 
     def api_url
