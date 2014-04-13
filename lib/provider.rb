@@ -9,6 +9,26 @@ module Lumiere
       end
     end
 
+    def api_url
+      raise "provider must provide a api_url"
+    end
+
+    def embed_url
+      raise "provider must provide a embed_url"
+    end
+
+    def embed_code
+      raise "provider must provide a embed_code"
+    end
+
+    def title
+      raise "provider must provide a title"
+    end
+
+    def description
+      raise "provider must provide a description"
+    end
+
     def fetch
       remote_structure(api_url)
     end
