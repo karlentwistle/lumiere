@@ -21,13 +21,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 10:15:26 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 10:15:26 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -35,30 +33,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"CUUHSX47eCp7I2A9Wh9UEUs."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Thu, 10 Apr 2014 20:53:58 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CUUHSX47eCp7I2A9Wh9UEUs.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-10T20:53:58.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.5185184,"max":5,"min":1,"numRaters":135,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150114"},"yt$rating":{"numDislikes":"50","numLikes":"85"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 10:14:45 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -80,13 +78,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 10:15:26 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 10:15:26 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -94,30 +90,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"CUUHSX47eCp7I2A9Wh9UEUs."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Thu, 10 Apr 2014 20:53:58 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CUUHSX47eCp7I2A9Wh9UEUs.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-10T20:53:58.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.5185184,"max":5,"min":1,"numRaters":135,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150114"},"yt$rating":{"numDislikes":"50","numLikes":"85"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 10:14:45 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -139,13 +135,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 10:35:49 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 10:35:49 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -153,30 +147,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"CUUHSX47eCp7I2A9Wh9UEUs."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Thu, 10 Apr 2014 20:53:58 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CUUHSX47eCp7I2A9Wh9UEUs.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-10T20:53:58.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.5185184,"max":5,"min":1,"numRaters":135,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150114"},"yt$rating":{"numDislikes":"50","numLikes":"85"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 10:35:08 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -200,13 +194,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 16:31:03 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 16:31:03 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -214,30 +206,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"A0UHQH47eCp7I2A9Wh9UEkw."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Fri, 11 Apr 2014 12:27:11 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"A0UHQH47eCp7I2A9Wh9UEkw.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-11T12:27:11.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.5294118,"max":5,"min":1,"numRaters":136,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150373"},"yt$rating":{"numDislikes":"50","numLikes":"86"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 16:30:11 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -259,13 +251,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 21:18:37 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 21:18:37 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -273,30 +263,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"DUEBQX47eCp7I2A9Wh9UEk4."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Fri, 11 Apr 2014 17:34:10 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"DUEBQX47eCp7I2A9Wh9UEk4.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-11T17:34:10.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.510949,"max":5,"min":1,"numRaters":137,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150673"},"yt$rating":{"numDislikes":"51","numLikes":"86"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 21:18:36 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -318,13 +308,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 21:19:00 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 21:19:00 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -332,30 +320,30 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"DUEBQX47eCp7I2A9Wh9UEk4."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Fri, 11 Apr 2014 17:34:10 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"DUEBQX47eCp7I2A9Wh9UEk4.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-11T17:34:10.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.510949,"max":5,"min":1,"numRaters":137,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150673"},"yt$rating":{"numDislikes":"51","numLikes":"86"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 21:18:58 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 - request:
     method: get
     uri: http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?alt=json&v=2
@@ -377,13 +365,11 @@ http_interactions:
       X-Gdata-User-Country:
       - GB
       Content-Type:
-      - application/json; charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      - application/json;charset=UTF-8
       Expires:
-      - Fri, 11 Apr 2014 21:19:08 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Date:
-      - Fri, 11 Apr 2014 21:19:08 GMT
+      - Sun, 13 Apr 2014 09:39:51 GMT
       Cache-Control:
       - private, max-age=300, no-transform
       Vary:
@@ -391,28 +377,28 @@ http_interactions:
       Gdata-Version:
       - '2.1'
       Etag:
-      - W/"DUEBQX47eCp7I2A9Wh9UEk4."
+      - W/"CEIARX47eCp7I2A9Wh9UE0o."
       Last-Modified:
-      - Fri, 11 Apr 2014 17:34:10 GMT
-      Transfer-Encoding:
-      - chunked
+      - Sun, 13 Apr 2014 07:02:24 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '4636'
       Server:
       - GSE
       Alternate-Protocol:
       - 80:quic
     body:
       encoding: UTF-8
-      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"DUEBQX47eCp7I2A9Wh9UEk4.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-11T17:34:10.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
+      string: '{"version":"1.0","encoding":"UTF-8","entry":{"xmlns":"http://www.w3.org/2005/Atom","xmlns$media":"http://search.yahoo.com/mrss/","xmlns$gd":"http://schemas.google.com/g/2005","xmlns$yt":"http://gdata.youtube.com/schemas/2007","gd$etag":"W/\"CEIARX47eCp7I2A9Wh9UE0o.\"","id":{"$t":"tag:youtube.com,2008:video:NwRuI0yjreQ"},"published":{"$t":"2013-12-23T11:50:34.000Z"},"updated":{"$t":"2014-04-13T07:02:24.000Z"},"category":[{"scheme":"http://schemas.google.com/g/2005#kind","term":"http://gdata.youtube.com/schemas/2007#video"},{"scheme":"http://gdata.youtube.com/schemas/2007/categories.cat","term":"Entertainment","label":"Entertainment"}],"title":{"$t":"Shock
         haircut Supermodel punishment"},"content":{"type":"application/x-shockwave-flash","src":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata"},"link":[{"rel":"alternate","type":"text/html","href":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata"},{"rel":"http://gdata.youtube.com/schemas/2007#video.related","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/related?v=2"},{"rel":"http://gdata.youtube.com/schemas/2007#mobile","type":"text/html","href":"http://m.youtube.com/details?v=NwRuI0yjreQ"},{"rel":"http://gdata.youtube.com/schemas/2007#uploader","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/users/TSozZB3RDv7mCjpJ_lgluA?v=2"},{"rel":"self","type":"application/atom+xml","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ?v=2"}],"author":[{"name":{"$t":"maneroisdancing"},"uri":{"$t":"http://gdata.youtube.com/feeds/api/users/maneroisdancing"},"yt$userId":{"$t":"TSozZB3RDv7mCjpJ_lgluA"}}],"yt$accessControl":[{"action":"comment","permission":"allowed"},{"action":"commentVote","permission":"allowed"},{"action":"videoRespond","permission":"moderated"},{"action":"rate","permission":"allowed"},{"action":"embed","permission":"allowed"},{"action":"list","permission":"allowed"},{"action":"autoPlay","permission":"allowed"},{"action":"syndicate","permission":"allowed"}],"gd$comments":{"gd$feedLink":{"rel":"http://gdata.youtube.com/schemas/2007#comments","href":"http://gdata.youtube.com/feeds/api/videos/NwRuI0yjreQ/comments?v=2","countHint":18}},"media$group":{"media$category":[{"$t":"Entertainment","label":"Entertainment","scheme":"http://gdata.youtube.com/schemas/2007/categories.cat"}],"media$content":[{"url":"http://www.youtube.com/v/NwRuI0yjreQ?version=3&f=videos&app=youtube_gdata","type":"application/x-shockwave-flash","medium":"video","isDefault":"true","expression":"full","duration":419,"yt$format":5},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":1},{"url":"rtsp://r7---sn-cg07luez.c.youtube.com/CiILENy73wIaGQnkraNMI24ENxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","type":"video/3gpp","medium":"video","expression":"full","duration":419,"yt$format":6}],"media$credit":[{"$t":"maneroisdancing","role":"uploader","scheme":"urn:youtube","yt$display":"maneroisdancing"}],"media$description":{"$t":"Supermodels
         are forced to cut their long locks and burst into tears. Fashion makeover
         or Punishment?","type":"plain"},"media$keywords":{},"media$license":{"$t":"youtube","type":"text/html","href":"http://www.youtube.com/t/terms"},"media$player":{"url":"http://www.youtube.com/watch?v=NwRuI0yjreQ&feature=youtube_gdata_player"},"media$thumbnail":[{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"default"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg","height":180,"width":320,"yt$name":"mqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg","height":360,"width":480,"yt$name":"hqdefault"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/1.jpg","height":90,"width":120,"time":"00:01:44.750","yt$name":"start"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/2.jpg","height":90,"width":120,"time":"00:03:29.500","yt$name":"middle"},{"url":"http://i1.ytimg.com/vi/NwRuI0yjreQ/3.jpg","height":90,"width":120,"time":"00:05:14.250","yt$name":"end"}],"media$title":{"$t":"Shock
-        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.510949,"max":5,"min":1,"numRaters":137,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"150673"},"yt$rating":{"numDislikes":"51","numLikes":"86"}}}'
+        haircut Supermodel punishment","type":"plain"},"yt$duration":{"seconds":"419"},"yt$uploaded":{"$t":"2013-12-23T11:50:34.000Z"},"yt$uploaderId":{"$t":"UCTSozZB3RDv7mCjpJ_lgluA"},"yt$videoid":{"$t":"NwRuI0yjreQ"}},"gd$rating":{"average":3.4857142,"max":5,"min":1,"numRaters":140,"rel":"http://schemas.google.com/g/2005#overall"},"yt$statistics":{"favoriteCount":"0","viewCount":"152772"},"yt$rating":{"numDislikes":"53","numLikes":"87"}}}'
     http_version: 
-  recorded_at: Fri, 11 Apr 2014 21:19:07 GMT
+  recorded_at: Sun, 13 Apr 2014 09:41:17 GMT
 recorded_with: VCR 2.9.0
