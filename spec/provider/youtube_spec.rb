@@ -46,8 +46,8 @@ module Lumiere
     subject(:video) { YouTube.new('VIDEO_ID') }
 
     describe ".useable?" do
-      valid_urls.each_value do |url|
-        context "valid" do
+      context "valid" do
+        valid_urls.each_value do |url|
           context "#{url}" do
             it "returns true" do
               expect(YouTube.useable?(url)).to eql(true)
