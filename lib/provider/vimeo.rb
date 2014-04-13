@@ -58,6 +58,10 @@ class Vimeo < Lumiere::Provider
 
   private
 
+  def fetch
+    @remote_structure ||= Lumiere::RemoteResponse.new(api_url, JSON).parse
+  end
+
   def fetch_video_id
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?

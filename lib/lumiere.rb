@@ -1,8 +1,9 @@
 require "lumiere/version"
 require 'open-uri'
 require 'net/http'
-require 'pry'
 require 'json'
+require 'provider'
+require_relative 'remote_response'
 require_relative 'provider'
 Lumiere::Provider::PROVIDERS.each do |provider|
   require_relative "provider/#{provider.downcase}"
