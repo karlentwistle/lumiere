@@ -5,9 +5,6 @@ require 'json'
 
 require_relative 'remote_response'
 require_relative 'provider'
-Lumiere::Provider::PROVIDERS.each do |provider|
-  require_relative "provider/#{provider.downcase}"
-end
 
 class Elluminate
   extend Forwardable

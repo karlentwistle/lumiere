@@ -1,4 +1,5 @@
-class Vimeo < Lumiere::Provider
+module Lumiere
+class Vimeo < Provider
   attr_accessor :url
 
   def self.useable?(url)
@@ -67,4 +68,5 @@ class Vimeo < Lumiere::Provider
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
     uri.path.delete('/')
   end
+end
 end

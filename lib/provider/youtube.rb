@@ -1,4 +1,5 @@
-class YouTube < Lumiere::Provider
+module Lumiere
+class YouTube < Provider
   attr_accessor :url
 
   def self.useable?(url)
@@ -74,4 +75,5 @@ class YouTube < Lumiere::Provider
     end
   end
 
+end
 end

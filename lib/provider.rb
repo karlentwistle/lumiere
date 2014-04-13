@@ -2,10 +2,13 @@ module Lumiere
   class Provider
 
     PROVIDERS = %w(YouTube Vimeo)
+    PROVIDERS.each do |provider|
+      require_relative "provider/#{provider.downcase}"
+    end
 
     def self.delegate(url)
       PROVIDERS.each do |provider|
-        provider_class = Object.const_get(provider)
+        provider_class = Object.const_get("Lumiere").const_get(provider)
         if provider_class.useable?(url)
           return provider_class.new(url)
         end
