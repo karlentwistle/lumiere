@@ -1,5 +1,15 @@
 require 'spec_helper'
 
+def valid_urls
+  {
+    '89682547' => 'https://www.vimeo.com/89682547',
+    '8968222' => 'www.vimeo.com/8968222',
+    '10000' => 'http://vimeo.com/10000',
+    '99999' => 'https://vimeo.com/99999',
+    '80' => 'vimeo.com/80',
+  }
+end
+
 module Lumiere
   describe Vimeo do
     let(:description) { 'Description of my awesome Video' }
@@ -24,15 +34,7 @@ module Lumiere
     subject(:video) { Vimeo.new('VIDEO_ID') }
 
     describe ".useable?" do
-      valid_urls = [
-        'http://www.vimeo.com/898029',
-        'https://www.vimeo.com/898029',
-        'www.vimeo.com/898029',
-        'http://vimeo.com/898029',
-        'https://vimeo.com/898029',
-        'vimeo.com/898029',
-      ]
-      valid_urls.each do |url|
+      valid_urls.each_value do |url|
         context "valid" do
           context "#{url}" do
             it "returns true" do
@@ -48,13 +50,7 @@ module Lumiere
     end
 
     describe "video_id" do
-      valid_urls = {
-        '89682547' => 'https://www.vimeo.com/89682547',
-        '8968222' => 'www.vimeo.com/8968222',
-        '10000' => 'http://vimeo.com/10000',
-        '99999' => 'https://vimeo.com/99999',
-        '80' => 'vimeo.com/80',
-      }.each do |video_id, url|
+      valid_urls.each do |video_id, url|
         context url do
           it "extracts the video_id" do
             expect(Vimeo.new(url).video_id).to eql(video_id)

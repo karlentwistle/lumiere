@@ -1,5 +1,19 @@
 require 'spec_helper'
 
+def valid_urls
+  {
+    'Xp6CXF' => 'http://www.youtube.com/watch?v=Xp6CXF',
+    'BRRolKTlF6Q' => 'https://www.youtube.com/watch?v=BRRolKTlF6Q',
+    'elvOZm0d4H0' => 'www.youtube.com/watch?v=elvOZm0d4H0',
+    'XTeJ64KD5cg' => 'http://youtube.com/watch?v=XTeJ64KD5cg',
+    'iW_LkYiuTKE' => 'https://youtube.com/watch?v=iW_LkYiuTKE',
+    'tflf05x-WVI' => 'youtube.com/watch?v=tflf05x-WVI',
+    '1GCf29FPM4k' => 'http://youtu.be/1GCf29FPM4k',
+    'U7f8j3mVMbc' => 'https://youtu.be/U7f8j3mVMbc',
+    'abv4Fz7oNr0' => 'youtu.be/abv4Fz7oNr0',
+  }
+end
+
 module Lumiere
   describe YouTube do
     let(:description) { 'Description of my awesome Video' }
@@ -32,18 +46,7 @@ module Lumiere
     subject(:video) { YouTube.new('VIDEO_ID') }
 
     describe ".useable?" do
-      valid_urls = [
-        'http://www.youtube.com/watch?v=Xp6CXF',
-        'https://www.youtube.com/watch?v=Xp6CXF',
-        'www.youtube.com/watch?v=Xp6CXF',
-        'http://youtube.com/watch?v=Xp6CXF',
-        'https://youtube.com/watch?v=Xp6CXF',
-        'youtube.com/watch?v=Xp6CXF',
-        'http://youtu.be/JM9NgvjjVng',
-        'https://youtu.be/JM9NgvjjVng',
-        'youtu.be/JM9NgvjjVng'
-      ]
-      valid_urls.each do |url|
+      valid_urls.each_value do |url|
         context "valid" do
           context "#{url}" do
             it "returns true" do
@@ -59,17 +62,7 @@ module Lumiere
     end
 
     describe "video_id" do
-      valid_urls = {
-        'Xp6CXF' => 'http://www.youtube.com/watch?v=Xp6CXF',
-        'BRRolKTlF6Q' => 'https://www.youtube.com/watch?v=BRRolKTlF6Q',
-        'elvOZm0d4H0' => 'www.youtube.com/watch?v=elvOZm0d4H0',
-        'XTeJ64KD5cg' => 'http://youtube.com/watch?v=XTeJ64KD5cg',
-        'iW_LkYiuTKE' => 'https://youtube.com/watch?v=iW_LkYiuTKE',
-        'tflf05x-WVI' => 'youtube.com/watch?v=tflf05x-WVI',
-        '1GCf29FPM4k' => 'http://youtu.be/1GCf29FPM4k',
-        'U7f8j3mVMbc' => 'https://youtu.be/U7f8j3mVMbc',
-        'abv4Fz7oNr0' => 'youtu.be/abv4Fz7oNr0'
-      }.each do |video_id, url|
+      valid_urls.each do |video_id, url|
         context url do
           it "extracts the video_id" do
             expect(YouTube.new(url).video_id).to eql(video_id)
