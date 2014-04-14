@@ -1,6 +1,6 @@
 module Lumiere
 class YouTube < Provider
-  extend ExtendedURI
+  include ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
@@ -61,8 +61,7 @@ class YouTube < Provider
   end
 
   def fetch_video_id
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri = schemeless_parse(url)
     if uri.query
       uri.query.sub("v=", '')
     else

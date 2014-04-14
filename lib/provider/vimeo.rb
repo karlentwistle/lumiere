@@ -1,6 +1,6 @@
 module Lumiere
 class Vimeo < Provider
-  extend ExtendedURI
+  include ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.vimeo.com', 'vimeo.com']
@@ -61,8 +61,7 @@ class Vimeo < Provider
   end
 
   def fetch_video_id
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri = schemeless_parse(url)
     uri.path.delete('/')
   end
 end
