@@ -1,12 +1,12 @@
 module Lumiere
 class Vimeo < Provider
+  extend ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.vimeo.com', 'vimeo.com']
 
   def self.useable?(url)
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri = schemeless_parse(url)
     USEABLE.include?(uri.host.to_s)
   end
 

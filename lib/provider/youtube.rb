@@ -1,12 +1,12 @@
 module Lumiere
 class YouTube < Provider
+  extend ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
 
   def self.useable?(url)
-    uri = URI.parse(url)
-    uri = URI.parse("http://#{url}") if uri.scheme.nil?
+    uri = schemeless_parse(url)
     USEABLE.include?(uri.host.to_s)
   end
 
