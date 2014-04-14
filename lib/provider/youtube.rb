@@ -2,17 +2,12 @@ module Lumiere
 class YouTube < Provider
   attr_accessor :url
 
+  USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
+
   def self.useable?(url)
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
-    case uri.host
-    when 'www.youtube.com'
-      true
-    when 'youtube.com'
-      true
-    when 'youtu.be'
-      true
-    end
+    USEABLE.include?(uri.host.to_s)
   end
 
   def initialize(url)
