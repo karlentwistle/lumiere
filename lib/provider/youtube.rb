@@ -57,7 +57,7 @@ class YouTube < Provider
   private
 
   def fetch
-    @remote_structure ||= Lumiere::RemoteResponse.new(api_url, JSON).parse
+    @remote_structure ||= Lumiere::FetchParse.new(api_url, JSON).parse
   end
 
   def fetch_video_id

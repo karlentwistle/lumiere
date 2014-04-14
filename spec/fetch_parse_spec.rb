@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 module Lumiere
-  describe RemoteResponse do
+  describe FetchParse do
     describe "#parse" do
       let(:url) { double }
       let(:parser) { double }
       let(:raw_response) { double(read: true) }
 
-      subject(:remote_response) { RemoteResponse.new(url, parser) }
+      subject(:remote_response) { FetchParse.new(url, parser) }
 
       it "calls parse on parser" do
         allow(remote_response).to receive(:open).with(url) { raw_response }

@@ -3,7 +3,7 @@ require 'open-uri'
 require 'net/http'
 require 'json'
 
-require_relative 'remote_response'
+require_relative 'fetch_parse'
 require_relative 'provider'
 
 class Elluminate

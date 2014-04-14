@@ -1,5 +1,5 @@
 module Lumiere
-  class RemoteResponse
+  class FetchParse
     def initialize(url, parser)
       @url = url
       @parser = parser
