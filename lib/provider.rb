@@ -1,7 +1,7 @@
 module Lumiere
   class Provider
 
-    PROVIDERS = %w(YouTube Vimeo)
+    PROVIDERS = %w(YouTubePlaylist YouTube Vimeo)
     PROVIDERS.each do |provider|
       require_relative "provider/#{provider.downcase}"
     end
@@ -42,5 +42,8 @@ module Lumiere
       @remote_status ||= !%w[403 404].include?(code)
     end
 
+    def ==(other)
+      url == other.url
+    end
   end
 end

@@ -27,8 +27,29 @@ module Lumiere
         expect(video.thumbnail_large).to eql('http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg')
       end
     end
+
+    context "YouTube Playlist PLA575C81A1FBC04CF" do
+    subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
+      it do
+        expect(video.title).to eql('Music Playlist')
+        expect(video.description).to eql("Playlist just brimming with the odd, beautiful, or interesting music videos I come across")
+        expect(video.thumbnail_small).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/default.jpg')
+        expect(video.thumbnail_medium).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/mqdefault.jpg')
+        expect(video.thumbnail_large).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/hqdefault.jpg')
+
+        expect(video.videos).to match_array([
+          YouTube.new('http://www.youtube.com/watch?v=nyMkLwSyOVQ'),
+          YouTube.new('http://www.youtube.com/watch?v=2_HXUhShhmY'),
+          YouTube.new('http://www.youtube.com/watch?v=lLJf9qJHR3E'),
+          YouTube.new('http://www.youtube.com/watch?v=j9e38cuhnaU'),
+          YouTube.new('http://www.youtube.com/watch?v=MZAKjKC7Gho'),
+          YouTube.new('http://www.youtube.com/watch?v=vLrslkB1pG8'),
+          YouTube.new('http://www.youtube.com/watch?v=JWiwuiT58Yc'),
+          YouTube.new('http://www.youtube.com/watch?v=yFTvbcNhEgc'),
+        ])
+
+      end
+    end
+
   end
 end
-
-
-

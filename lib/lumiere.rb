@@ -18,4 +18,5 @@ class Elluminate
   def_delegators :@provider, :thumbnail_small, :thumbnail_medium, :thumbnail_large
   def_delegators :@provider, :embed_code, :embed_url
   def_delegators :@provider, :accessible?
+  def_delegators :@provider, :videos
 end
