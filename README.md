@@ -8,3 +8,5 @@
 * Lots of duplication in the YouTube and YouTubePlaylist could be good to move YouTube out to YouTubeVideo and have YouTube as a common base class.......
 * Refactor YouTube to recognize embed links with
 * Refactor Vimeo to recognize embed links with
+* Get the VCR cassets down to a single request per file
+* Add support for YouTube playlist with more than 25 videos
