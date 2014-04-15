@@ -1,5 +1,5 @@
 module Lumiere
-class YouTubePlaylist
+class YouTubePlaylist < Provider
   include ExtendedURI
   attr_accessor :url
 
