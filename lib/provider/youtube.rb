@@ -10,6 +10,10 @@ class YouTube < Provider
     USEABLE.include?(uri.host.to_s)
   end
 
+  def self.new_from_video_id(video_id)
+    new("http://www.youtube.com/watch?v=#{video_id}")
+  end
+
   def initialize(url)
     @url = url
   end

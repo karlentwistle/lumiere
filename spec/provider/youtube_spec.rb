@@ -45,6 +45,12 @@ module Lumiere
 
     subject(:video) { YouTube.new('VIDEO_ID') }
 
+    describe ".new_from_video_id" do
+      it "returns a new YouTube object with a .useable? url" do
+        expect(YouTube.new_from_video_id(1)).to eq(YouTube.new('http://www.youtube.com/watch?v=1'))
+      end
+    end
+
     describe ".useable?" do
       context "valid" do
         valid_urls.each_value do |url|
