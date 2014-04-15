@@ -25,7 +25,6 @@ module Lumiere
         { id: 'vLrslkB1pG8' },
       ]
     }
-    #let(:duration) { 35 }
     let(:remote_structure) {
       {
         'feed' => {
@@ -132,13 +131,6 @@ module Lumiere
         expect(playlist.description).to eql(description)
       end
     end
-
-    # describe "#duration" do
-    #   it "returns the video duration" do
-    #     video.stub(:fetch) { remote_structure }
-    #     expect(video.duration).to eql(duration)
-    #   end
-    # end
 
     describe "#thumbnail_small" do
       it "returns the video thumbnail_small" do
