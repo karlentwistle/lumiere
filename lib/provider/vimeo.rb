@@ -31,38 +31,58 @@ class Vimeo < Provider
   end
 
   def title
-    fetch[0]['title']
+    fetch.title
   end
 
   def description
-    fetch[0]['description']
+    fetch.description
   end
 
   def duration
-    fetch[0]['duration']
+    fetch.duration
   end
 
   def thumbnail_small
-    fetch[0]['thumbnail_small']
+    fetch.thumbnail_small
   end
 
   def thumbnail_medium
-    fetch[0]['thumbnail_medium']
+    fetch.thumbnail_medium
   end
 
   def thumbnail_large
-    fetch[0]['thumbnail_large']
+    fetch.thumbnail_large
   end
 
   private
 
   def fetch
-    @remote_structure ||= Lumiere::FetchParse.new(api_url, JSON).parse
+    json = open(api_url).read
+    videos = [].extend(VimeoRepresenter).from_json(json)
+    videos[0]
   end
 
   def fetch_video_id
     uri = schemeless_parse(url)
     uri.path.delete('/')
   end
+
+  module VideoRepresenter
+    include Representable::JSON
+
+    property :title
+    property :description
+    property :duration
+    property :thumbnail_small
+    property :thumbnail_medium
+    property :thumbnail_large
+  end
+
+  module VimeoRepresenter
+    include Representable::JSON::Collection
+
+    items extend: VideoRepresenter, class: OpenStruct
+  end
+
 end
 end

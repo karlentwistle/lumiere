@@ -84,42 +84,42 @@ module Lumiere
 
     describe "#title" do
       it "returns the video title" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.title).to eql(title)
       end
     end
 
     describe "#description" do
       it "returns the video description" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.description).to eql(description)
       end
     end
 
     describe "#duration" do
       it "returns the video duration" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.duration).to eql(duration)
       end
     end
 
     describe "#thumbnail_small" do
       it "returns the video thumbnail_small" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
       it "returns the video thumbnail_medium" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
       it "returns the video thumbnail_large" do
-        video.stub(:fetch) { remote_structure }
+        video.stub(:fetch) { OpenStruct.new(remote_structure[0]) }
         expect(video.thumbnail_large).to eql(thumbnail_large)
       end
     end
