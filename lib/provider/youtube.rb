@@ -65,7 +65,7 @@ class YouTube < Provider
   end
 
   def fetch
-    OpenStruct.new.extend(VideoRepresenter).from_json(raw_response)
+    @fetch ||= OpenStruct.new.extend(VideoRepresenter).from_json(raw_response)
   end
 
   def fetch_video_id
