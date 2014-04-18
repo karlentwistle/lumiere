@@ -34,61 +34,17 @@ class YouTube < Provider
     "<iframe src=\"//www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
-  def title
-    fetch
-    @title
-  end
-
-  def description
-    fetch
-    @description
-  end
-
-  def duration
-    fetch
-    @duration
-  end
-
-  def thumbnail_small
-    fetch
-    @thumbnail_small
-  end
-
-  def thumbnail_medium
-    fetch
-    @thumbnail_medium
-  end
-
-  def thumbnail_large
-    fetch
-    @thumbnail_large
+  remote_attributes = [:title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large]
+  remote_attributes.each do |attribute|
+    define_method(attribute) do
+      fetch unless defined?(@fetch)
+      instance_variable_get("@#{attribute}")
+    end
   end
 
   private
 
-  def title=(title)
-    @title = title
-  end
-
-  def description=(description)
-    @description = description
-  end
-
-  def duration=(duration)
-    @duration = duration
-  end
-
-  def thumbnail_small=(thumbnail_small)
-    @thumbnail_small = thumbnail_small
-  end
-
-  def thumbnail_medium=(thumbnail_medium)
-    @thumbnail_medium = thumbnail_medium
-  end
-
-  def thumbnail_large=(thumbnail_large)
-    @thumbnail_large = thumbnail_large
-  end
+  attr_writer :title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large
 
   def raw_response
     @raw ||= open(api_url).read
