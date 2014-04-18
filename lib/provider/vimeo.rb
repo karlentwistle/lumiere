@@ -39,7 +39,7 @@ class Vimeo < Provider
   end
 
   def duration
-    fetch.duration
+    fetch.duration.to_i
   end
 
   def thumbnail_small
@@ -56,9 +56,12 @@ class Vimeo < Provider
 
   private
 
+  def raw_response
+    @raw ||= open(api_url).read
+  end
+
   def fetch
-    json = open(api_url).read
-    videos = [].extend(VimeoRepresenter).from_json(json)
+    videos = [].extend(VimeoRepresenter).from_json(raw_response)
     videos[0]
   end
 
