@@ -35,37 +35,67 @@ class YouTube < Provider
   end
 
   def title
-    fetch.title
+    fetch
+    @title
   end
 
   def description
-    fetch.description
+    fetch
+    @description
   end
 
   def duration
-    fetch.duration.to_i
+    fetch
+    @duration
   end
 
   def thumbnail_small
-    fetch.thumbnail_small
+    fetch
+    @thumbnail_small
   end
 
   def thumbnail_medium
-    fetch.thumbnail_medium
+    fetch
+    @thumbnail_medium
   end
 
   def thumbnail_large
-    fetch.thumbnail_large
+    fetch
+    @thumbnail_large
   end
 
   private
+
+  def title=(title)
+    @title = title
+  end
+
+  def description=(description)
+    @description = description
+  end
+
+  def duration=(duration)
+    @duration = duration
+  end
+
+  def thumbnail_small=(thumbnail_small)
+    @thumbnail_small = thumbnail_small
+  end
+
+  def thumbnail_medium=(thumbnail_medium)
+    @thumbnail_medium = thumbnail_medium
+  end
+
+  def thumbnail_large=(thumbnail_large)
+    @thumbnail_large = thumbnail_large
+  end
 
   def raw_response
     @raw ||= open(api_url).read
   end
 
   def fetch
-    @fetch ||= OpenStruct.new.extend(VideoRepresenter).from_json(raw_response)
+    @fetch ||= self.extend(VideoRepresenter).from_json(raw_response)
   end
 
   def fetch_video_id
@@ -79,6 +109,7 @@ class YouTube < Provider
 
   module VideoRepresenter
     include Representable::JSON
+    include Representable::Coercion
     self.representation_wrap = :entry
 
     nested 'title' do
@@ -91,7 +122,7 @@ class YouTube < Provider
       end
 
       nested 'yt$duration' do
-        property :duration, as: :seconds
+        property :duration, as: :seconds, type: Integer
       end
 
       nested 'media$thumbnail' do

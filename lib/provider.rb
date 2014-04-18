@@ -43,7 +43,9 @@ module Lumiere
     end
 
     def ==(other)
-      url == other.url
+      if other.respond_to?(:url)
+        url == other.url
+      end
     end
   end
 end

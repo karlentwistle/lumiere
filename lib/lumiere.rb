@@ -3,6 +3,7 @@ require 'open-uri'
 require 'net/http'
 require 'json'
 require 'representable'
+require 'representable/coercion'
 require 'representable/json'
 require 'representable/json/collection'
 
