@@ -57,7 +57,7 @@ class Vimeo < Provider
   private
 
   def raw_response
-    @raw ||= open(api_url).read
+    open(api_url).read
   end
 
   def fetch

@@ -47,7 +47,7 @@ class YouTube < Provider
   attr_writer :title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large
 
   def raw_response
-    @raw ||= open(api_url).read
+    open(api_url).read
   end
 
   def fetch
