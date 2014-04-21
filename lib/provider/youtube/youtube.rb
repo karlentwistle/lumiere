@@ -19,7 +19,7 @@ class YouTube < Provider
   end
 
   def video_id
-    @video_id ||= fetch_video_id
+    @video_id ||= calculate_video_id
   end
 
   def api_url
@@ -57,10 +57,11 @@ class YouTube < Provider
     @fetch ||= self.extend(YouTubeVideoRepresenter).from_json(raw_response)
   end
 
-  def fetch_video_id
+  def calculate_video_id
     uri = schemeless_parse(url)
     if uri.query
-      uri.query.sub("v=", '')
+      params_hash = Hash[URI::decode_www_form(uri.query)]
+      params_hash['v']
     else
       uri.path.delete('/')
     end

@@ -15,7 +15,7 @@ class Vimeo < Provider
   end
 
   def video_id
-    @video_id ||= fetch_video_id
+    @video_id ||= calculate_video_id
   end
 
   def api_url
@@ -65,7 +65,7 @@ class Vimeo < Provider
     @fetch ||= videos[0]
   end
 
-  def fetch_video_id
+  def calculate_video_id
     uri = schemeless_parse(url)
     uri.path.delete('/')
   end
