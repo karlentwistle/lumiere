@@ -3,11 +3,9 @@ module Lumiere
 
     PROVIDERS = %w(YouTubePlaylist YouTube Vimeo)
     PROVIDERS.each do |provider|
-      require_relative "provider/#{provider.downcase}"
+      require_relative "provider/#{provider.downcase}/#{provider.downcase}"
+      require_relative "provider/#{provider.downcase}/representer"
     end
-
-    require_relative "provider/youtube/representer"
-    require_relative "provider/vimeo/representer"
 
     def self.delegate(url)
       PROVIDERS.each do |provider|
