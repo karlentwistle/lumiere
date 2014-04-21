@@ -65,7 +65,6 @@ class YouTube < Provider
 
   module VideoRepresenter
     include Representable::JSON
-    include Representable::Coercion
     self.representation_wrap = :entry
 
     nested 'title' do
@@ -78,6 +77,7 @@ class YouTube < Provider
       end
 
       nested 'yt$duration' do
+        include Representable::Coercion
         property :duration, as: :seconds, type: Integer
       end
 
