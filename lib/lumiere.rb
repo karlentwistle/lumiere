@@ -2,6 +2,10 @@ require "lumiere/version"
 require 'open-uri'
 require 'net/http'
 require 'json'
+require 'representable'
+require 'representable/coercion'
+require 'representable/json'
+require 'representable/json/collection'
 
 require_relative 'extended_uri'
 require_relative 'fetch_parse'

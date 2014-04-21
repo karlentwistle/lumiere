@@ -18,7 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "httpi", "~> 2.1.0"
+  spec.add_dependency "representable", "~> 1.8.0"
+  spec.add_dependency "virtus", ">= 0.5.0"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"

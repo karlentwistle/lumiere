@@ -34,34 +34,24 @@ class YouTube < Provider
     "<iframe src=\"//www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
-  def title
-    fetch['entry']['title']['$t']
-  end
-
-  def description
-    fetch['entry']['media$group']['media$description']['$t']
-  end
-
-  def duration
-    fetch['entry']['media$group']['yt$duration']['seconds'].to_i
-  end
-
-  def thumbnail_small
-    fetch['entry']['media$group']['media$thumbnail'][0]['url']
-  end
-
-  def thumbnail_medium
-    fetch['entry']['media$group']['media$thumbnail'][1]['url']
-  end
-
-  def thumbnail_large
-    fetch['entry']['media$group']['media$thumbnail'][2]['url']
+  remote_attributes = [:title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large]
+  remote_attributes.each do |attribute|
+    define_method(attribute) do
+      fetch unless defined?(@fetch)
+      instance_variable_get("@#{attribute}")
+    end
   end
 
   private
 
+  attr_writer :title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large
+
+  def raw_response
+    open(api_url).read
+  end
+
   def fetch
-    @remote_structure ||= Lumiere::FetchParse.new(api_url, JSON).parse
+    @fetch ||= self.extend(VideoRepresenter).from_json(raw_response)
   end
 
   def fetch_video_id
@@ -72,6 +62,33 @@ class YouTube < Provider
       uri.path.delete('/')
     end
   end
+
+  module VideoRepresenter
+    include Representable::JSON
+    self.representation_wrap = :entry
+
+    nested 'title' do
+      property :title, as: '$t'
+    end
+
+    nested 'media$group' do
+      nested 'media$description' do
+        property :description, as: '$t'
+      end
+
+      nested 'yt$duration' do
+        include Representable::Coercion
+        property :duration, as: :seconds, type: Integer
+      end
+
+      nested 'media$thumbnail' do
+        property :thumbnail_small, :reader => lambda { |doc, args| self.thumbnail_small = doc[0]['url'] }
+        property :thumbnail_medium, :reader => lambda { |doc, args| self.thumbnail_medium = doc[1]['url'] }
+        property :thumbnail_large, :reader => lambda { |doc, args| self.thumbnail_large = doc[2]['url'] }
+      end
+    end
+  end
+
 
 end
 end
