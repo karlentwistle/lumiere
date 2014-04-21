@@ -8,7 +8,6 @@ require 'representable/json'
 require 'representable/json/collection'
 
 require_relative 'extended_uri'
-require_relative 'fetch_parse'
 require_relative 'provider'
 
 class Elluminate
