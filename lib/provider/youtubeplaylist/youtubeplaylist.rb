@@ -31,35 +31,37 @@ class YouTubePlaylist < Provider
   end
 
   def videos
-    fetch['feed']['entry'].map do |entry|
-      YouTube.new_from_video_id(entry['media$group']['yt$videoid']['$t'])
+    fetch unless defined?(@fetch)
+    @videos.map do |video|
+      YouTube.new_from_video_id(video.video_id)
     end
   end
 
-  def title
-    fetch['feed']['title']['$t']
-  end
+  REMOTE_ATTRIBUTES = [:title, :description, :thumbnail_small, :thumbnail_medium, :thumbnail_large]
 
-  def description
-    fetch['feed']['subtitle']['$t']
-  end
-
-  def thumbnail_small
-    fetch['feed']['media$group']['media$thumbnail'][0]['url']
-  end
-
-  def thumbnail_medium
-    fetch['feed']['media$group']['media$thumbnail'][1]['url']
-  end
-
-  def thumbnail_large
-    fetch['feed']['media$group']['media$thumbnail'][2]['url']
+  REMOTE_ATTRIBUTES.each do |attribute|
+    define_method(attribute) do
+      fetch unless defined?(@fetch)
+      instance_variable_get("@#{attribute}")
+    end
   end
 
   private
 
+  REMOTE_ATTRIBUTES.each do |attribute|
+    attr_writer attribute
+  end
+
+  def videos=(videos)
+    @videos = videos
+  end
+
+  def raw_response
+    open(api_url).read
+  end
+
   def fetch
-    @remote_structure ||= Lumiere::FetchParse.new(api_url, JSON).parse
+    @fetch ||= self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
   end
 
   def calculate_playlist_id
@@ -70,6 +72,3 @@ class YouTubePlaylist < Provider
 
 end
 end
-
-
-
