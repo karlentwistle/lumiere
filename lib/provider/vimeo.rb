@@ -61,30 +61,13 @@ class Vimeo < Provider
   end
 
   def fetch
-    videos = [].extend(VimeoRepresenter).from_json(raw_response)
+    videos = [].extend(VimeoVideosRepresenter).from_json(raw_response)
     @fetch ||= videos[0]
   end
 
   def fetch_video_id
     uri = schemeless_parse(url)
     uri.path.delete('/')
-  end
-
-  module VideoRepresenter
-    include Representable::JSON
-
-    property :title
-    property :description
-    property :duration
-    property :thumbnail_small
-    property :thumbnail_medium
-    property :thumbnail_large
-  end
-
-  module VimeoRepresenter
-    include Representable::JSON::Collection
-
-    items extend: VideoRepresenter, class: OpenStruct
   end
 
 end

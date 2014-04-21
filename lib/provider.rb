@@ -7,6 +7,7 @@ module Lumiere
     end
 
     require_relative "provider/youtube/representer"
+    require_relative "provider/vimeo/representer"
 
     def self.delegate(url)
       PROVIDERS.each do |provider|
