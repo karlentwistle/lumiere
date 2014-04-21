@@ -54,7 +54,7 @@ module Lumiere
             },
           ]
         }
-      }
+      }.to_json
     }
 
     subject(:playlist) { YouTubePlaylist.new('VIDEO_ID') }
@@ -110,14 +110,14 @@ module Lumiere
 
     describe "#title" do
       it "returns the video title" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.title).to eql(title)
       end
     end
 
     describe "#videos" do
       it "returns the videos the playlist contains" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.videos).to match_array([
           YouTube.new_from_video_id(videos[0][:id]),
           YouTube.new_from_video_id(videos[1][:id])
@@ -127,28 +127,28 @@ module Lumiere
 
     describe "#description" do
       it "returns the video description" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.description).to eql(description)
       end
     end
 
     describe "#thumbnail_small" do
       it "returns the video thumbnail_small" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
       it "returns the video thumbnail_medium" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
       it "returns the video thumbnail_large" do
-        playlist.stub(:fetch) { remote_structure }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
       end
     end
