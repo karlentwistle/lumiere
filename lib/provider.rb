@@ -48,5 +48,11 @@ module Lumiere
         url == other.url
       end
     end
+
+    private
+
+    def raw_response
+      open(api_url).read
+    end
   end
 end

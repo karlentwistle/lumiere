@@ -56,10 +56,6 @@ class YouTubePlaylist < Provider
     @videos = videos
   end
 
-  def raw_response
-    open(api_url).read
-  end
-
   def fetch
     @fetch ||= self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
   end

@@ -49,10 +49,6 @@ class YouTube < Provider
     attr_writer attribute
   end
 
-  def raw_response
-    open(api_url).read
-  end
-
   def fetch
     @fetch ||= self.extend(YouTubeVideoRepresenter).from_json(raw_response)
   end

@@ -56,10 +56,6 @@ class Vimeo < Provider
 
   private
 
-  def raw_response
-    open(api_url).read
-  end
-
   def fetch
     videos = [].extend(VimeoVideosRepresenter).from_json(raw_response)
     @fetch ||= videos[0]
