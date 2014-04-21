@@ -39,7 +39,7 @@ class Vimeo < Provider
   end
 
   def duration
-    fetch.duration.to_i
+    fetch.duration
   end
 
   def thumbnail_small

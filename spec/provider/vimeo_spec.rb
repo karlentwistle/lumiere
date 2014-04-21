@@ -23,7 +23,7 @@ module Lumiere
         {
           'title' => title,
           'description' => description,
-          'duration' => duration,
+          'duration' => "#{duration}",
           'thumbnail_small' => thumbnail_small,
           'thumbnail_medium' => thumbnail_medium,
           'thumbnail_large' => thumbnail_large,
