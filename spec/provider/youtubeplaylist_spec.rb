@@ -25,9 +25,13 @@ module Lumiere
         { id: 'vLrslkB1pG8' },
       ]
     }
+    let(:total_results) { 2 }
     let(:remote_structure) {
       {
         'feed' => {
+	  'openSearch$totalResults' => {
+	    '$t' => "#{total_results}"
+	  },
           'title' => {'$t' => title},
           'subtitle' => {'$t' => description},
           'media$group' => {
@@ -152,6 +156,14 @@ module Lumiere
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
       end
     end
+
+    describe "#total_results" do
+      it "returns the video thumbnail_large" do
+	playlist.stub(:raw_response) { remote_structure }
+	expect(playlist.total_results).to eql(2)
+      end
+    end
+
   end
 
 end

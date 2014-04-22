@@ -4,6 +4,11 @@ module Lumiere
     include Representable::JSON
     self.representation_wrap = :feed
 
+    nested 'openSearch$totalResults' do
+      include Representable::Coercion
+      property :total_results, as: '$t', type: Integer
+    end
+
     nested 'title' do
       property :title, as: '$t'
     end

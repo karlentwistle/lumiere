@@ -37,7 +37,7 @@ class YouTubePlaylist < Provider
     end
   end
 
-  REMOTE_ATTRIBUTES = [:title, :description, :thumbnail_small, :thumbnail_medium, :thumbnail_large]
+  REMOTE_ATTRIBUTES = [:title, :description, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_results]
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do
