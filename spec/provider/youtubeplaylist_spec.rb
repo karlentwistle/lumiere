@@ -29,9 +29,9 @@ module Lumiere
     let(:remote_structure) {
       {
         'feed' => {
-	  'openSearch$totalResults' => {
-	    '$t' => "#{total_results}"
-	  },
+            'openSearch$totalResults' => {
+            '$t' => "#{total_results}"
+          },
           'title' => {'$t' => title},
           'subtitle' => {'$t' => description},
           'media$group' => {
