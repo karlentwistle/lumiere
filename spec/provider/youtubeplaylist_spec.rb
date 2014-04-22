@@ -61,7 +61,7 @@ module Lumiere
       }.to_json
     }
 
-    subject(:playlist) { YouTubePlaylist.new('VIDEO_ID') }
+    subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID') }
 
     describe ".useable?" do
       context "valid" do
@@ -91,11 +91,29 @@ module Lumiere
     end
 
     describe "#api_url" do
-      it "returns the url of the Vimeo api" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
-        expect(playlist.api_url).
-          to eql('http://gdata.youtube.com/feeds/api/playlists/PLAYLIST_ID?v=2&alt=json')
+      context "no opts passed" do
+        it "returns the url of the YouTube api" do
+          expect(playlist.api_url).
+            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=25&start-index=1&v=2&alt=json')
+        end
       end
+
+      context "start_index" do
+        subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID', start_index: 26) }
+        it "returns the url of the YouTube api with start_index" do
+          expect(playlist.api_url).
+            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=25&start-index=26&v=2&alt=json')
+        end
+      end
+
+      context "max_results" do
+        subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID', max_results: 10) }
+        it "returns the url of the YouTube api with max results" do
+          expect(playlist.api_url).
+            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=10&start-index=1&v=2&alt=json')
+        end
+      end
+
     end
 
     describe "#embed_url" do
@@ -122,6 +140,7 @@ module Lumiere
     describe "#videos" do
       it "returns the videos the playlist contains" do
         playlist.stub(:raw_response) { remote_structure }
+        expect(playlist.videos.size).to eql(2)
         expect(playlist.videos).to match_array([
           YouTube.new_from_video_id(videos[0][:id]),
           YouTube.new_from_video_id(videos[1][:id])
@@ -159,8 +178,8 @@ module Lumiere
 
     describe "#total_results" do
       it "returns the video thumbnail_large" do
-	playlist.stub(:raw_response) { remote_structure }
-	expect(playlist.total_results).to eql(2)
+        playlist.stub(:raw_response) { remote_structure }
+        expect(playlist.total_results).to eql(2)
       end
     end
 

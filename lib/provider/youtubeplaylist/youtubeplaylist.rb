@@ -10,8 +10,10 @@ class YouTubePlaylist < Provider
     USEABLE.include?(uri.host.to_s) && (uri.path == '/playlist' || uri.path == '/view_play_list')
   end
 
-  def initialize(url)
+  def initialize(url, opts={})
     @url = url
+    @start_index = opts[:start_index] || 1
+    @max_results = opts[:max_results] || 25
   end
 
   def playlist_id
@@ -19,7 +21,11 @@ class YouTubePlaylist < Provider
   end
 
   def api_url
-    "http://gdata.youtube.com/feeds/api/playlists/#{playlist_id}?v=2&alt=json"
+    url = "http://gdata.youtube.com/feeds/api/playlists/#{playlist_id}"
+    url << "?max-results=#{@max_results}"
+    url << "&start-index=#{@start_index}"
+    url << "&v=2&alt=json"
+    url
   end
 
   def embed_url
@@ -32,7 +38,13 @@ class YouTubePlaylist < Provider
 
   def videos
     fetch unless defined?(@fetch)
-    @videos.map do |video|
+
+    while @start_index < @total_results && @videos.size < @total_results
+      @start_index =+ @videos.size + 1
+      fetch!
+    end
+
+    @all_videos = @videos.map do |video|
       YouTube.new_from_video_id(video.video_id)
     end
   end
@@ -53,11 +65,16 @@ class YouTubePlaylist < Provider
   end
 
   def videos=(videos)
-    @videos = videos
+    @videos ||= []
+    @videos += videos
   end
 
   def fetch
     @fetch ||= self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
+  end
+
+  def fetch!
+    self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
   end
 
   def calculate_playlist_id

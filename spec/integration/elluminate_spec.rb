@@ -48,8 +48,16 @@ module Lumiere
           YouTube.new('http://www.youtube.com/watch?v=JWiwuiT58Yc'),
           YouTube.new('http://www.youtube.com/watch?v=yFTvbcNhEgc'),
         ])
-
       end
+    end
+
+    context "YouTube Playlist PL44955DED6D0262DB" do
+      subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=PL44955DED6D0262DB') }
+
+      it do
+        expect(video.videos.size).to eql(199) # the deleted video doesnt count
+      end
+
     end
 
   end
