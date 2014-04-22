@@ -31,7 +31,7 @@ module Lumiere
         it "raises an exception" do
           expect {
             Provider.delegate(url)
-          }.to raise_exception("sorry Lumiere doesnt currently support that provider")
+          }.to raise_exception(NotImplementedError)
         end
       end
     end

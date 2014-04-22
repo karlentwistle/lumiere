@@ -15,27 +15,27 @@ module Lumiere
         end
       end
 
-      raise "sorry Lumiere doesnt currently support that provider"
+      raise NotImplementedError
     end
 
     def api_url
-      raise "provider must provide a api_url"
+      raise NotImplementedError
     end
 
     def embed_url
-      raise "provider must provide a embed_url"
+      raise NotImplementedError
     end
 
     def embed_code
-      raise "provider must provide a embed_code"
+      raise NotImplementedError
     end
 
     def title
-      raise "provider must provide a title"
+      raise NotImplementedError
     end
 
     def description
-      raise "provider must provide a description"
+      raise NotImplementedError
     end
 
     def accessible?
