@@ -11,6 +11,13 @@ def valid_urls
     '1GCf29FPM4k' => 'http://youtu.be/1GCf29FPM4k',
     'U7f8j3mVMbc' => 'https://youtu.be/U7f8j3mVMbc',
     'abv4Fz7oNr0' => 'youtu.be/abv4Fz7oNr0',
+    'cUCSSJwO3GU' => 'https://www.youtube.com/embed/cUCSSJwO3GU',
+    'cUCSSJwO3GA' => 'http://www.youtube.com/embed/cUCSSJwO3GA',
+    'cUCSSJwO3GW' => 'www.youtube.com/embed/cUCSSJwO3GW',
+    'VeasFckfMHY' => 'http://www.youtube.com/user/EducatorVids3?v=VeasFckfMHY',
+    'VeasFckfMHS' => 'http://www.youtube.com/v/VeasFckfMHS',
+    'VeasFckfMHA' => 'http://www.youtube.com/v/VeasFckfMHA',
+    'BeasFckfMHY' => 'http://www.youtube.com/watch?feature=player_profilepage&v=BeasFckfMHY',
   }
 end
 

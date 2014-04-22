@@ -59,7 +59,11 @@ class YouTube < Provider
       params_hash = Hash[URI::decode_www_form(uri.query)]
       params_hash['v']
     else
-      uri.path.delete('/')
+      uri.path.gsub!('/embed/', '')
+      uri.path.gsub!('/v/', '')
+      uri.path.gsub!('/e/', '')
+      uri.path.delete!('/')
+      uri.path
     end
   end
 
