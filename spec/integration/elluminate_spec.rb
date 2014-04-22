@@ -28,7 +28,7 @@ module Lumiere
       end
     end
 
-    context "YouTube Playlist PLA575C81A1FBC04CF" do
+    context "YouTube Playlist 63F0C78739B09958" do
     subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
       it do
         expect(video.title).to eql('Music Playlist')
