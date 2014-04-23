@@ -7,6 +7,11 @@ module Lumiere
       property :title, as: '$t'
     end
 
+    nested 'published' do
+      include Representable::Coercion
+      property :upload_date, as: '$t', type: DateTime
+    end
+
     nested 'media$group' do
       nested 'media$description' do
         property :description, as: '$t'

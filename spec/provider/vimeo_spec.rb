@@ -96,6 +96,15 @@ module Lumiere
       end
     end
 
+    describe "#upload_date" do
+      let(:upload_date) { Date.today }
+      let(:remote_structure) { [ { upload_date: upload_date } ].to_json }
+      it "returns the date the video was uploaded" do
+        video.stub(:raw_response) { remote_structure }
+        expect(video.upload_date).to eql(upload_date)
+      end
+    end
+
     describe "#thumbnail_small" do
       let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
       let(:remote_structure) { [ { thumbnail_small: thumbnail_small } ].to_json }

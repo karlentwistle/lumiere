@@ -46,6 +46,10 @@ class Vimeo < Provider
     fetch.duration
   end
 
+  def upload_date
+    fetch.upload_date
+  end
+
   def thumbnail_small
     fetch.thumbnail_small
   end

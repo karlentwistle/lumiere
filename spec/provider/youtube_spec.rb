@@ -120,6 +120,23 @@ module Lumiere
       end
     end
 
+    describe "#upload_date" do
+      let(:upload_date) { Date.today }
+      let(:remote_structure) {
+        {
+          'entry' => {
+            'published' => {
+              '$t' => upload_date
+            },
+          }
+        }.to_json
+      }
+      it "returns the video duration" do
+        video.stub(:raw_response) { remote_structure }
+        expect(video.upload_date).to eql(upload_date)
+      end
+    end
+
     describe "#duration" do
       let(:duration) { '35' }
       let(:remote_structure) {

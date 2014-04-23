@@ -53,7 +53,7 @@ class YouTube < Provider
     @thumbnails[2].url
   end
 
-  REMOTE_ATTRIBUTES = [:title, :description, :duration]
+  REMOTE_ATTRIBUTES = [:title, :description, :duration, :upload_date]
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do

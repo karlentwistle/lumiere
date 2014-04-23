@@ -6,6 +6,7 @@ module Lumiere
     property :title
     property :description
     property :duration, type: Integer
+    property :upload_date, type: DateTime
     property :thumbnail_small
     property :thumbnail_medium
     property :thumbnail_large
