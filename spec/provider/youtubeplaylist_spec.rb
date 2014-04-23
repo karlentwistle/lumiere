@@ -17,53 +17,6 @@ end
 
 module Lumiere
   describe YouTubePlaylist do
-    let(:description) { 'Description of my awesome playlist' }
-    let(:title) { 'Title of my awesome playlist' }
-    let(:thumbnail_small) { 'Thumbnail Small' }
-    let(:thumbnail_medium) { 'Thumbnail Medium' }
-    let(:thumbnail_large) { 'Thumbnail Large' }
-    let(:videos) {
-      [
-        { id: '2_HXUhShhmY' },
-        { id: 'vLrslkB1pG8' },
-      ]
-    }
-    let(:total_results) { 2 }
-    let(:remote_structure) {
-      {
-        'feed' => {
-            'openSearch$totalResults' => {
-            '$t' => "#{total_results}"
-          },
-          'title' => {'$t' => title},
-          'subtitle' => {'$t' => description},
-          'media$group' => {
-            'media$thumbnail' => [
-              {'url' => thumbnail_small},
-              {'url' => thumbnail_medium},
-              {'url' => thumbnail_large},
-            ]
-          },
-          'entry' => [
-            {
-              'media$group' => {
-                'yt$videoid' => {
-                  '$t' => videos[0][:id]
-                }
-              }
-            },
-            {
-              'media$group' => {
-                'yt$videoid' => {
-                  '$t' => videos[1][:id]
-                }
-              }
-            },
-          ]
-        }
-      }.to_json
-    }
-
     subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID') }
 
     describe ".useable?" do
@@ -134,6 +87,15 @@ module Lumiere
     end
 
     describe "#title" do
+      let(:title) { 'Title of my awesome playlist' }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'title' => {'$t' => title},
+          }
+        }.to_json
+      }
+
       it "returns the video title" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.title).to eql(title)
@@ -141,17 +103,55 @@ module Lumiere
     end
 
     describe "#videos" do
+      let(:video_1) { { id: '2_HXUhShhmY' } }
+      let(:video_2) { { id: 'vLrslkB1pG8' } }
+      let(:videos) { [video_1, video_2] }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'openSearch$totalResults' => {
+              '$t' => "#{videos.size}"
+            },
+            'entry' => [
+              {
+                'media$group' => {
+                  'yt$videoid' => {
+                    '$t' => video_1[:id]
+                  }
+                }
+              },
+              {
+                'media$group' => {
+                  'yt$videoid' => {
+                    '$t' => video_2[:id]
+                  }
+                }
+              },
+            ]
+          }
+        }.to_json
+      }
+
       it "returns the videos the playlist contains" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.videos.size).to eql(2)
         expect(playlist.videos).to match_array([
-          YouTube.new_from_video_id(videos[0][:id]),
-          YouTube.new_from_video_id(videos[1][:id])
+          YouTube.new_from_video_id(video_1[:id]),
+          YouTube.new_from_video_id(video_2[:id])
         ])
       end
     end
 
     describe "#description" do
+      let(:description) { 'Description of my awesome playlist' }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'subtitle' => {'$t' => description},
+          }
+        }.to_json
+      }
+
       it "returns the video description" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.description).to eql(description)
@@ -159,6 +159,23 @@ module Lumiere
     end
 
     describe "#thumbnail_small" do
+      let(:thumbnail_small) { 'Thumbnail Small' }
+      let(:thumbnail_medium) { 'Thumbnail Medium' }
+      let(:thumbnail_large) { 'Thumbnail Large' }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'media$group' => {
+              'media$thumbnail' => [
+                {'url' => thumbnail_small},
+                {'url' => thumbnail_medium},
+                {'url' => thumbnail_large},
+              ]
+            },
+          }
+        }.to_json
+      }
+
       it "returns the video thumbnail_small" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_small).to eql(thumbnail_small)
@@ -166,6 +183,23 @@ module Lumiere
     end
 
     describe "#thumbnail_medium" do
+      let(:thumbnail_small) { 'Thumbnail Small' }
+      let(:thumbnail_medium) { 'Thumbnail Medium' }
+      let(:thumbnail_large) { 'Thumbnail Large' }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'media$group' => {
+              'media$thumbnail' => [
+                {'url' => thumbnail_small},
+                {'url' => thumbnail_medium},
+                {'url' => thumbnail_large},
+              ]
+            },
+          }
+        }.to_json
+      }
+
       it "returns the video thumbnail_medium" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
@@ -173,6 +207,23 @@ module Lumiere
     end
 
     describe "#thumbnail_large" do
+      let(:thumbnail_small) { 'Thumbnail Small' }
+      let(:thumbnail_medium) { 'Thumbnail Medium' }
+      let(:thumbnail_large) { 'Thumbnail Large' }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'media$group' => {
+              'media$thumbnail' => [
+                {'url' => thumbnail_small},
+                {'url' => thumbnail_medium},
+                {'url' => thumbnail_large},
+              ]
+            },
+          }
+        }.to_json
+      }
+
       it "returns the video thumbnail_large" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
@@ -180,6 +231,17 @@ module Lumiere
     end
 
     describe "#total_results" do
+      let(:total_results) { 2 }
+      let(:remote_structure) {
+        {
+          'feed' => {
+            'openSearch$totalResults' => {
+              '$t' => "#{total_results}"
+            },
+          }
+        }.to_json
+      }
+
       it "returns the video thumbnail_large" do
         playlist.stub(:raw_response) { remote_structure }
         expect(playlist.total_results).to eql(2)
