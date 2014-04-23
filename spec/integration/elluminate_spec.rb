@@ -57,7 +57,14 @@ module Lumiere
       it do
         expect(video.videos.size).to eql(199) # the deleted video doesnt count
       end
+    end
 
+    context "YouTube Playlist PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ" do
+      subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ') }
+
+      it do
+        expect(video.videos.size).to eql(200)
+      end
     end
 
   end

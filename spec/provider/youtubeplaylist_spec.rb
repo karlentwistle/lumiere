@@ -9,6 +9,9 @@ def valid_urls
     'PL48A83AD3506C9D38' => 'https://www.youtube.com/playlist?list=PL48A83AD3506C9D38',
     '63F0C78739B09958' => 'https://www.youtube.com/view_play_list?p=63F0C78739B09958',
     '63F0C7873' => 'youtube.com/view_play_list?p=63F0C7873',
+    'PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ' => 'https://www.youtube.com/playlist?p=PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ',
+    'AGGznEl712WekhqwD9jh3YXR-cJTjSBVjQ' => 'https://youtube.com/playlist?p=AGGznEl712WekhqwD9jh3YXR-cJTjSBVjQ',
+    'WAD-cJTjSBVjQ' => 'http://www.youtube.com/playlist?p=WAD-cJTjSBVjQ',
   }
 end
 
