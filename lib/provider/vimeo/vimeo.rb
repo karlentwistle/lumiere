@@ -57,8 +57,7 @@ class Vimeo < Provider
   private
 
   def fetch
-    videos = [].extend(VimeoVideosRepresenter).from_json(raw_response)
-    @fetch ||= videos[0]
+    @fetch ||= [].extend(VimeoVideosRepresenter).from_json(raw_response)[0]
   end
 
   def calculate_video_id
