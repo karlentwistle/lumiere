@@ -34,7 +34,22 @@ class YouTube < Provider
     "<iframe src=\"//www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
-  REMOTE_ATTRIBUTES = [:title, :description, :duration, :thumbnail_small, :thumbnail_medium, :thumbnail_large]
+  def thumbnail_small
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[0].url
+  end
+
+  def thumbnail_medium
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[1].url
+  end
+
+  def thumbnail_large
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[2].url
+  end
+
+  REMOTE_ATTRIBUTES = [:title, :description, :duration]
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do
@@ -48,6 +63,8 @@ class YouTube < Provider
   REMOTE_ATTRIBUTES.each do |attribute|
     attr_writer attribute
   end
+
+  attr_writer :thumbnails
 
   def fetch!
     self.extend(YouTubeVideoRepresenter).from_json(raw_response)

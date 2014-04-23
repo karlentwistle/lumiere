@@ -135,16 +135,14 @@ module Lumiere
 
     describe "#thumbnail_small" do
       let(:thumbnail_small) { 'Thumbnail Small' }
-      let(:thumbnail_medium) { 'Thumbnail Medium' }
-      let(:thumbnail_large) { 'Thumbnail Large' }
       let(:remote_structure) {
         {
           'entry' => {
             'media$group' => {
               'media$thumbnail' => [
                 {'url' => thumbnail_small},
-                {'url' => thumbnail_medium},
-                {'url' => thumbnail_large},
+                {'url' => 'stub'},
+                {'url' => 'stub'},
               ],
             }
           }
@@ -157,17 +155,15 @@ module Lumiere
     end
 
     describe "#thumbnail_medium" do
-      let(:thumbnail_small) { 'Thumbnail Small' }
       let(:thumbnail_medium) { 'Thumbnail Medium' }
-      let(:thumbnail_large) { 'Thumbnail Large' }
       let(:remote_structure) {
         {
           'entry' => {
             'media$group' => {
               'media$thumbnail' => [
-                {'url' => thumbnail_small},
+                {'url' => 'stub'},
                 {'url' => thumbnail_medium},
-                {'url' => thumbnail_large},
+                {'url' => 'stub'},
               ],
             }
           }
@@ -180,16 +176,14 @@ module Lumiere
     end
 
     describe "#thumbnail_large" do
-      let(:thumbnail_small) { 'Thumbnail Small' }
-      let(:thumbnail_medium) { 'Thumbnail Medium' }
       let(:thumbnail_large) { 'Thumbnail Large' }
       let(:remote_structure) {
         {
           'entry' => {
             'media$group' => {
               'media$thumbnail' => [
-                {'url' => thumbnail_small},
-                {'url' => thumbnail_medium},
+                {'url' => 'stub'},
+                {'url' => 'stub'},
                 {'url' => thumbnail_large},
               ],
             }

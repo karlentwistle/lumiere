@@ -18,10 +18,8 @@ module Lumiere
     end
 
     nested 'media$group' do
-      nested 'media$thumbnail' do
-        property :thumbnail_small, :reader => lambda { |doc, args| self.thumbnail_small = doc[0]['url'] }
-        property :thumbnail_medium, :reader => lambda { |doc, args| self.thumbnail_medium = doc[1]['url'] }
-        property :thumbnail_large, :reader => lambda { |doc, args| self.thumbnail_large = doc[2]['url'] }
+      collection :thumbnails, class: OpenStruct, as: 'media$thumbnail' do
+        property :url
       end
     end
 

@@ -49,7 +49,22 @@ class YouTubePlaylist < Provider
     end
   end
 
-  REMOTE_ATTRIBUTES = [:title, :description, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_results]
+  def thumbnail_small
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[0].url
+  end
+
+  def thumbnail_medium
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[1].url
+  end
+
+  def thumbnail_large
+    fetch! unless defined?(@thumbnails)
+    @thumbnails[2].url
+  end
+
+  REMOTE_ATTRIBUTES = [:title, :description, :total_results]
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do
@@ -63,6 +78,8 @@ class YouTubePlaylist < Provider
   REMOTE_ATTRIBUTES.each do |attribute|
     attr_writer attribute
   end
+
+  attr_writer :thumbnails
 
   def videos=(videos)
     @videos ||= []
