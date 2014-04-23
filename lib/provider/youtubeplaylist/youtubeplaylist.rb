@@ -16,6 +16,10 @@ class YouTubePlaylist < Provider
     @max_results = opts[:max_results] || 25
   end
 
+  def provider
+    "YouTube"
+  end
+
   def playlist_id
     @playlist_id ||= calculate_playlist_id
   end

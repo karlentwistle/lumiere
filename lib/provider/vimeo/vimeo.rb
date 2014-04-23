@@ -14,6 +14,10 @@ class Vimeo < Provider
     @url = url
   end
 
+  def provider
+    "Vimeo"
+  end
+
   def video_id
     @video_id ||= calculate_video_id
   end

@@ -18,6 +18,10 @@ class YouTube < Provider
     @url = url
   end
 
+  def provider
+    "YouTube"
+  end
+
   def video_id
     @video_id ||= calculate_video_id
   end

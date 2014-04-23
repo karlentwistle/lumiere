@@ -20,6 +20,7 @@ Usage
 ``` ruby
 video = Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ')
 # video.accessible?      => true
+# video.provider         => 'YouTube'
 # video.title            => "Shock haircut Supermodel punishment"
 # video.description      => "Supermodels are forced to cut their long locks and burst into tears. Fashion makeover or Punishment?"
 # video.duration         => 419
@@ -32,6 +33,7 @@ video = Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ')
 
 video = Elluminate.new("http://vimeo.com/4268592")
 # video.accessible?      => true
+# video.provider         => 'Vimeo'
 # video.title            => "Alan Watts"
 # video.description      => "Alan Watts&#13;<br />\n&#13;<br />\n&#13;<br />\nSo true.&#13;"
 # video.duration         => 141

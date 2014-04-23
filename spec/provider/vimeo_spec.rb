@@ -40,6 +40,12 @@ module Lumiere
       end
     end
 
+    describe "#provider" do
+      it "returns Vimeo" do
+        expect(video.provider).to eql("Vimeo")
+      end
+    end
+
     describe "#api_url" do
       it "returns the url of the Vimeo api" do
         video.stub(:video_id) { 'VIDEO_ID' }

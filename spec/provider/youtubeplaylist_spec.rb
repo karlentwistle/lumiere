@@ -46,6 +46,12 @@ module Lumiere
       end
     end
 
+    describe "#provider" do
+      it "returns YouTube" do
+        expect(playlist.provider).to eql("YouTube")
+      end
+    end
+
     describe "#api_url" do
       context "no opts passed" do
         it "returns the url of the YouTube api" do

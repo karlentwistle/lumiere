@@ -5,6 +5,7 @@ module Lumiere
     context "Vimeo 4268592" do
     subject(:video) { Elluminate.new('https://vimeo.com/4268592') }
       it do
+        expect(video.provider).to eql('Vimeo')
         expect(video.title).to eql('Alan Watts')
         expect(video.description).to eql("Alan Watts&#13;<br />\n&#13;<br />\n&#13;<br />\nSo true.&#13;")
         expect(video.duration).to eql(141)
@@ -18,6 +19,7 @@ module Lumiere
     context "YouTube NwRuI0yjreQ" do
     subject(:video) { Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ') }
       it do
+        expect(video.provider).to eql('YouTube')
         expect(video.title).to eql('Shock haircut Supermodel punishment')
         expect(video.description).to eql("Supermodels are forced to cut their long locks and burst into tears. Fashion makeover or Punishment?")
         expect(video.duration).to eql(419)
@@ -31,6 +33,7 @@ module Lumiere
     context "YouTube Playlist 63F0C78739B09958" do
     subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
       it do
+        expect(video.provider).to eql('YouTube')
         expect(video.title).to eql('Music Playlist')
         expect(video.description).to eql("Playlist just brimming with the odd, beautiful, or interesting music videos I come across")
         expect(video.accessible?).to eql(true)

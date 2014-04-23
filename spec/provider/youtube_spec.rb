@@ -57,6 +57,12 @@ module Lumiere
       end
     end
 
+    describe "#provider" do
+      it "returns YouTube" do
+        expect(video.provider).to eql("YouTube")
+      end
+    end
+
     describe "#api_url" do
       it "returns the url of the YouTube api" do
         video.stub(:video_id) { 'VIDEO_ID' }

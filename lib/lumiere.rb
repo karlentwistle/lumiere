@@ -17,6 +17,7 @@ class Elluminate
     @provider ||= Lumiere::Provider.delegate(url)
   end
 
+  def_delegators :@provider, :provider
   def_delegators :@provider, :title, :description, :duration
   def_delegators :@provider, :thumbnail_small, :thumbnail_medium, :thumbnail_large
   def_delegators :@provider, :embed_code, :embed_url
