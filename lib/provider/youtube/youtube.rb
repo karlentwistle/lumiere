@@ -38,7 +38,7 @@ class YouTube < Provider
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do
-      fetch unless defined?(@fetch)
+      fetch! unless instance_variable_get("@#{attribute}")
       instance_variable_get("@#{attribute}")
     end
   end
@@ -49,8 +49,8 @@ class YouTube < Provider
     attr_writer attribute
   end
 
-  def fetch
-    @fetch ||= self.extend(YouTubeVideoRepresenter).from_json(raw_response)
+  def fetch!
+    self.extend(YouTubeVideoRepresenter).from_json(raw_response)
   end
 
   def calculate_video_id

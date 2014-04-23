@@ -37,7 +37,7 @@ class YouTubePlaylist < Provider
   end
 
   def videos
-    fetch unless defined?(@fetch)
+    fetch! unless defined?(@videos)
 
     while @start_index < @total_results && @videos.size < @total_results
       @start_index =+ @videos.size + 1
@@ -53,7 +53,7 @@ class YouTubePlaylist < Provider
 
   REMOTE_ATTRIBUTES.each do |attribute|
     define_method(attribute) do
-      fetch unless defined?(@fetch)
+      fetch! unless instance_variable_get("@#{attribute}")
       instance_variable_get("@#{attribute}")
     end
   end
@@ -67,10 +67,6 @@ class YouTubePlaylist < Provider
   def videos=(videos)
     @videos ||= []
     @videos += videos
-  end
-
-  def fetch
-    @fetch ||= self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
   end
 
   def fetch!
