@@ -24,7 +24,6 @@ video = Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ')
 # video.title            => "Shock haircut Supermodel punishment"
 # video.description      => "Supermodels are forced to cut their long locks and burst into tears. Fashion makeover or Punishment?"
 # video.duration         => 419
-# video.date             => Mon Mar 03 16:29:31 UTC 2008
 # video.thumbnail_small  => "http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg"
 # video.thumbnail_medium => "http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg"
 # video.thumbnail_large  => "http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg"
