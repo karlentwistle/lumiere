@@ -1,5 +1,6 @@
 require "lumiere/version"
 require 'open-uri'
+require 'forwardable'
 require 'net/http'
 require 'json'
 require 'representable'
