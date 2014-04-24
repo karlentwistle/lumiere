@@ -1,8 +1,6 @@
 module Lumiere
   module YouTubeVideoRepresenter
     include Representable::JSON
-    self.representation_wrap = :entry
-
     nested 'title' do
       property :title, as: '$t'
     end
@@ -27,4 +25,12 @@ module Lumiere
       end
     end
   end
+
+  module YouTubeVideoEntryRepresenter
+    include Representable::JSON
+    nested 'entry' do
+      include YouTubeVideoRepresenter
+    end
+  end
+
 end

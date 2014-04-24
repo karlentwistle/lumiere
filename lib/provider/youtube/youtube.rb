@@ -70,7 +70,7 @@ class YouTube < Provider
   attr_writer :thumbnails
 
   def fetch!
-    self.extend(YouTubeVideoRepresenter).from_json(raw_response)
+    self.extend(YouTubeVideoEntryRepresenter).from_json(raw_response)
   end
 
   def calculate_video_id
