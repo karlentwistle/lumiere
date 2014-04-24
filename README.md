@@ -18,17 +18,17 @@ Usage
 -----
 
 ``` ruby
-video = Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ')
+video = Elluminate.new('https://www.youtube.com/watch?v=6sJ80Y1YLJY')
 # video.accessible?      => true
 # video.provider         => 'YouTube'
-# video.title            => "Shock haircut Supermodel punishment"
-# video.description      => "Supermodels are forced to cut their long locks and burst into tears. Fashion makeover or Punishment?"
-# video.duration         => 419
-# video.thumbnail_small  => "http://i1.ytimg.com/vi/NwRuI0yjreQ/default.jpg"
-# video.thumbnail_medium => "http://i1.ytimg.com/vi/NwRuI0yjreQ/mqdefault.jpg"
-# video.thumbnail_large  => "http://i1.ytimg.com/vi/NwRuI0yjreQ/hqdefault.jpg"
-# video.embed_url        => "http://www.youtube.com/embed/NwRuI0yjreQ"
-# video.embed_code       => "'<iframe src="//www.youtube.com/embed/NwRuI0yjreQ" frameborder="0" allowfullscreen></iframe>'"
+# video.title            => "enduser - End of A Beginning (Sublight Version)"
+# video.description      => "enduser - End of A Beginning (Sublight Version)"
+# video.duration         => 367
+# video.thumbnail_small  => "http://i1.ytimg.com/vi/6sJ80Y1YLJY/default.jpg"
+# video.thumbnail_medium => "http://i1.ytimg.com/vi/6sJ80Y1YLJY/mqdefault.jpg"
+# video.thumbnail_large  => "http://i1.ytimg.com/vi/6sJ80Y1YLJY/hqdefault.jpg"
+# video.embed_url        => "http://www.youtube.com/embed/6sJ80Y1YLJY"
+# video.embed_code       => "'<iframe src="//www.youtube.com/embed/6sJ80Y1YLJY" frameborder="0" allowfullscreen></iframe>'"
 
 video = Elluminate.new("http://vimeo.com/4268592")
 # video.accessible?      => true
