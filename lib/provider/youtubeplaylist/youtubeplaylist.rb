@@ -6,7 +6,7 @@ class YouTubePlaylist < Provider
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
-    USEABLE.include?(uri.host.to_s) && (uri.path == '/playlist' || uri.path == '/view_play_list')
+    USEABLE.include?(uri.host) && (uri.path == '/playlist' || uri.path == '/view_play_list')
   end
 
   def initialize(url, opts={})

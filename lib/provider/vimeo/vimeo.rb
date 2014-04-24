@@ -6,7 +6,7 @@ class Vimeo < Provider
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
-    USEABLE.include?(uri.host.to_s)
+    USEABLE.include?(uri.host)
   end
 
   def initialize(url)
