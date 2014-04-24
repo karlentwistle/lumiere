@@ -5,6 +5,11 @@ require 'vcr'
 require 'active_support'
 require 'active_support/inflector'
 
+if ENV['CI']
+  require 'coveralls'
+  Coveralls.wear!
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect

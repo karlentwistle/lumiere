@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/karlentwistle/lumiere.png?branch=master)](http://travis-ci.org/karlentwistle/lumiere)
+[![Gem Version](https://badge.fury.io/rb/lumiere.png)](http://badge.fury.io/rb/lumiere) [![Build Status](https://travis-ci.org/karlentwistle/lumiere.png?branch=master)](https://travis-ci.org/karlentwistle/lumiere) [![Dependency Status](https://gemnasium.com/karlentwistle/lumiere.png)](https://gemnasium.com/karlentwistle/lumiere) [![Code Climate](https://codeclimate.com/github/karlentwistle/lumiere.png)](https://codeclimate.com/github/karlentwistle/lumiere) [![Coverage Status](https://coveralls.io/repos/karlentwistle/lumiere/badge.png?branch=master)](https://coveralls.io/r/karlentwistle/lumiere)
 
 # Lumiere
 
