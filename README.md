@@ -20,6 +20,7 @@ Usage
 ``` ruby
 video = Elluminate.new('https://www.youtube.com/watch?v=6sJ80Y1YLJY')
 # video.accessible?      => true
+# video.video_id         => '6sJ80Y1YLJY'
 # video.provider         => 'YouTube'
 # video.title            => "enduser - End of A Beginning (Sublight Version)"
 # video.description      => "enduser - End of A Beginning (Sublight Version)"
@@ -32,6 +33,7 @@ video = Elluminate.new('https://www.youtube.com/watch?v=6sJ80Y1YLJY')
 
 video = Elluminate.new("http://vimeo.com/4268592")
 # video.accessible?      => true
+# video.video_id         => '4268592'
 # video.provider         => 'Vimeo'
 # video.title            => "Alan Watts"
 # video.description      => "Alan Watts&#13;<br />\n&#13;<br />\n&#13;<br />\nSo true.&#13;"

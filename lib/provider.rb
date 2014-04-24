@@ -18,6 +18,14 @@ module Lumiere
       raise NotImplementedError
     end
 
+    def video_id
+      raise NotImplementedError
+    end
+
+    def playlist_id
+      raise NotImplementedError
+    end
+
     def api_url
       raise NotImplementedError
     end
