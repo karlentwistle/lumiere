@@ -1,12 +1,11 @@
 module Lumiere
 class YouTubePlaylist < Provider
-  include ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
 
   def self.useable?(url)
-    uri = schemeless_parse(url)
+    uri = URISchemeless.parse(url)
     USEABLE.include?(uri.host.to_s) && (uri.path == '/playlist' || uri.path == '/view_play_list')
   end
 
@@ -95,7 +94,7 @@ class YouTubePlaylist < Provider
   end
 
   def calculate_playlist_id
-    uri = schemeless_parse(url)
+    uri = URISchemeless.parse(url)
     params_hash = Hash[URI::decode_www_form(uri.query)]
     params_hash['list'] || params_hash['p']
   end

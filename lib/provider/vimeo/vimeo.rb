@@ -1,12 +1,11 @@
 module Lumiere
 class Vimeo < Provider
-  include ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.vimeo.com', 'vimeo.com']
 
   def self.useable?(url)
-    uri = schemeless_parse(url)
+    uri = URISchemeless.parse(url)
     USEABLE.include?(uri.host.to_s)
   end
 
@@ -69,8 +68,9 @@ class Vimeo < Provider
   end
 
   def calculate_video_id
-    uri = schemeless_parse(url)
-    uri.path.delete('/')
+    uri = URISchemeless.parse(url)
+    uri.path.delete!('/')
+    uri.path
   end
 
 end

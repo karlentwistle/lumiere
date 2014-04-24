@@ -1,12 +1,11 @@
 module Lumiere
 class YouTube < Provider
-  include ExtendedURI
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
 
   def self.useable?(url)
-    uri = schemeless_parse(url)
+    uri = URISchemeless.parse(url)
     USEABLE.include?(uri.host.to_s)
   end
 
@@ -75,7 +74,7 @@ class YouTube < Provider
   end
 
   def calculate_video_id
-    uri = schemeless_parse(url)
+    uri = URISchemeless.parse(url)
     if uri.query
       params_hash = Hash[URI::decode_www_form(uri.query)]
       params_hash['v']
