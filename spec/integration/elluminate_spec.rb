@@ -33,17 +33,17 @@ module Lumiere
     end
 
     context "YouTube Playlist 63F0C78739B09958" do
-    subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
+    subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
       it do
-        expect(video.provider).to eql('YouTube')
-        expect(video.title).to eql('Music Playlist')
-        expect(video.description).to eql("Playlist just brimming with the odd, beautiful, or interesting music videos I come across")
-        expect(video.accessible?).to eql(true)
-        expect(video.thumbnail_small).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/default.jpg')
-        expect(video.thumbnail_medium).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/mqdefault.jpg')
-        expect(video.thumbnail_large).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/hqdefault.jpg')
+        expect(playlist.provider).to eql('YouTube')
+        expect(playlist.title).to eql('Music Playlist')
+        expect(playlist.description).to eql("Playlist just brimming with the odd, beautiful, or interesting music videos I come across")
+        expect(playlist.accessible?).to eql(true)
+        expect(playlist.thumbnail_small).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/default.jpg')
+        expect(playlist.thumbnail_medium).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/mqdefault.jpg')
+        expect(playlist.thumbnail_large).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/hqdefault.jpg')
 
-        expect(video.videos).to match_array([
+        expect(playlist.videos).to match_array([
           YouTube.new('http://www.youtube.com/watch?v=nyMkLwSyOVQ'),
           YouTube.new('http://www.youtube.com/watch?v=2_HXUhShhmY'),
           YouTube.new('http://www.youtube.com/watch?v=lLJf9qJHR3E'),
@@ -57,18 +57,18 @@ module Lumiere
     end
 
     context "YouTube Playlist PL44955DED6D0262DB" do
-      subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=PL44955DED6D0262DB') }
+      subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=PL44955DED6D0262DB') }
 
       it do
-        expect(video.videos.size).to eql(199) # the deleted video doesnt count
+        expect(playlist.videos.size).to eql(199) # the deleted video doesnt count
       end
     end
 
     context "YouTube Playlist PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ" do
-      subject(:video) { Elluminate.new('https://www.youtube.com/playlist?p=PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ') }
+      subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ') }
 
       it do
-        expect(video.videos.size).to eql(200)
+        expect(playlist.videos.size).to eql(200)
       end
     end
 
