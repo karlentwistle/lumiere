@@ -56,4 +56,3 @@ Contributors
 
 ## TODO
 * Add playlist support for Vimeo (new_from_video_id)
-* Refactor Vimeo to recognize embed links

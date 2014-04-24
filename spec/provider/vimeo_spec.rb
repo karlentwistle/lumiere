@@ -7,6 +7,11 @@ def valid_urls
     '10000' => 'http://vimeo.com/10000',
     '99999' => 'https://vimeo.com/99999',
     '80' => 'vimeo.com/80',
+    '92224516' => '//player.vimeo.com/video/92224516?badge=0',
+    '15468' => 'http://player.vimeo.com/video/15468',
+    '10' =>'player.vimeo.com/video/10',
+    '999' =>'http://player.vimeo.com/video/999',
+    '1010' =>'http://player.vimeo.com/video/1010',
   }
 end
 

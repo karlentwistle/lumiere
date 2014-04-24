@@ -2,7 +2,7 @@ module Lumiere
 class Vimeo < Provider
   attr_accessor :url
 
-  USEABLE = ['www.vimeo.com', 'vimeo.com']
+  USEABLE = ['www.vimeo.com', 'vimeo.com', 'player.vimeo.com']
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
@@ -69,6 +69,7 @@ class Vimeo < Provider
 
   def calculate_video_id
     uri = URISchemeless.parse(url)
+    uri.path.gsub!('/video/', '')
     uri.path.delete!('/')
     uri.path
   end
