@@ -11,6 +11,10 @@ module Lumiere
     end
 
     nested 'media$group' do
+      nested 'yt$videoid' do
+        property :video_id, as: '$t'
+      end
+
       nested 'media$description' do
         property :description, as: '$t'
       end

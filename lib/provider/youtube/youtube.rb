@@ -13,7 +13,7 @@ class YouTube < Provider
     new("http://www.youtube.com/watch?v=#{video_id}")
   end
 
-  def initialize(url)
+  def initialize(url=nil)
     @url = url
   end
 
@@ -67,7 +67,7 @@ class YouTube < Provider
     attr_writer attribute
   end
 
-  attr_writer :thumbnails
+  attr_writer :thumbnails, :video_id
 
   def fetch!
     self.extend(YouTubeVideoEntryRepresenter).from_json(raw_response)

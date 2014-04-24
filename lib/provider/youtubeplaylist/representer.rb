@@ -1,3 +1,6 @@
+require_relative '../youtube/youtube'
+require_relative '../youtube/representer'
+
 module Lumiere
 
   module YouTubePlaylistRepresenter
@@ -23,20 +26,7 @@ module Lumiere
       end
     end
 
-    collection :videos, as: :entry, class: OpenStruct do
-
-      nested 'links' do
-        property :url, :reader => lambda { |doc, args| self.url = doc[0]['href'] }
-      end
-
-      nested 'media$group' do
-        nested 'yt$videoid' do
-          property :video_id, as: '$t'
-        end
-      end
-
-    end
-
+    collection :videos, as: :entry, extend: YouTubeVideoRepresenter, class: YouTube
   end
 
 end
