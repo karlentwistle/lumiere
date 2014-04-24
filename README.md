@@ -29,7 +29,20 @@ video = Elluminate.new('https://www.youtube.com/watch?v=6sJ80Y1YLJY')
 # video.thumbnail_medium => "http://i1.ytimg.com/vi/6sJ80Y1YLJY/mqdefault.jpg"
 # video.thumbnail_large  => "http://i1.ytimg.com/vi/6sJ80Y1YLJY/hqdefault.jpg"
 # video.embed_url        => "http://www.youtube.com/embed/6sJ80Y1YLJY"
-# video.embed_code       => "'<iframe src="//www.youtube.com/embed/6sJ80Y1YLJY" frameborder="0" allowfullscreen></iframe>'"
+# video.embed_code       => "<iframe src="//www.youtube.com/embed/6sJ80Y1YLJY" frameborder="0" allowfullscreen></iframe>"
+
+playlist = Elluminate.new('https://www.youtube.com/playlist?list=PL4AEB04ABEB34B5EC')
+# playlist.videos           => [Array of YouTube videos]
+# playlist.videos.count     => 32
+# playlist.accessible?      => true
+# playlist.playlist_id      => 'PL4AEB04ABEB34B5EC'
+# playlist.title            => "Mat Zo Anjunabeats Playlist"
+# playlist.description      => "A playlist covering Mat Zo's releases on Anjunabeats"
+# playlist.thumbnail_small  => "http://i.ytimg.com/vi/B0bXdMQlrEY/default.jpg"
+# playlist.thumbnail_medium => "http://i.ytimg.com/vi/B0bXdMQlrEY/mqdefault.jpg"
+# playlist.thumbnail_large  => "http://i.ytimg.com/vi/B0bXdMQlrEY/hqdefault.jpg"
+# playlist.embed_url        => "http://youtube.com/embed/?list=PL4AEB04ABEB34B5EC"
+# playlist.embed_code       => "<iframe src=\"//youtube.com/embed/?list=PL4AEB04ABEB34B5EC\" frameborder=\"0\" allowfullscreen></iframe>"
 
 video = Elluminate.new("http://vimeo.com/4268592")
 # video.accessible?      => true
