@@ -4,16 +4,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'lumiere/version'
 
 Gem::Specification.new do |spec|
+  spec.platform      = Gem::Platform::RUBY
   spec.name          = "lumiere"
   spec.version       = Lumiere::VERSION
-  spec.authors       = ["Karl Entwistle"]
-  spec.email         = ["karl.entwistle@unboxedconsulting.com"]
+  spec.author        = "Karl Entwistle"
+  spec.email         = "karl.entwistle@unboxedconsulting.com"
   spec.summary       = %q{Lumiere fetches metadata from video providers}
   spec.description   = %q{Lumiere fetches metadata from video providers}
   spec.homepage      = "https://github.com/karlentwistle/lumiere"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.required_ruby_version = '>= 1.9.3'
+
+  spec.files         = Dir['LICENSE.txt', 'README.rdoc', 'lib/**/*']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
