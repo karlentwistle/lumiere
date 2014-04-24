@@ -30,11 +30,39 @@ module Lumiere
       raise NotImplementedError
     end
 
+    def provider
+      raise NotImplementedError
+    end
+
     def title
       raise NotImplementedError
     end
 
     def description
+      raise NotImplementedError
+    end
+
+    def duration
+      raise NotImplementedError
+    end
+
+    def upload_date
+      raise NotImplementedError
+    end
+
+    def thumbnail_small
+      raise NotImplementedError
+    end
+
+    def thumbnail_medium
+      raise NotImplementedError
+    end
+
+    def thumbnail_large
+      raise NotImplementedError
+    end
+
+    def videos
       raise NotImplementedError
     end
 
