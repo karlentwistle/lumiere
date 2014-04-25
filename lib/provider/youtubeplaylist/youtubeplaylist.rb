@@ -3,7 +3,7 @@ class YouTubePlaylist < Provider
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
-  MAX_RESULTS = 25
+  RESULTS_PER_REQUEST = 25
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
@@ -25,7 +25,7 @@ class YouTubePlaylist < Provider
 
   def api_url
     url = "http://gdata.youtube.com/feeds/api/playlists/#{playlist_id}"
-    url << "?max-results=#{MAX_RESULTS}"
+    url << "?max-results=#{RESULTS_PER_REQUEST}"
     url << "&start-index=#{@start_index}"
     url << "&v=2&alt=json"
     url
@@ -91,7 +91,7 @@ class YouTubePlaylist < Provider
   attr_writer :thumbnails, :title, :description, :total_results
 
   def page_count
-    Playlist.page_count(total_results, MAX_RESULTS)
+    Playlist.page_count(total_results, RESULTS_PER_REQUEST)
   end
 
   def videos=(videos)
