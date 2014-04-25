@@ -18,6 +18,30 @@ module Lumiere
       end
     end
 
+    context "Vimeo Playlist 4268592" do
+    subject(:playlist) { Elluminate.new('https://vimeo.com/album/1488772') }
+      it do
+        expect(playlist.provider).to eql('Vimeo')
+        expect(playlist.title).to eql('STEPHEN HAWKING\'S UNIVERSE')
+        expect(playlist.description).to eql("Descubre el universo de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos del Universo, la formaci\u00f3n de los planetas,\u2026")
+        expect(playlist.upload_date).to eql(DateTime.parse("2010-12-08T06:37:55+00:00"))
+        expect(playlist.playlist_id).to eql('1488772')
+        expect(playlist.accessible?).to eql(true)
+        expect(playlist.thumbnail_small).to eql('http://i.vimeocdn.com/video/134668334_100x75.jpg')
+        expect(playlist.thumbnail_medium).to eql('http://i.vimeocdn.com/video/134668334_200x150.jpg')
+        expect(playlist.thumbnail_large).to eql('http://i.vimeocdn.com/video/134668334_640.jpg')
+
+        expect(playlist.videos).to match_array([
+          Vimeo.new('http://vimeo.com/17385851'),
+          Vimeo.new('http://vimeo.com/17384125'),
+          Vimeo.new('http://vimeo.com/17571029'),
+          Vimeo.new('http://vimeo.com/17581126'),
+          Vimeo.new('http://vimeo.com/17814855'),
+          Vimeo.new('http://vimeo.com/17838622'),
+        ])
+      end
+    end
+
     context "YouTube NwRuI0yjreQ" do
     subject(:video) { Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ') }
       it do

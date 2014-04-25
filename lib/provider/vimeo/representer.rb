@@ -3,6 +3,7 @@ module Lumiere
     include Representable::JSON
     include Representable::Coercion
 
+    property :id
     property :title
     property :description
     property :duration, type: Integer

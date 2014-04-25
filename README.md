@@ -56,6 +56,19 @@ video = Elluminate.new("http://vimeo.com/4268592")
 # video.thumbnail_large  => "http://i.vimeocdn.com/video/9464045_640.jpg"
 # video.embed_url        => "http://player.vimeo.com/video/4268592"
 # video.embed_code       => "<iframe src=\"//player.vimeo.com/video/4268592\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+
+playlist = Elluminate.new('https://vimeo.com/album/1488772')
+# playlist.videos           => [Array of Vimeo videos]
+# playlist.videos.count     => 6
+# playlist.accessible?      => true
+# playlist.playlist_id      => '1488772'
+# playlist.title            => "STEPHEN HAWKING'S UNIVERSE"
+# playlist.description      => "Descubre el universo de la mano de Stephen Hawking"
+# playlist.thumbnail_small  => "http://i.vimeocdn.com/video/134668334_100x75.jpg"
+# playlist.thumbnail_medium => "http://i.vimeocdn.com/video/134668334_200x150.jpg"
+# playlist.thumbnail_large  => "http://i.vimeocdn.com/video/134668334_640.jpg"
+# playlist.embed_url        => "http://player.vimeo.com/hubnut/album/1488772"
+# playlist.embed_code       => "<iframe src=\"//player.vimeo.com/hubnut/album/1488772?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
 ```
 
 Author
@@ -67,7 +80,3 @@ Contributors
 ------------
 
 [https://github.com/karlentwistle/lumiere/graphs/contributors](https://github.com/karlentwistle/lumiere/graphs/contributors)
-
-
-## TODO
-* Add playlist support for Vimeo (new_from_video_id)

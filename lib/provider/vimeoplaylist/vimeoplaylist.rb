@@ -1,0 +1,102 @@
+module Lumiere
+class VimeoPlaylist < Provider
+  attr_accessor :url
+
+  USEABLE = ['vimeo.com', 'player.vimeo.com', 'www.vimeo.com']
+
+  def self.useable?(url)
+    uri = URISchemeless.parse(url)
+    return false unless USEABLE.include?(uri.host)
+    split_path = uri.path.split('/')
+    split_path.include?('album')
+  end
+
+  def initialize(url)
+    @url = url
+  end
+
+  def provider
+    "Vimeo"
+  end
+
+  def playlist_id
+    @playlist_id ||= calculate_playlist_id
+  end
+
+  def api_url
+    "http://vimeo.com/api/v2/album/#{playlist_id}/info.json"
+  end
+
+  def embed_url
+    "http://player.vimeo.com/hubnut/album/#{playlist_id}"
+  end
+
+  def embed_code
+    "<iframe src=\"//player.vimeo.com/hubnut/album/#{playlist_id}?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
+  end
+
+  def title
+    fetch! unless @title
+    @title
+  end
+
+  def description
+    fetch! unless @description
+    @description
+  end
+
+  def upload_date
+    fetch! unless @upload_date
+    @upload_date
+  end
+
+  def thumbnail_small
+    fetch! unless @thumbnail_small
+    @thumbnail_small
+  end
+
+  def thumbnail_medium
+    fetch! unless @thumbnail_medium
+    @thumbnail_medium
+  end
+
+  def thumbnail_large
+    fetch! unless @thumbnail_large
+    @thumbnail_large
+  end
+
+  def videos
+    fetch_videos.map do |video|
+      Vimeo.new_from_video_id(video.id)
+    end
+  end
+
+  attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large
+
+  def videos=(videos)
+    @videos ||= []
+    @videos += videos
+  end
+
+  def fetch!
+    self.extend(VimeoPlaylistRepresenter).from_json(raw_response)
+  end
+
+  def fetch_videos
+    @videos ||= [].extend(VimeoVideosRepresenter).from_json(raw_response_videos)
+  end
+
+  def raw_response_videos
+    open("http://vimeo.com/api/v2/album/#{playlist_id}/videos.json").read
+  end
+
+  def calculate_playlist_id
+    uri = URISchemeless.parse(url)
+    uri.path.gsub!('/hubnut/album/', '')
+    uri.path.gsub!('/album/', '')
+    uri.path.delete!('/')
+    uri.path
+  end
+
+end
+end

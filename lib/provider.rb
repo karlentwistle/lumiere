@@ -1,7 +1,7 @@
 module Lumiere
   class Provider
 
-    PROVIDERS = %w(YouTubePlaylist YouTube Vimeo)
+    PROVIDERS = %w(YouTubePlaylist VimeoPlaylist YouTube Vimeo)
     PROVIDERS.each do |provider|
       require_relative "provider/#{provider.downcase}/#{provider.downcase}"
       require_relative "provider/#{provider.downcase}/representer"
