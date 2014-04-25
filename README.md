@@ -80,3 +80,10 @@ Contributors
 ------------
 
 [https://github.com/karlentwistle/lumiere/graphs/contributors](https://github.com/karlentwistle/lumiere/graphs/contributors)
+
+## TODO
+* VimeoPlaylist to render videos using Vimeo class, not OpenStruct
+* VimeoPlaylist to page through videos
+
+## Known Limits
+* Vimeo Playlist can only support a maximum of 60 videos results through the 'simple API'
