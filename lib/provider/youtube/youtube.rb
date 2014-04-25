@@ -38,37 +38,37 @@ class YouTube < Provider
   end
 
   def thumbnail_small
-    fetch! unless defined?(@thumbnails)
+    fetch! unless @thumbnails
     @thumbnails[0].url
   end
 
   def thumbnail_medium
-    fetch! unless defined?(@thumbnails)
+    fetch! unless @thumbnails
     @thumbnails[1].url
   end
 
   def thumbnail_large
-    fetch! unless defined?(@thumbnails)
+    fetch! unless @thumbnails
     @thumbnails[2].url
   end
 
   def title
-    fetch! unless defined?(@title)
+    fetch! unless @title
     @title
   end
 
   def description
-    fetch! unless defined?(@description)
+    fetch! unless @description
     @description
   end
 
   def duration
-    fetch! unless defined?(@duration)
+    fetch! unless @duration
     @duration
   end
 
   def upload_date
-    fetch! unless defined?(@upload_date)
+    fetch! unless @upload_date
     @upload_date
   end
 
