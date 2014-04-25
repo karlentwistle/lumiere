@@ -74,15 +74,11 @@ class VimeoPlaylist < Provider
   def videos
     return @videos if @videos
 
-    @videos ||= []
-    page_count = Playlist.page_count(total_videos, MAX_RESULTS)
-    page_count = 3 if page_count > 3 #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
-
-    page_count.times.with_index(1) do |times, index|
-      @videos += fetch_videos(index)
+    videos = page_count.times.with_index(1).flat_map do |_, index|
+      fetch_videos(index)
     end
 
-    @videos = @videos.map do |video|
+    @videos = videos.map do |video| #TODO: Make fetch_videos return Vimeo objects and remove this line
       Vimeo.new_from_video_id(video.id)
     end
   end
@@ -90,6 +86,13 @@ class VimeoPlaylist < Provider
   private
 
   attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_videos
+
+  def page_count
+    page_count = Playlist.page_count(total_videos, MAX_RESULTS)
+    #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
+    page_count = 3 if page_count > 3
+    page_count
+  end
 
   def fetch!
     self.extend(VimeoPlaylistRepresenter).from_json(raw_response)
