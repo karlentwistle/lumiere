@@ -42,6 +42,14 @@ module Lumiere
       end
     end
 
+    context "Vimeo Playlist 2356816" do
+      subject(:playlist) { Elluminate.new('//vimeo.com/album/2356816') }
+
+      it do
+        expect(playlist.videos.size).to eql(60) # this is a fundemental limitition in the simple vimeo api
+      end
+    end
+
     context "YouTube NwRuI0yjreQ" do
     subject(:video) { Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ') }
       it do

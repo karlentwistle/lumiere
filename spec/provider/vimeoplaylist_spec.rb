@@ -154,7 +154,8 @@ module Lumiere
       let(:video_1) { { id: 51869492 } }
       let(:video_2) { { id: 50387995 } }
       let(:videos) { [video_1, video_2] }
-      let(:remote_structure) {
+      let(:remote_structure) { { total_videos: 2 }.to_json }
+      let(:remote_structure_video) {
         [
           { 'id' => 51869492 },
           { 'id' => 50387995 }
@@ -162,12 +163,21 @@ module Lumiere
       }
 
       it "returns the videos the playlist contains" do
-        playlist.stub(:raw_response_videos) { remote_structure }
+        playlist.stub(:raw_response_videos) { remote_structure_video }
+        playlist.stub(:raw_response) { remote_structure }
         expect(playlist.videos.size).to eql(2)
         expect(playlist.videos).to match_array([
           Vimeo.new_from_video_id(video_1[:id]),
           Vimeo.new_from_video_id(video_2[:id])
         ])
+      end
+    end
+
+    describe "#total_videos" do
+      let(:remote_structure) { { total_videos: 21 }.to_json }
+      it "returns the video thumbnail_large" do
+        playlist.stub(:raw_response) { remote_structure }
+        expect(playlist.total_videos).to eql(21)
       end
     end
 

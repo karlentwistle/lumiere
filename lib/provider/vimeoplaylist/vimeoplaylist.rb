@@ -65,29 +65,40 @@ class VimeoPlaylist < Provider
     @thumbnail_large
   end
 
+  def total_videos
+    fetch! unless @total_videos
+    @total_videos
+  end
+
   def videos
-    fetch_videos.map do |video|
+    @videos ||= fetch_videos
+
+    page = 2
+    while page < 4 && @videos.size < total_videos
+      @videos += fetch_videos(page)
+      page += 1
+    end
+
+    @videos.map do |video|
       Vimeo.new_from_video_id(video.id)
     end
   end
 
-  attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large
+  private
 
-  def videos=(videos)
-    @videos ||= []
-    @videos += videos
-  end
+  attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_videos
 
   def fetch!
     self.extend(VimeoPlaylistRepresenter).from_json(raw_response)
   end
 
-  def fetch_videos
-    @videos ||= [].extend(VimeoVideosRepresenter).from_json(raw_response_videos)
+  def fetch_videos(page=1)
+    [].extend(VimeoVideosRepresenter).from_json(raw_response_videos(page))
   end
 
-  def raw_response_videos
-    open("http://vimeo.com/api/v2/album/#{playlist_id}/videos.json").read
+  def raw_response_videos(page=1)
+    url = "http://vimeo.com/api/v2/album/#{playlist_id}/videos.json?page=#{page}"
+    open(url).read
   end
 
   def calculate_playlist_id

@@ -9,5 +9,6 @@ module Lumiere
     property :thumbnail_small
     property :thumbnail_medium
     property :thumbnail_large
+    property :total_videos, type: Integer
   end
 end

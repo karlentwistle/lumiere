@@ -83,7 +83,6 @@ Contributors
 
 ## TODO
 * VimeoPlaylist to render videos using Vimeo class, not OpenStruct
-* VimeoPlaylist to page through videos
 
 ## Known Limits
 * Vimeo Playlist can only support a maximum of 60 videos results through the 'simple API'
