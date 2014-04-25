@@ -10,6 +10,7 @@ require 'representable/json/collection'
 
 require_relative 'extended_uri'
 require_relative 'provider'
+require_relative 'playlist'
 
 class Elluminate
   extend Forwardable

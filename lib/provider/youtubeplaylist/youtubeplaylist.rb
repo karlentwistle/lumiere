@@ -41,13 +41,15 @@ class YouTubePlaylist < Provider
 
   def videos
     fetch! unless defined?(@videos)
+    page_count = Playlist.page_count(total_results, @max_results)
+    page_count -= 1 #take into account the first request that calling total_results will trigger through fetch!
 
-    while @start_index < @total_results && @videos.size < @total_results
+    page_count.times do
       @start_index =+ @videos.size + 1
       fetch!
     end
 
-    @all_videos = @videos.map do |video|
+    @videos = @videos.map do |video|
       YouTube.new_from_video_id(video.video_id)
     end
   end

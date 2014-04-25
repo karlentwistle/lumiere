@@ -13,6 +13,7 @@ class VimeoPlaylist < Provider
 
   def initialize(url)
     @url = url
+    @max_results = 20
   end
 
   def provider
@@ -71,15 +72,17 @@ class VimeoPlaylist < Provider
   end
 
   def videos
-    @videos ||= fetch_videos
+    return @videos if @videos
 
-    page = 2
-    while page < 4 && @videos.size < total_videos
-      @videos += fetch_videos(page)
-      page += 1
+    @videos ||= []
+    page_count = Playlist.page_count(total_videos, @max_results)
+    page_count = 3 if page_count > 3 #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
+
+    page_count.times.with_index(1) do |times, index|
+      @videos += fetch_videos(index)
     end
 
-    @videos.map do |video|
+    @videos = @videos.map do |video|
       Vimeo.new_from_video_id(video.id)
     end
   end
