@@ -52,22 +52,29 @@ class YouTube < Provider
     @thumbnails[2].url
   end
 
-  REMOTE_ATTRIBUTES = [:title, :description, :duration, :upload_date]
+  def title
+    fetch! unless defined?(@title)
+    @title
+  end
 
-  REMOTE_ATTRIBUTES.each do |attribute|
-    define_method(attribute) do
-      fetch! unless instance_variable_get("@#{attribute}")
-      instance_variable_get("@#{attribute}")
-    end
+  def description
+    fetch! unless defined?(@description)
+    @description
+  end
+
+  def duration
+    fetch! unless defined?(@duration)
+    @duration
+  end
+
+  def upload_date
+    fetch! unless defined?(@upload_date)
+    @upload_date
   end
 
   private
 
-  REMOTE_ATTRIBUTES.each do |attribute|
-    attr_writer attribute
-  end
-
-  attr_writer :thumbnails, :video_id
+  attr_writer :thumbnails, :video_id, :title, :description, :duration, :upload_date
 
   def fetch!
     self.extend(YouTubeVideoEntryRepresenter).from_json(raw_response)
