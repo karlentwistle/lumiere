@@ -79,7 +79,7 @@ class VimeoPlaylist < Provider
     end
 
     @videos = videos.map do |video| #TODO: Make fetch_videos return Vimeo objects and remove this line
-      Vimeo.new_from_video_id(video.id)
+      Vimeo.new_from_video_id(video.video_id)
     end
   end
 
