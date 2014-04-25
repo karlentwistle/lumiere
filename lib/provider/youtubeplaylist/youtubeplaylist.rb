@@ -3,6 +3,7 @@ class YouTubePlaylist < Provider
   attr_accessor :url
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
+  MAX_RESULTS = 25
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
@@ -12,7 +13,6 @@ class YouTubePlaylist < Provider
   def initialize(url, opts={})
     @url = url
     @start_index = opts[:start_index] || 1
-    @max_results = opts[:max_results] || 25
   end
 
   def provider
@@ -25,7 +25,7 @@ class YouTubePlaylist < Provider
 
   def api_url
     url = "http://gdata.youtube.com/feeds/api/playlists/#{playlist_id}"
-    url << "?max-results=#{@max_results}"
+    url << "?max-results=#{MAX_RESULTS}"
     url << "&start-index=#{@start_index}"
     url << "&v=2&alt=json"
     url
@@ -41,7 +41,7 @@ class YouTubePlaylist < Provider
 
   def videos
     fetch! unless defined?(@videos)
-    page_count = Playlist.page_count(total_results, @max_results)
+    page_count = Playlist.page_count(total_results, MAX_RESULTS)
     page_count -= 1 #take into account the first request that calling total_results will trigger through fetch!
 
     page_count.times do

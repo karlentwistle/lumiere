@@ -3,6 +3,7 @@ class VimeoPlaylist < Provider
   attr_accessor :url
 
   USEABLE = ['vimeo.com', 'player.vimeo.com', 'www.vimeo.com']
+  MAX_RESULTS = 20
 
   def self.useable?(url)
     uri = URISchemeless.parse(url)
@@ -13,7 +14,6 @@ class VimeoPlaylist < Provider
 
   def initialize(url)
     @url = url
-    @max_results = 20
   end
 
   def provider
@@ -75,7 +75,7 @@ class VimeoPlaylist < Provider
     return @videos if @videos
 
     @videos ||= []
-    page_count = Playlist.page_count(total_videos, @max_results)
+    page_count = Playlist.page_count(total_videos, MAX_RESULTS)
     page_count = 3 if page_count > 3 #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
 
     page_count.times.with_index(1) do |times, index|

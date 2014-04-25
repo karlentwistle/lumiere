@@ -68,14 +68,6 @@ module Lumiere
         end
       end
 
-      context "max_results" do
-        subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID', max_results: 10) }
-        it "returns the url of the YouTube api with max results" do
-          expect(playlist.api_url).
-            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=10&start-index=1&v=2&alt=json')
-        end
-      end
-
     end
 
     describe "#embed_url" do
