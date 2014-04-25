@@ -19,6 +19,12 @@ module Lumiere
   describe Vimeo do
     subject(:video) { Vimeo.new('VIDEO_ID') }
 
+    describe ".new_from_video_id" do
+      it "returns a new Vimeo object with a .useable? url" do
+        expect(Vimeo.new_from_video_id(1)).to eq(Vimeo.new('http://vimeo.com/1'))
+      end
+    end
+
     describe ".useable?" do
       context "valid" do
         valid_urls.each_value do |url|

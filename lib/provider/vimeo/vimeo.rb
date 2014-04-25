@@ -9,6 +9,10 @@ class Vimeo < Provider
     USEABLE.include?(uri.host)
   end
 
+  def self.new_from_video_id(video_id)
+    new("http://vimeo.com/#{video_id}")
+  end
+
   def initialize(url)
     @url = url
   end
