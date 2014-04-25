@@ -74,12 +74,8 @@ class VimeoPlaylist < Provider
   def videos
     return @videos if @videos
 
-    videos = page_count.times.with_index(1).flat_map do |_, index|
+    @videos = page_count.times.with_index(1).flat_map do |_, index|
       fetch_videos(index)
-    end
-
-    @videos = videos.map do |video| #TODO: Make fetch_videos return Vimeo objects and remove this line
-      Vimeo.new_from_video_id(video.video_id)
     end
   end
 
