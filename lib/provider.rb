@@ -80,8 +80,8 @@ module Lumiere
     end
 
     def ==(other)
-      if other.respond_to?(:url)
-        url == other.url
+      if other.respond_to?(:video_id)
+        video_id == other.video_id
       end
     end
 

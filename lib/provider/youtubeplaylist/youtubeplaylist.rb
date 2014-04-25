@@ -40,18 +40,20 @@ class YouTubePlaylist < Provider
   end
 
   def videos
-    fetch! unless defined?(@videos)
-    page_count = Playlist.page_count(total_results, MAX_RESULTS)
-    page_count -= 1 #take into account the first request that calling total_results will trigger through fetch!
+    if @videos && @videos.size == total_results
+      return @videos
+    end
 
-    page_count.times do
+    #take into account the first request that calling total_results will trigger through fetch!
+    #todo refactor this
+    remaining_pages = page_count - 1
+
+    remaining_pages.times do
       @start_index =+ @videos.size + 1
       fetch!
     end
 
-    @videos = @videos.map do |video|
-      YouTube.new_from_video_id(video.video_id)
-    end
+    @videos
   end
 
   def thumbnail_small
@@ -84,7 +86,13 @@ class YouTubePlaylist < Provider
     @total_results
   end
 
+  private
+
   attr_writer :thumbnails, :title, :description, :total_results
+
+  def page_count
+    Playlist.page_count(total_results, MAX_RESULTS)
+  end
 
   def videos=(videos)
     @videos ||= []
