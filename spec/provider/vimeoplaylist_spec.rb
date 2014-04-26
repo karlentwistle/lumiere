@@ -97,55 +97,49 @@ module Lumiere
     end
 
     describe "#title" do
-      let(:title) { 'awesome playlist title' }
-      let(:remote_structure) { { title: title }.to_json }
+      let(:title) { 'awesome title' }
       it "returns the playlist title" do
-        playlist.stub(:raw_response) { remote_structure }
+        playlist.stub(:fetch) { double(title: title) }
         expect(playlist.title).to eql(title)
       end
     end
 
     describe "#description" do
-      let(:description) { 'awesome playlist description' }
-      let(:remote_structure) { { description: description }.to_json }
+      let(:description) { 'awesome description' }
       it "returns the playlist description" do
-        playlist.stub(:raw_response) { remote_structure }
+        playlist.stub(:fetch) { double(description: description) }
         expect(playlist.description).to eql(description)
       end
     end
 
     describe "#upload_date" do
-      let(:created_on) { Date.today }
-      let(:remote_structure) { { created_on: created_on }.to_json }
-      it "returns the date the video was uploaded" do
-        playlist.stub(:raw_response) { remote_structure }
-        expect(playlist.upload_date).to eql(created_on)
+      let(:upload_date) { Date.today }
+      it "returns the date the playlist was uploaded" do
+        playlist.stub(:fetch) { double(upload_date: upload_date) }
+        expect(playlist.upload_date).to eql(upload_date)
       end
     end
 
     describe "#thumbnail_small" do
       let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
-      let(:remote_structure) { { thumbnail_small: thumbnail_small }.to_json }
       it "returns the playlist thumbnail_small" do
-        playlist.stub(:raw_response) { remote_structure }
+        playlist.stub(:fetch) { double(thumbnail_small: thumbnail_small) }
         expect(playlist.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
       let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
-      let(:remote_structure) { { thumbnail_medium: thumbnail_medium }.to_json }
       it "returns the playlist thumbnail_medium" do
-        playlist.stub(:raw_response) { remote_structure }
+        playlist.stub(:fetch) { double(thumbnail_medium: thumbnail_medium) }
         expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
       let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
-      let(:remote_structure) { { thumbnail_large: thumbnail_large }.to_json }
       it "returns the playlist thumbnail_large" do
-        playlist.stub(:raw_response) { remote_structure }
+        playlist.stub(:fetch) { double(thumbnail_large: thumbnail_large) }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
       end
     end
@@ -164,10 +158,10 @@ module Lumiere
     end
 
     describe "#total_videos" do
-      let(:remote_structure) { { total_videos: 21 }.to_json }
+      let(:total_videos) { 21 }
       it "returns the video thumbnail_large" do
-        playlist.stub(:raw_response) { remote_structure }
-        expect(playlist.total_videos).to eql(21)
+        playlist.stub(:total_videos) { total_videos }
+        expect(playlist.total_videos).to eql(total_videos)
       end
     end
 

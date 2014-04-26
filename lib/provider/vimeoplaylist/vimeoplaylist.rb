@@ -37,38 +37,31 @@ class VimeoPlaylist < Provider
   end
 
   def title
-    fetch! unless @title
-    @title
+    fetch.title
   end
 
   def description
-    fetch! unless @description
-    @description
+    fetch.description
   end
 
   def upload_date
-    fetch! unless @upload_date
-    @upload_date
+    fetch.upload_date
   end
 
   def thumbnail_small
-    fetch! unless @thumbnail_small
-    @thumbnail_small
+    fetch.thumbnail_small
   end
 
   def thumbnail_medium
-    fetch! unless @thumbnail_medium
-    @thumbnail_medium
+    fetch.thumbnail_medium
   end
 
   def thumbnail_large
-    fetch! unless @thumbnail_large
-    @thumbnail_large
+    fetch.thumbnail_large
   end
 
   def total_videos
-    fetch! unless @total_videos
-    @total_videos
+    fetch.total_videos
   end
 
   def videos
@@ -81,8 +74,6 @@ class VimeoPlaylist < Provider
 
   private
 
-  attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_videos
-
   def page_count
     page_count = Playlist.page_count(total_videos, RESULTS_PER_REQUEST)
     #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
@@ -90,8 +81,13 @@ class VimeoPlaylist < Provider
     page_count
   end
 
-  def fetch!
-    self.extend(VimeoPlaylistRepresenter).from_json(raw_response)
+  def fetch
+    if @fetched
+      @fetched
+    else
+      playlist = OpenStruct.new.extend(VimeoPlaylistRepresenter)
+      @fetched = Fetcher.new(api_url, playlist).fetched
+    end
   end
 
   def fetch_videos(page=1)
