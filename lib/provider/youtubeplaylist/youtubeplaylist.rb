@@ -96,7 +96,9 @@ class YouTubePlaylist < Provider
 
   def videos=(videos)
     @videos ||= []
-    @videos += videos
+    @videos += videos.map do |video|
+      YouTube.new_from_video_id(video.video_id, video)
+    end
   end
 
   def fetch!

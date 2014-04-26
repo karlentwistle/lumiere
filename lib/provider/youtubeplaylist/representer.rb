@@ -26,7 +26,7 @@ module Lumiere
       end
     end
 
-    collection :videos, as: :entry, extend: YouTubeVideoRepresenter, class: YouTube
+    collection :videos, as: :entry, extend: YouTubeVideoRepresenter, class: OpenStruct
   end
 
 end
