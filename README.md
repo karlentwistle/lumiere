@@ -81,5 +81,5 @@ Contributors
 
 [https://github.com/karlentwistle/lumiere/graphs/contributors](https://github.com/karlentwistle/lumiere/graphs/contributors)
 
-## Known Limits
+## Known Limitations
 * Vimeo Playlist can only support a maximum of 60 videos results through the 'simple API'
