@@ -81,8 +81,5 @@ Contributors
 
 [https://github.com/karlentwistle/lumiere/graphs/contributors](https://github.com/karlentwistle/lumiere/graphs/contributors)
 
-## TODO
-* Vimeo class is in a very strange state with regards to fetching / creating another vimeo class and then proxying requests to it. Need to figure out a way to unpack the fetch request into self or make a VimeoFetcher
-
 ## Known Limits
 * Vimeo Playlist can only support a maximum of 60 videos results through the 'simple API'
