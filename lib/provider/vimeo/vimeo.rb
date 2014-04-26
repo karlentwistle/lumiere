@@ -72,8 +72,8 @@ class Vimeo < Provider
     if @fetched
       @fetched
     else
-      representer = lambda { VimeoVideosRepresenter }
-      @fetched = Fetcher.new(api_url, &representer).fetched
+      videos = [].extend(VimeoVideosRepresenter)
+      @fetched = Fetcher.new(api_url, videos).fetched
       @fetched = @fetched[0]
     end
   end

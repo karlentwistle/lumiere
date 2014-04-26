@@ -3,17 +3,16 @@ class Fetcher
 
   attr_accessor :fetched
 
-  def initialize(api_url, &block)
+  def initialize(api_url, unpack_into)
     @api_url = api_url
-    @representer = block.call
+    @unpack_into = unpack_into
     @fetched = fetch
   end
 
   private
 
   def fetch
-    videos = [].extend(@representer)
-    videos.from_json(raw_response)
+    @unpack_into.from_json(raw_response)
   end
 
   def raw_response
