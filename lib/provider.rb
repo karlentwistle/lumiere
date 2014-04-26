@@ -84,11 +84,5 @@ module Lumiere
         video_id == other.video_id
       end
     end
-
-    private
-
-    def raw_response
-      open(api_url).read
-    end
   end
 end
