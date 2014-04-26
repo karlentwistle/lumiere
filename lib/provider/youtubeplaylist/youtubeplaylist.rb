@@ -44,63 +44,62 @@ class YouTubePlaylist < Provider
       return @videos
     end
 
+    @videos = fetch.videos
     #take into account the first request that calling total_results will trigger through fetch!
     #todo refactor this
     remaining_pages = page_count - 1
-
     remaining_pages.times do
       @start_index =+ @videos.size + 1
-      fetch!
+      @videos += fetch!.videos
     end
 
-    @videos
+    @videos.map do |video|
+      YouTube.new_from_video_id(video.video_id, video)
+    end
   end
-
-  def thumbnail_small
-    fetch! unless @thumbnails
-    @thumbnails[0].url
-  end
-
-  def thumbnail_medium
-    fetch! unless @thumbnails
-    @thumbnails[1].url
-  end
-
-  def thumbnail_large
-    fetch! unless @thumbnails
-    @thumbnails[2].url
-  end
-
-  def title
-    fetch! unless @title
-    @title
-  end
-
-  def description
-    fetch! unless @description
-    @description
-  end
-
-  def total_results
-    fetch! unless @total_results
-    @total_results
-  end
-
-  private
-
-  attr_writer :thumbnails, :title, :description, :total_results
 
   def page_count
     Playlist.page_count(total_results, RESULTS_PER_REQUEST)
   end
 
-  def videos=(videos)
-    @videos ||= []
-    @videos += videos
+  def thumbnail_small
+    fetch.thumbnails[0].url
+  end
+
+  def thumbnail_medium
+    fetch.thumbnails[1].url
+  end
+
+  def thumbnail_large
+    fetch.thumbnails[2].url
+  end
+
+  def title
+    fetch.title
+  end
+
+  def description
+    fetch.description
+  end
+
+  def total_results
+    fetch.total_results
+  end
+
+  private
+
+  def fetch
+    if @fetched
+      @fetched
+    else
+      playlist = OpenStruct.new.extend(YouTubePlaylistRepresenter)
+      @fetched = Fetcher.new(api_url, playlist).fetched
+    end
   end
 
   def fetch!
-    self.extend(YouTubePlaylistRepresenter).from_json(raw_response)
+    playlist = OpenStruct.new.extend(YouTubePlaylistRepresenter)
+    @fetched = Fetcher.new(api_url, playlist).fetched
   end
 
   def calculate_playlist_id

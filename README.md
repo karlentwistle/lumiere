@@ -81,5 +81,9 @@ Contributors
 
 [https://github.com/karlentwistle/lumiere/graphs/contributors](https://github.com/karlentwistle/lumiere/graphs/contributors)
 
+## TODO
+* Unit test the private VimeoPlaylist VimeoVideos fetcher class
+* Unit test the YouTube videos method
+
 ## Known Limits
 * Vimeo Playlist can only support a maximum of 60 videos results through the 'simple API'

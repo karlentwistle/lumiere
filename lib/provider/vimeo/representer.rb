@@ -16,6 +16,6 @@ module Lumiere
   module VimeoVideosRepresenter
     include Representable::JSON::Collection
 
-    items extend: VimeoVideoRepresenter, class: Vimeo
+    items extend: VimeoVideoRepresenter, class: OpenStruct
   end
 end

@@ -86,157 +86,55 @@ module Lumiere
 
     describe "#title" do
       let(:title) { 'Title of my awesome playlist' }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'title' => {'$t' => title},
-          }
-        }.to_json
-      }
-
-      it "returns the video title" do
-        playlist.stub(:raw_response) { remote_structure }
+      it "returns the playlist title" do
+        playlist.stub(:fetch) { double(title: title) }
         expect(playlist.title).to eql(title)
-      end
-    end
-
-    describe "#videos" do
-      let(:video_1) { { id: '2_HXUhShhmY' } }
-      let(:video_2) { { id: 'vLrslkB1pG8' } }
-      let(:videos) { [video_1, video_2] }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'openSearch$totalResults' => {
-              '$t' => "#{videos.size}"
-            },
-            'entry' => [
-              {
-                'media$group' => {
-                  'yt$videoid' => {
-                    '$t' => video_1[:id]
-                  }
-                }
-              },
-              {
-                'media$group' => {
-                  'yt$videoid' => {
-                    '$t' => video_2[:id]
-                  }
-                }
-              },
-            ]
-          }
-        }.to_json
-      }
-
-      it "returns the videos the playlist contains" do
-        playlist.stub(:raw_response) { remote_structure }
-        expect(playlist.videos.size).to eql(2)
-        expect(playlist.videos).to match_array([
-          YouTube.new_from_video_id(video_1[:id]),
-          YouTube.new_from_video_id(video_2[:id])
-        ])
       end
     end
 
     describe "#description" do
       let(:description) { 'Description of my awesome playlist' }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'subtitle' => {'$t' => description},
-          }
-        }.to_json
-      }
-
-      it "returns the video description" do
-        playlist.stub(:raw_response) { remote_structure }
+      it "returns the playlist description" do
+        playlist.stub(:fetch) { double(description: description) }
         expect(playlist.description).to eql(description)
       end
     end
 
     describe "#thumbnail_small" do
-      let(:thumbnail_small) { 'Thumbnail Small' }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => thumbnail_small},
-                {'url' => 'stub'},
-                {'url' => 'stub'},
-              ]
-            },
-          }
-        }.to_json
-      }
-
-      it "returns the video thumbnail_small" do
-        playlist.stub(:raw_response) { remote_structure }
+      let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
+      it "returns the playlist thumbnail_small" do
+        playlist.stub(:fetch) {
+          double(thumbnails:[double(url: thumbnail_small)])
+        }
         expect(playlist.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
-      let(:thumbnail_medium) { 'Thumbnail Medium' }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => 'stub'},
-                {'url' => thumbnail_medium},
-                {'url' => 'stub'},
-              ]
-            },
-          }
-        }.to_json
-      }
-
-      it "returns the video thumbnail_medium" do
-        playlist.stub(:raw_response) { remote_structure }
+      let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
+      it "returns the playlist thumbnail_medium" do
+        playlist.stub(:fetch) {
+          double(thumbnails:[nil, double(url: thumbnail_medium)])
+        }
         expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
-      let(:thumbnail_large) { 'Thumbnail Large' }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => 'stub'},
-                {'url' => 'stub'},
-                {'url' => thumbnail_large},
-              ]
-            },
-          }
-        }.to_json
-      }
-
-      it "returns the video thumbnail_large" do
-        playlist.stub(:raw_response) { remote_structure }
+      let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
+      it "returns the playlist thumbnail_large" do
+        playlist.stub(:fetch) {
+          double(thumbnails:[nil, nil, double(url: thumbnail_large)])
+        }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
       end
     end
 
     describe "#total_results" do
-      let(:total_results) { 2 }
-      let(:remote_structure) {
-        {
-          'feed' => {
-            'openSearch$totalResults' => {
-              '$t' => "#{total_results}"
-            },
-          }
-        }.to_json
-      }
-
-      it "returns the video thumbnail_large" do
-        playlist.stub(:raw_response) { remote_structure }
-        expect(playlist.total_results).to eql(2)
+      let(:total_results) { 12 }
+      it "returns the playlist total_results" do
+        playlist.stub(:fetch) { double(total_results: total_results) }
+        expect(playlist.total_results).to eql(total_results)
       end
     end
 
