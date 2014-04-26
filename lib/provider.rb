@@ -7,6 +7,8 @@ module Lumiere
       require_relative "provider/#{provider.downcase}/representer"
     end
 
+    require_relative "provider/vimeo/fetcher"
+
     def self.delegate(url)
       PROVIDERS.each do |provider|
         provider_class = Object.const_get("Lumiere").const_get(provider)

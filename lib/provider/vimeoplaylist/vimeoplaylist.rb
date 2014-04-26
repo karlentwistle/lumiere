@@ -95,7 +95,12 @@ class VimeoPlaylist < Provider
   end
 
   def fetch_videos(page=1)
-    [].extend(VimeoVideosRepresenter).from_json(raw_response_videos(page))
+    videos = []
+    videos.extend(VimeoVideosRepresenter)
+    videos.from_json(raw_response_videos(page))
+    videos.map do |video|
+      Vimeo.new_from_video_id(video.video_id, video)
+    end
   end
 
   def raw_response_videos(page=1)
