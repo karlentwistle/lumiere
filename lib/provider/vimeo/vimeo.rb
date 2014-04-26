@@ -13,7 +13,7 @@ class Vimeo < Provider
     new("http://vimeo.com/#{video_id}", fetched)
   end
 
-  def initialize(url=nil, fetched=nil)
+  def initialize(url, fetched=nil)
     @url = url
     @fetched = fetched
   end

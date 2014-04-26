@@ -13,7 +13,7 @@ class YouTube < Provider
     new("http://www.youtube.com/watch?v=#{video_id}")
   end
 
-  def initialize(url=nil, fetched=nil)
+  def initialize(url, fetched=nil)
     @url = url
     @fetched = fetched
   end
