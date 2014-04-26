@@ -9,12 +9,13 @@ class YouTube < Provider
     USEABLE.include?(uri.host)
   end
 
-  def self.new_from_video_id(video_id)
+  def self.new_from_video_id(video_id, fetched=nil)
     new("http://www.youtube.com/watch?v=#{video_id}")
   end
 
-  def initialize(url=nil)
+  def initialize(url, fetched=nil)
     @url = url
+    @fetched = fetched
   end
 
   def provider
@@ -38,46 +39,42 @@ class YouTube < Provider
   end
 
   def thumbnail_small
-    fetch! unless @thumbnails
-    @thumbnails[0].url
+    fetch.thumbnails[0].url
   end
 
   def thumbnail_medium
-    fetch! unless @thumbnails
-    @thumbnails[1].url
+    fetch.thumbnails[1].url
   end
 
   def thumbnail_large
-    fetch! unless @thumbnails
-    @thumbnails[2].url
+    fetch.thumbnails[2].url
   end
 
   def title
-    fetch! unless @title
-    @title
+    fetch.title
   end
 
   def description
-    fetch! unless @description
-    @description
+    fetch.description
   end
 
   def duration
-    fetch! unless @duration
-    @duration
+    fetch.duration
   end
 
   def upload_date
-    fetch! unless @upload_date
-    @upload_date
+    fetch.upload_date
   end
 
   private
 
-  attr_writer :thumbnails, :video_id, :title, :description, :duration, :upload_date
-
-  def fetch!
-    self.extend(YouTubeVideoEntryRepresenter).from_json(raw_response)
+  def fetch
+    if @fetched
+      @fetched
+    else
+      video = OpenStruct.new.extend(YouTubeVideoEntryRepresenter)
+      @fetched = Fetcher.new(api_url, video).fetched
+    end
   end
 
   def calculate_video_id

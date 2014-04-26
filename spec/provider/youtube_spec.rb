@@ -88,133 +88,62 @@ module Lumiere
 
     describe "#title" do
       let(:title) { 'awesome title' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'title' => {'$t' => title},
-          }
-        }.to_json
-      }
       it "returns the video title" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) { double(title: title) }
         expect(video.title).to eql(title)
       end
     end
 
     describe "#description" do
       let(:description) { 'Description of my awesome Video' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'media$group' => {
-              'media$description' => {
-                '$t' => description
-              },
-            }
-          }
-        }.to_json
-      }
       it "returns the video description" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) { double(description: description) }
         expect(video.description).to eql(description)
       end
     end
 
     describe "#upload_date" do
       let(:upload_date) { Date.today }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'published' => {
-              '$t' => upload_date
-            },
-          }
-        }.to_json
-      }
       it "returns the video duration" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) { double(upload_date: upload_date) }
         expect(video.upload_date).to eql(upload_date)
       end
     end
 
     describe "#duration" do
       let(:duration) { '35' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'media$group' => {
-              'yt$duration' => {
-                'seconds' => duration
-              },
-            }
-          }
-        }.to_json
-      }
       it "returns the video duration" do
-        video.stub(:raw_response) { remote_structure }
-        expect(video.duration).to eql(duration.to_i)
+        video.stub(:fetch) { double(duration: duration) }
+        expect(video.duration).to eql(duration)
       end
     end
 
     describe "#thumbnail_small" do
-      let(:thumbnail_small) { 'Thumbnail Small' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => thumbnail_small},
-                {'url' => 'stub'},
-                {'url' => 'stub'},
-              ],
-            }
-          }
-        }.to_json
-      }
+      let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
       it "returns the video thumbnail_small" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) {
+          double(thumbnails:[double(url: thumbnail_small)])
+        }
         expect(video.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
-      let(:thumbnail_medium) { 'Thumbnail Medium' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => 'stub'},
-                {'url' => thumbnail_medium},
-                {'url' => 'stub'},
-              ],
-            }
-          }
-        }.to_json
-      }
+      let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
       it "returns the video thumbnail_medium" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) {
+          double(thumbnails:[nil, double(url: thumbnail_medium)])
+        }
         expect(video.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
-      let(:thumbnail_large) { 'Thumbnail Large' }
-      let(:remote_structure) {
-        {
-          'entry' => {
-            'media$group' => {
-              'media$thumbnail' => [
-                {'url' => 'stub'},
-                {'url' => 'stub'},
-                {'url' => thumbnail_large},
-              ],
-            }
-          }
-        }.to_json
-      }
+      let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
       it "returns the video thumbnail_large" do
-        video.stub(:raw_response) { remote_structure }
+        video.stub(:fetch) {
+          double(thumbnails:[nil, nil, double(url: thumbnail_large)])
+        }
         expect(video.thumbnail_large).to eql(thumbnail_large)
       end
     end

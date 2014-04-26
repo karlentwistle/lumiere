@@ -37,70 +37,46 @@ class VimeoPlaylist < Provider
   end
 
   def title
-    fetch! unless @title
-    @title
+    fetch.title
   end
 
   def description
-    fetch! unless @description
-    @description
+    fetch.description
   end
 
   def upload_date
-    fetch! unless @upload_date
-    @upload_date
+    fetch.upload_date
   end
 
   def thumbnail_small
-    fetch! unless @thumbnail_small
-    @thumbnail_small
+    fetch.thumbnail_small
   end
 
   def thumbnail_medium
-    fetch! unless @thumbnail_medium
-    @thumbnail_medium
+    fetch.thumbnail_medium
   end
 
   def thumbnail_large
-    fetch! unless @thumbnail_large
-    @thumbnail_large
+    fetch.thumbnail_large
   end
 
   def total_videos
-    fetch! unless @total_videos
-    @total_videos
+    fetch.total_videos
   end
 
   def videos
-    return @videos if @videos
-
-    @videos = page_count.times.with_index(1).flat_map do |_, index|
-      fetch_videos(index)
-    end
+    @videos ||= VideoFetcher.new(playlist_id, total_videos).videos
   end
 
   private
 
-  attr_writer :title, :description, :upload_date, :thumbnail_small, :thumbnail_medium, :thumbnail_large, :total_videos
-
-  def page_count
-    page_count = Playlist.page_count(total_videos, RESULTS_PER_REQUEST)
-    #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
-    page_count = 3 if page_count > 3
-    page_count
-  end
-
-  def fetch!
-    self.extend(VimeoPlaylistRepresenter).from_json(raw_response)
-  end
-
-  def fetch_videos(page=1)
-    [].extend(VimeoVideosRepresenter).from_json(raw_response_videos(page))
-  end
-
-  def raw_response_videos(page=1)
-    url = "http://vimeo.com/api/v2/album/#{playlist_id}/videos.json?page=#{page}"
-    open(url).read
+  def fetch
+    if @fetched
+      @fetched
+    else
+      playlist = OpenStruct.new.extend(VimeoPlaylistRepresenter)
+      @fetched = Fetcher.new(api_url, playlist).fetched
+    end
   end
 
   def calculate_playlist_id
@@ -109,6 +85,47 @@ class VimeoPlaylist < Provider
     uri.path.gsub!('/album/', '')
     uri.path.delete!('/')
     uri.path
+  end
+
+  class VideoFetcher
+    RESULTS_PER_REQUEST = 20
+
+    def initialize(playlist_id, total_videos)
+      @playlist_id = playlist_id
+      @total_videos = total_videos
+      @page = 1
+    end
+
+    def videos
+      videos = []
+      page_count.times do
+        videos += fetched_videos
+        @page += 1
+      end
+
+      videos.map do |video|
+        Vimeo.new_from_video_id(video.video_id, video)
+      end
+    end
+
+    private
+
+    def fetched_videos
+      videos = [].extend(VimeoVideosRepresenter)
+      Fetcher.new(api_url, videos).fetched
+    end
+
+    def api_url
+      "http://vimeo.com/api/v2/album/#{@playlist_id}/videos.json?page=#{@page}"
+    end
+
+    def page_count
+      page_count = Playlist.page_count(@total_videos, RESULTS_PER_REQUEST)
+      #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
+      page_count = 3 if page_count > 3
+      page_count
+    end
+
   end
 
 end
