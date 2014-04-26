@@ -144,19 +144,6 @@ module Lumiere
       end
     end
 
-    describe "#videos" do
-      let(:video_1) { double(video_id: 51869492) }
-      let(:video_2) { double(video_id: 50387995) }
-      let(:videos) { [video_1, video_2] }
-
-      it "returns the videos the playlist contains" do
-        playlist.stub(:page_count) { 1 }
-        playlist.stub(:fetch_videos) { videos }
-        expect(playlist.videos.size).to eql(2)
-        expect(playlist.videos).to match_array(videos)
-      end
-    end
-
     describe "#total_videos" do
       let(:total_videos) { 21 }
       it "returns the video thumbnail_large" do

@@ -65,21 +65,10 @@ class VimeoPlaylist < Provider
   end
 
   def videos
-    return @videos if @videos
-
-    @videos = page_count.times.with_index(1).flat_map do |_, index|
-      fetch_videos(index)
-    end
+    @videos ||= VideoFetcher.new(playlist_id, total_videos).videos
   end
 
   private
-
-  def page_count
-    page_count = Playlist.page_count(total_videos, RESULTS_PER_REQUEST)
-    #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
-    page_count = 3 if page_count > 3
-    page_count
-  end
 
   def fetch
     if @fetched
@@ -90,25 +79,53 @@ class VimeoPlaylist < Provider
     end
   end
 
-  def fetch_videos(page=1)
-    videos = [].extend(VimeoVideosRepresenter)
-    api_url = api_url_videos(page)
-    videos = Fetcher.new(api_url, videos).fetched
-    videos.map do |video|
-      Vimeo.new_from_video_id(video.video_id, video)
-    end
-  end
-
-  def api_url_videos(page=1)
-    "http://vimeo.com/api/v2/album/#{playlist_id}/videos.json?page=#{page}"
-  end
-
   def calculate_playlist_id
     uri = URISchemeless.parse(url)
     uri.path.gsub!('/hubnut/album/', '')
     uri.path.gsub!('/album/', '')
     uri.path.delete!('/')
     uri.path
+  end
+
+  class VideoFetcher
+    RESULTS_PER_REQUEST = 20
+
+    def initialize(playlist_id, total_videos)
+      @playlist_id = playlist_id
+      @total_videos = total_videos
+      @page = 1
+    end
+
+    def videos
+      videos = []
+      page_count.times do
+        videos += fetched_videos
+        @page += 1
+      end
+
+      videos.map do |video|
+        Vimeo.new_from_video_id(video.video_id, video)
+      end
+    end
+
+    private
+
+    def fetched_videos
+      videos = [].extend(VimeoVideosRepresenter)
+      Fetcher.new(api_url, videos).fetched
+    end
+
+    def api_url
+      "http://vimeo.com/api/v2/album/#{@playlist_id}/videos.json?page=#{@page}"
+    end
+
+    def page_count
+      page_count = Playlist.page_count(@total_videos, RESULTS_PER_REQUEST)
+      #VIMEO CANT DEAL WITH MORE THAN 60 RESULTS ON SIMPLE API...
+      page_count = 3 if page_count > 3
+      page_count
+    end
+
   end
 
 end
