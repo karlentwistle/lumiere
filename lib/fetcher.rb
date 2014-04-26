@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Lumiere
 class Fetcher
 
@@ -6,7 +8,7 @@ class Fetcher
     @unpack_into = unpack_into
   end
 
-  def fetched
+  def fetch
     @unpack_into.from_json(raw_response)
   end
 

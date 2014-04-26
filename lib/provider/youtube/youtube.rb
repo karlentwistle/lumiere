@@ -73,7 +73,7 @@ class YouTube < Provider
       @fetched
     else
       video = OpenStruct.new.extend(YouTubeVideoEntryRepresenter)
-      @fetched = Fetcher.new(api_url, video).fetched
+      @fetched = Fetcher.new(api_url, video).fetch
     end
   end
 

@@ -93,13 +93,13 @@ class YouTubePlaylist < Provider
       @fetched
     else
       playlist = OpenStruct.new.extend(YouTubePlaylistRepresenter)
-      @fetched = Fetcher.new(api_url, playlist).fetched
+      @fetched = Fetcher.new(api_url, playlist).fetch
     end
   end
 
   def fetch!
     playlist = OpenStruct.new.extend(YouTubePlaylistRepresenter)
-    @fetched = Fetcher.new(api_url, playlist).fetched
+    @fetched = Fetcher.new(api_url, playlist).fetch
   end
 
   def calculate_playlist_id

@@ -75,7 +75,7 @@ class VimeoPlaylist < Provider
       @fetched
     else
       playlist = OpenStruct.new.extend(VimeoPlaylistRepresenter)
-      @fetched = Fetcher.new(api_url, playlist).fetched
+      @fetched = Fetcher.new(api_url, playlist).fetch
     end
   end
 
@@ -112,7 +112,7 @@ class VimeoPlaylist < Provider
 
     def fetched_videos
       videos = [].extend(VimeoVideosRepresenter)
-      Fetcher.new(api_url, videos).fetched
+      Fetcher.new(api_url, videos).fetch
     end
 
     def api_url
