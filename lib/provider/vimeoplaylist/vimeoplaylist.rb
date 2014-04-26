@@ -95,17 +95,16 @@ class VimeoPlaylist < Provider
   end
 
   def fetch_videos(page=1)
-    videos = []
-    videos.extend(VimeoVideosRepresenter)
-    videos.from_json(raw_response_videos(page))
+    videos = [].extend(VimeoVideosRepresenter)
+    api_url = api_url_videos(page)
+    videos = Fetcher.new(api_url, videos).fetched
     videos.map do |video|
       Vimeo.new_from_video_id(video.video_id, video)
     end
   end
 
-  def raw_response_videos(page=1)
-    url = "http://vimeo.com/api/v2/album/#{playlist_id}/videos.json?page=#{page}"
-    open(url).read
+  def api_url_videos(page=1)
+    "http://vimeo.com/api/v2/album/#{playlist_id}/videos.json?page=#{page}"
   end
 
   def calculate_playlist_id
