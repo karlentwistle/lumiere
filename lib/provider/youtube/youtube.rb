@@ -68,13 +68,16 @@ class YouTube < Provider
 
   private
 
+  def fetcher
+    @fetcher ||= Fetcher.new(api_url, unpack_into)
+  end
+
+  def unpack_into
+    OpenStruct.new.extend(YouTubeVideoEntryRepresenter)
+  end
+
   def fetch
-    if @fetched
-      @fetched
-    else
-      video = OpenStruct.new.extend(YouTubeVideoEntryRepresenter)
-      @fetched = Fetcher.new(api_url, video).fetch
-    end
+    fetcher.fetch
   end
 
   def calculate_video_id

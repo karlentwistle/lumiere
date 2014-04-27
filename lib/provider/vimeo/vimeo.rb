@@ -68,14 +68,16 @@ class Vimeo < Provider
 
   private
 
+  def fetcher
+    @fetcher ||= Fetcher.new(api_url, unpack_into)
+  end
+
+  def unpack_into
+    [].extend(VimeoVideosRepresenter)
+  end
+
   def fetch
-    if @fetched
-      @fetched
-    else
-      videos = [].extend(VimeoVideosRepresenter)
-      @fetched = Fetcher.new(api_url, videos).fetch
-      @fetched = @fetched[0]
-    end
+    fetcher.fetch[0]
   end
 
   def calculate_video_id
