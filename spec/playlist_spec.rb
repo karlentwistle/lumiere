@@ -33,7 +33,7 @@ module Lumiere
         end
       end
 
-      context "total: 12, per_page: 5" do
+      context "total: 13, per_page: 5" do
         let(:total) { 13 }
         let(:per_page) { 5 }
 
