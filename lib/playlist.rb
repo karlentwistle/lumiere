@@ -1,9 +1,8 @@
 module Lumiere
   module Playlist
     def self.page_count(total, per_page)
-      page_count = total / per_page
-      page_count += 1 unless total % per_page == 0
-      page_count
+      mid_point = total.to_f / per_page.to_f
+      mid_point.ceil
     end
   end
 end
