@@ -70,13 +70,16 @@ class VimeoPlaylist < Provider
 
   private
 
+  def fetcher
+    @fetcher ||= Fetcher.new(api_url, unpack_into)
+  end
+
+  def unpack_into
+    OpenStruct.new.extend(VimeoPlaylistRepresenter)
+  end
+
   def fetch
-    if @fetched
-      @fetched
-    else
-      playlist = OpenStruct.new.extend(VimeoPlaylistRepresenter)
-      @fetched = Fetcher.new(api_url, playlist).fetch
-    end
+    fetcher.fetch
   end
 
   def calculate_playlist_id
