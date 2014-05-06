@@ -86,35 +86,17 @@ module Lumiere
       end
     end
 
-    describe "#title" do
-      let(:title) { 'awesome title' }
-      it "returns the video title" do
-        video.stub(:fetch) { double(title: title) }
-        expect(video.title).to eql(title)
-      end
-    end
-
-    describe "#description" do
-      let(:description) { 'Description of my awesome Video' }
-      it "returns the video description" do
-        video.stub(:fetch) { double(description: description) }
-        expect(video.description).to eql(description)
-      end
-    end
-
-    describe "#upload_date" do
-      let(:upload_date) { Date.today }
-      it "returns the video duration" do
-        video.stub(:fetch) { double(upload_date: upload_date) }
-        expect(video.upload_date).to eql(upload_date)
-      end
-    end
-
-    describe "#duration" do
-      let(:duration) { '35' }
-      it "returns the video duration" do
-        video.stub(:fetch) { double(duration: duration) }
-        expect(video.duration).to eql(duration)
+    remotes = {
+      title: 'awesome title',
+      description: 'Description of my awesome Video',
+      upload_date: Date.today,
+      duration: '35',
+    }.each do |attribute, expected_value|
+      describe "##{attribute}" do
+        it "returns the video #{attribute}" do
+          video.stub(:fetch) { double(attribute => expected_value) }
+          expect(video.send(attribute)).to eql(expected_value)
+        end
       end
     end
 

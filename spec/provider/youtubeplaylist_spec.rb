@@ -84,19 +84,16 @@ module Lumiere
       end
     end
 
-    describe "#title" do
-      let(:title) { 'Title of my awesome playlist' }
-      it "returns the playlist title" do
-        playlist.stub(:fetch) { double(title: title) }
-        expect(playlist.title).to eql(title)
-      end
-    end
-
-    describe "#description" do
-      let(:description) { 'Description of my awesome playlist' }
-      it "returns the playlist description" do
-        playlist.stub(:fetch) { double(description: description) }
-        expect(playlist.description).to eql(description)
+    remotes = {
+      title: 'Title of my awesome playlist',
+      description: 'Description of my awesome playlist',
+      total_results: 12,
+    }.each do |attribute, expected_value|
+      describe "##{attribute}" do
+        it "returns the playlist #{attribute}" do
+          playlist.stub(:fetch) { double(attribute => expected_value) }
+          expect(playlist.send(attribute)).to eql(expected_value)
+        end
       end
     end
 
@@ -127,14 +124,6 @@ module Lumiere
           double(thumbnails:[nil, nil, double(url: thumbnail_large)])
         }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
-      end
-    end
-
-    describe "#total_results" do
-      let(:total_results) { 12 }
-      it "returns the playlist total_results" do
-        playlist.stub(:fetch) { double(total_results: total_results) }
-        expect(playlist.total_results).to eql(total_results)
       end
     end
 

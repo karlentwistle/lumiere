@@ -96,62 +96,22 @@ module Lumiere
       end
     end
 
-    describe "#title" do
-      let(:title) { 'awesome title' }
-      it "returns the playlist title" do
-        playlist.stub(:fetch) { double(title: title) }
-        expect(playlist.title).to eql(title)
-      end
-    end
-
-    describe "#description" do
-      let(:description) { 'awesome description' }
-      it "returns the playlist description" do
-        playlist.stub(:fetch) { double(description: description) }
-        expect(playlist.description).to eql(description)
-      end
-    end
-
-    describe "#upload_date" do
-      let(:upload_date) { Date.today }
-      it "returns the date the playlist was uploaded" do
-        playlist.stub(:fetch) { double(upload_date: upload_date) }
-        expect(playlist.upload_date).to eql(upload_date)
-      end
-    end
-
-    describe "#thumbnail_small" do
-      let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
-      it "returns the playlist thumbnail_small" do
-        playlist.stub(:fetch) { double(thumbnail_small: thumbnail_small) }
-        expect(playlist.thumbnail_small).to eql(thumbnail_small)
-      end
-    end
-
-    describe "#thumbnail_medium" do
-      let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
-      it "returns the playlist thumbnail_medium" do
-        playlist.stub(:fetch) { double(thumbnail_medium: thumbnail_medium) }
-        expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
-      end
-    end
-
-    describe "#thumbnail_large" do
-      let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
-      it "returns the playlist thumbnail_large" do
-        playlist.stub(:fetch) { double(thumbnail_large: thumbnail_large) }
-        expect(playlist.thumbnail_large).to eql(thumbnail_large)
-      end
-    end
-
-    describe "#total_videos" do
-      let(:total_videos) { 21 }
-      it "returns the video thumbnail_large" do
-        playlist.stub(:total_videos) { total_videos }
-        expect(playlist.total_videos).to eql(total_videos)
+    remotes = {
+      title: 'awesome title',
+      description: 'awesome description',
+      upload_date: Date.today,
+      thumbnail_small: 'http://example.org/small_thumb.jpg',
+      thumbnail_medium: 'http://example.org/medium_thumb.jpg',
+      thumbnail_large: 'http://example.org/large_thumb.jpg',
+      total_videos: 21,
+    }.each do |attribute, expected_value|
+      describe "##{attribute}" do
+        it "returns the playlist #{attribute}" do
+          playlist.stub(:fetch) { double(attribute => expected_value) }
+          expect(playlist.send(attribute)).to eql(expected_value)
+        end
       end
     end
 
   end
-
 end

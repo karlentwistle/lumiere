@@ -80,61 +80,22 @@ module Lumiere
       end
     end
 
-    describe "#title" do
-      let(:title) { 'awesome title' }
-      it "returns the video title" do
-        video.stub(:fetch) { double(title: title) }
-        expect(video.title).to eql(title)
+    remotes = {
+      title: 'awesome title',
+      description: 'awesome description',
+      duration: '54',
+      upload_date: Date.today,
+      thumbnail_small: 'http://example.org/small_thumb.jpg',
+      thumbnail_medium: 'http://example.org/medium_thumb.jpg',
+      thumbnail_large: 'http://example.org/large_thumb.jpg',
+    }.each do |attribute, expected_value|
+      describe "##{attribute}" do
+        it "returns the video #{attribute}" do
+          video.stub(:fetch) { double(attribute => expected_value) }
+          expect(video.send(attribute)).to eql(expected_value)
+        end
       end
     end
 
-    describe "#description" do
-      let(:description) { 'awesome description' }
-      it "returns the video description" do
-        video.stub(:fetch) { double(description: description) }
-        expect(video.description).to eql(description)
-      end
-    end
-
-    describe "#duration" do
-      let(:duration) { '54' }
-      it "returns the video duration" do
-        video.stub(:fetch) { double(duration: duration) }
-        expect(video.duration).to eql(duration)
-      end
-    end
-
-    describe "#upload_date" do
-      let(:upload_date) { Date.today }
-      it "returns the date the video was uploaded" do
-        video.stub(:fetch) { double(upload_date: upload_date) }
-        expect(video.upload_date).to eql(upload_date)
-      end
-    end
-
-    describe "#thumbnail_small" do
-      let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
-      it "returns the video thumbnail_small" do
-        video.stub(:fetch) { double(thumbnail_small: thumbnail_small) }
-        expect(video.thumbnail_small).to eql(thumbnail_small)
-      end
-    end
-
-    describe "#thumbnail_medium" do
-      let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
-      it "returns the video thumbnail_medium" do
-        video.stub(:fetch) { double(thumbnail_medium: thumbnail_medium) }
-        expect(video.thumbnail_medium).to eql(thumbnail_medium)
-      end
-    end
-
-    describe "#thumbnail_large" do
-      let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
-      it "returns the video thumbnail_large" do
-        video.stub(:fetch) { double(thumbnail_large: thumbnail_large) }
-        expect(video.thumbnail_large).to eql(thumbnail_large)
-      end
-    end
   end
-
 end
