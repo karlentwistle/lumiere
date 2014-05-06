@@ -66,19 +66,11 @@ class Vimeo < Provider
     fetch.thumbnail_large
   end
 
-  private
-
-  def fetcher
-    @fetcher ||= Fetcher.new(api_url, unpack_into)
-  end
-
-  def unpack_into
-    [].extend(VimeoVideosRepresenter)
-  end
-
   def fetch
-    fetcher.fetch[0]
+    @fetch ||= VimeoFetcher.new(self).struct
   end
+
+  private
 
   def calculate_video_id
     uri = URISchemeless.parse(url)
@@ -88,4 +80,30 @@ class Vimeo < Provider
   end
 
 end
+end
+
+module Lumiere
+  class VimeoFetcher
+    attr_accessor :struct
+
+    def initialize(context)
+      @context = context
+      fetch
+    end
+
+    private
+
+    def fetch
+      @struct = fetcher.fetch[0]
+    end
+
+    def fetcher
+      Fetcher.new(@context.api_url, unpack_into)
+    end
+
+    def unpack_into
+      struct = []
+      struct.extend(VimeoVideosRepresenter)
+    end
+  end
 end
