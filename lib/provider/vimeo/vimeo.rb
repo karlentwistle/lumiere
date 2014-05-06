@@ -67,7 +67,12 @@ class Vimeo < Provider
   end
 
   def fetch
-    @fetch ||= VimeoFetcher.new(self).struct
+    @fetch ||= Fetcher.new(self).remote_attributes[0]
+  end
+
+  def unpack_into
+    struct = []
+    struct.extend(VimeoVideosRepresenter)
   end
 
   private
@@ -80,30 +85,4 @@ class Vimeo < Provider
   end
 
 end
-end
-
-module Lumiere
-  class VimeoFetcher
-    attr_accessor :struct
-
-    def initialize(context)
-      @context = context
-      fetch
-    end
-
-    private
-
-    def fetch
-      @struct = fetcher.fetch[0]
-    end
-
-    def fetcher
-      Fetcher.new(@context.api_url, unpack_into)
-    end
-
-    def unpack_into
-      struct = []
-      struct.extend(VimeoVideosRepresenter)
-    end
-  end
 end

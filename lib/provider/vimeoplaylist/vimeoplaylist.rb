@@ -64,6 +64,11 @@ class VimeoPlaylist < Provider
     fetch.total_videos
   end
 
+  def unpack_into
+    struct = OpenStruct.new
+    struct.extend(VimeoPlaylistRepresenter)
+  end
+
   def videos
     @videos ||= VideoFetcher.new(playlist_id, total_videos).videos
   end
@@ -71,7 +76,7 @@ class VimeoPlaylist < Provider
   private
 
   def fetch
-    @fetch ||= VimeoPlaylistFetcher.new(self).struct
+    @fetch ||= Fetcher.new(self).remote_attributes
   end
 
   def calculate_playlist_id
@@ -107,6 +112,11 @@ class VimeoPlaylist < Provider
       "http://vimeo.com/api/v2/album/#{@playlist_id}/videos.json?page=#{@page}"
     end
 
+    def unpack_into
+      struct = []
+      struct.extend(VimeoVideosRepresenter)
+    end
+
     private
 
     def fetched_videos
@@ -114,7 +124,7 @@ class VimeoPlaylist < Provider
     end
 
     def fetch
-      VimeoVideosFetcher.new(self).struct
+      Fetcher.new(self).remote_attributes
     end
 
     def page_count
@@ -127,58 +137,3 @@ class VimeoPlaylist < Provider
 
 end
 end
-
-
-module Lumiere
-  class VimeoPlaylistFetcher
-    attr_accessor :struct
-
-    def initialize(context)
-      @context = context
-      fetch
-    end
-
-    private
-
-    def fetch
-      @struct = fetcher.fetch
-    end
-
-    def fetcher
-      Fetcher.new(@context.api_url, unpack_into)
-    end
-
-    def unpack_into
-      struct = OpenStruct.new
-      struct.extend(VimeoPlaylistRepresenter)
-    end
-  end
-end
-
-
-module Lumiere
-  class VimeoVideosFetcher
-    attr_accessor :struct
-
-    def initialize(context)
-      @context = context
-      fetch
-    end
-
-    private
-
-    def fetch
-      @struct = fetcher.fetch
-    end
-
-    def fetcher
-      Fetcher.new(@context.api_url, unpack_into)
-    end
-
-    def unpack_into
-      struct = []
-      struct.extend(VimeoVideosRepresenter)
-    end
-  end
-end
-

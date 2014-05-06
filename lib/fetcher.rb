@@ -3,12 +3,12 @@ require 'open-uri'
 module Lumiere
 class Fetcher
 
-  def initialize(api_url, unpack_into)
-    @api_url = api_url
-    @unpack_into = unpack_into
+  def initialize(context)
+    @api_url = context.api_url
+    @unpack_into = context.unpack_into
   end
 
-  def fetch
+  def remote_attributes
     unless request_hash[@api_url]
       request_hash[@api_url] = unpack
     end

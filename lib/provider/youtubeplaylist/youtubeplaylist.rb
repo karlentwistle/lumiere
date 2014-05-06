@@ -86,14 +86,19 @@ class YouTubePlaylist < Provider
     fetch.total_results
   end
 
+  def unpack_into
+    struct = OpenStruct.new
+    struct.extend(YouTubePlaylistRepresenter)
+  end
+
   private
 
   def fetch
-    @fetch ||= YouTubePlaylistFetcher.new(self).struct
+    @fetch ||= fetch!
   end
 
   def fetch!
-    YouTubePlaylistFetcher.new(self).struct
+    Fetcher.new(self).remote_attributes
   end
 
   def calculate_playlist_id
@@ -103,31 +108,4 @@ class YouTubePlaylist < Provider
   end
 
 end
-end
-
-module Lumiere
-  class YouTubePlaylistFetcher
-    attr_accessor :struct
-
-    def initialize(context)
-      @context = context
-      fetch
-    end
-
-    private
-
-    def fetch
-      @struct = fetcher.fetch
-    end
-
-    def fetcher
-      Fetcher.new(@context.api_url, unpack_into)
-    end
-
-    def unpack_into
-      struct = OpenStruct.new
-      struct.extend(YouTubePlaylistRepresenter)
-    end
-
-  end
 end
