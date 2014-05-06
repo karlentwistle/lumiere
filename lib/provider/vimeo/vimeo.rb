@@ -66,16 +66,16 @@ class Vimeo < Provider
     fetch.thumbnail_large
   end
 
-  def fetch
-    @fetch ||= Fetcher.new(self).remote_attributes[0]
-  end
-
   def unpack_into
     struct = []
     struct.extend(VimeoVideosRepresenter)
   end
 
   private
+
+  def fetch
+    @fetch ||= Fetcher.new(self).remote_attributes[0]
+  end
 
   def calculate_video_id
     uri = URISchemeless.parse(url)
