@@ -20,6 +20,10 @@ class Elluminate
     @provider ||= Lumiere::Provider.delegate(url)
   end
 
+  def self.useable?(url)
+    Lumiere::Provider.useable?(url)
+  end
+
   def_delegators :@provider, :video_id, :playlist_id
   def_delegators :@provider, :provider, :upload_date
   def_delegators :@provider, :title, :description, :duration

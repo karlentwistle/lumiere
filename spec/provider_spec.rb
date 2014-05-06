@@ -5,7 +5,7 @@ module Lumiere
     subject(:provider) { Provider.new }
 
     describe ".delegate" do
-      context "YouTube URL" do
+      context "Single Provider" do
         let(:url) { 'www.youtube.com' }
         let(:youtube) { double }
         it "sets 'delegate' instance variable with new YouTube" do
@@ -15,7 +15,7 @@ module Lumiere
         end
       end
 
-      context "Vimeo URL" do
+      context "Multiple Providers" do
         let(:url) { 'www.vimeo.com' }
         let(:vimeo) { double }
         it "sets 'delegate' instance variable with new Vimeo" do
@@ -32,6 +32,29 @@ module Lumiere
           expect {
             Provider.delegate(url)
           }.to raise_exception(NotImplementedError)
+        end
+      end
+    end
+
+    describe ".useable?" do
+      context "Single Provider" do
+        let(:url) { 'http://youtube.com/watch?v=XTeJ64KD5cg' }
+        it "returns true" do
+          expect(Provider.useable?(url)).to be_true
+        end
+      end
+
+      context "Multiple Providers" do
+        let(:url) { 'https://www.vimeo.com/89682547' }
+        it "returns true" do
+          expect(Provider.useable?(url)).to be_true
+        end
+      end
+
+      context "Unsupported URL" do
+        let(:url) { 'http://video.google.com/videoplay?docid=5547481422995115331&hl=en' }
+        it "returns false" do
+          expect(Provider.useable?(url)).to be_false
         end
       end
     end

@@ -19,6 +19,11 @@ Usage
 -----
 
 ``` ruby
+# Elluminate.useable?('https://www.youtube.com/watch?v=6sJ80Y1YLJY')  => true
+# Elluminate.useable?('http://vimeo.com/4268592')                     => true
+# Elluminate.useable?('http://www.dailymotion.com/video/x1dh11z')     => true
+# Elluminate.useable?('https://github.com/karlentwistle/lumiere')     => false
+
 video = Elluminate.new('https://www.youtube.com/watch?v=6sJ80Y1YLJY')
 # video.accessible?      => true
 # video.video_id         => '6sJ80Y1YLJY'

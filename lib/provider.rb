@@ -18,6 +18,13 @@ module Lumiere
       raise NotImplementedError
     end
 
+    def self.useable?(url)
+      delegate(url)
+      true
+    rescue NotImplementedError
+      false
+    end
+
     def video_id
       raise NotImplementedError
     end

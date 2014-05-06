@@ -3,7 +3,13 @@ require 'spec_helper'
 module Lumiere
   describe Elluminate, :vcr do
     context "Vimeo 4268592" do
-    subject(:video) { Elluminate.new('https://vimeo.com/4268592') }
+      let(:url) { 'https://vimeo.com/4268592' }
+      subject(:video) { Elluminate.new(url) }
+
+      it "is useable" do
+        expect(Elluminate.useable?(url)).to be_true
+      end
+
       it do
         expect(video.provider).to eql('Vimeo')
         expect(video.title).to eql('Alan Watts')
@@ -19,7 +25,13 @@ module Lumiere
     end
 
     context "Vimeo Playlist 4268592" do
-    subject(:playlist) { Elluminate.new('https://vimeo.com/album/1488772') }
+      let(:url) { 'https://vimeo.com/album/1488772' }
+      subject(:playlist) { Elluminate.new('https://vimeo.com/album/1488772') }
+
+      it "is useable" do
+        expect(Elluminate.useable?(url)).to be_true
+      end
+
       it do
         expect(playlist.provider).to eql('Vimeo')
         expect(playlist.title).to eql('STEPHEN HAWKING\'S UNIVERSE')
@@ -51,7 +63,13 @@ module Lumiere
     end
 
     context "YouTube NwRuI0yjreQ" do
-    subject(:video) { Elluminate.new('https://www.youtube.com/watch?v=NwRuI0yjreQ') }
+      let(:url) { 'https://www.youtube.com/watch?v=NwRuI0yjreQ' }
+      subject(:video) { Elluminate.new(url) }
+
+      it "is useable" do
+        expect(Elluminate.useable?(url)).to be_true
+      end
+
       it do
         expect(video.provider).to eql('YouTube')
         expect(video.title).to eql('Shock haircut Supermodel punishment')
@@ -67,7 +85,13 @@ module Lumiere
     end
 
     context "YouTube Playlist 63F0C78739B09958" do
-    subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=63F0C78739B09958') }
+      let(:url) { 'https://www.youtube.com/playlist?p=63F0C78739B09958' }
+      subject(:playlist) { Elluminate.new(url) }
+
+      it "is useable" do
+        expect(Elluminate.useable?(url)).to be_true
+      end
+
       it do
         expect(playlist.provider).to eql('YouTube')
         expect(playlist.title).to eql('Music Playlist')
@@ -108,7 +132,12 @@ module Lumiere
     end
 
     context "Dailymotion x1dh5lh" do
-      subject(:video) { Elluminate.new('http://www.dailymotion.com/video/x1dh11z_vintage-otis-hydraulic-elevator-at-saks-fifth-avenue-frontenac-plaza-frontenac-mo_fun') }
+      let(:url) { 'http://www.dailymotion.com/video/x1dh11z_vintage-otis-hydraulic-elevator-at-saks-fifth-avenue-frontenac-plaza-frontenac-mo_fun' }
+      subject(:video) { Elluminate.new(url) }
+
+      it "is useable" do
+        expect(Elluminate.useable?(url)).to be_true
+      end
 
       it do
         expect(video.provider).to eql('Dailymotion')
