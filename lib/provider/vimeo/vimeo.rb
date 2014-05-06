@@ -35,7 +35,7 @@ class Vimeo < Provider
   end
 
   def embed_code
-    "<iframe src=\"//player.vimeo.com/video/#{video_id}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+    "<iframe src=\"#{embed_url}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
   end
 
   def title

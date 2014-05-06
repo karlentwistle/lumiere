@@ -36,7 +36,7 @@ class YouTubePlaylist < Provider
   end
 
   def embed_code
-    "<iframe src=\"//youtube.com/embed/?list=#{playlist_id}\" frameborder=\"0\" allowfullscreen></iframe>"
+    "<iframe src=\"#{embed_url}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
   def videos

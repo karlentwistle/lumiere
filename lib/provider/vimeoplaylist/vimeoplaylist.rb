@@ -33,7 +33,7 @@ class VimeoPlaylist < Provider
   end
 
   def embed_code
-    "<iframe src=\"//player.vimeo.com/hubnut/album/#{playlist_id}?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
+    "<iframe src=\"#{embed_url}?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
   end
 
   def title

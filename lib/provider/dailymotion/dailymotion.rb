@@ -30,7 +30,7 @@ class Dailymotion < Provider
   end
 
   def embed_code
-    "<iframe frameborder=\"0\" src=\"//www.dailymotion.com/embed/video/#{video_id}\" allowfullscreen></iframe>"
+    "<iframe frameborder=\"0\" src=\"#{embed_url}\" allowfullscreen></iframe>"
   end
 
   def title

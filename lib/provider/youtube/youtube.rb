@@ -35,7 +35,7 @@ class YouTube < Provider
   end
 
   def embed_code
-    "<iframe src=\"//www.youtube.com/embed/#{video_id}\" frameborder=\"0\" allowfullscreen></iframe>"
+    "<iframe src=\"#{embed_url}\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
   def thumbnail_small
