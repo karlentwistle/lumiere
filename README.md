@@ -5,7 +5,8 @@
 Lumiere fetches metadata from video providers
 
 * YouTube (with playlist support)
-* Vimeo
+* Vimeo (with playlist support)
+* Dailymotion
 
 Install
 --------
