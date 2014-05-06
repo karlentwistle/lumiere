@@ -68,16 +68,8 @@ class YouTube < Provider
 
   private
 
-  def fetcher
-    @fetcher ||= Fetcher.new(api_url, unpack_into)
-  end
-
-  def unpack_into
-    OpenStruct.new.extend(YouTubeVideoEntryRepresenter)
-  end
-
   def fetch
-    fetcher.fetch
+    @fetch ||= YouTubeFetcher.new(self).struct
   end
 
   def calculate_video_id
@@ -93,6 +85,31 @@ class YouTube < Provider
       uri.path
     end
   end
-
 end
+end
+
+module Lumiere
+  class YouTubeFetcher
+    attr_accessor :struct
+
+    def initialize(context)
+      @context = context
+      fetch
+    end
+
+    private
+
+    def fetch
+      @struct = fetcher.fetch
+    end
+
+    def fetcher
+      Fetcher.new(@context.api_url, unpack_into)
+    end
+
+    def unpack_into
+      struct = OpenStruct.new
+      struct.extend(YouTubeVideoEntryRepresenter)
+    end
+  end
 end
