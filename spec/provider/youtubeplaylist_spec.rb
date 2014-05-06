@@ -17,7 +17,7 @@ end
 
 module Lumiere
   describe YouTubePlaylist do
-    subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID') }
+    subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=PLAYLIST_ID') }
 
     describe ".useable?" do
       context "valid" do
@@ -56,15 +56,15 @@ module Lumiere
       context "no opts passed" do
         it "returns the url of the YouTube api" do
           expect(playlist.api_url).
-            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=25&start-index=1&v=2&alt=json')
+            to eql('http://gdata.youtube.com/feeds/api/playlists/PLAYLIST_ID?max-results=25&start-index=1&v=2&alt=json')
         end
       end
 
       context "start_index" do
-        subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=VIDEO_ID', start_index: 26) }
+        subject(:playlist) { YouTubePlaylist.new('http://www.youtube.com/playlist?list=PLAYLIST_ID', start_index: 26) }
         it "returns the url of the YouTube api with start_index" do
           expect(playlist.api_url).
-            to eql('http://gdata.youtube.com/feeds/api/playlists/VIDEO_ID?max-results=25&start-index=26&v=2&alt=json')
+            to eql('http://gdata.youtube.com/feeds/api/playlists/PLAYLIST_ID?max-results=25&start-index=26&v=2&alt=json')
         end
       end
 
@@ -72,14 +72,12 @@ module Lumiere
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
         expect(playlist.embed_url).to eql('http://youtube.com/embed/?list=PLAYLIST_ID')
       end
     end
 
     describe "#embed_code" do
       it "returns the embed_code" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
         expect(playlist.embed_code).to eql('<iframe src="//youtube.com/embed/?list=PLAYLIST_ID" frameborder="0" allowfullscreen></iframe>')
       end
     end

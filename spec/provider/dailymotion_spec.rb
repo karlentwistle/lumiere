@@ -62,8 +62,6 @@ module Lumiere
       end
     end
 
-#<iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x1pd4nn" allowfullscreen></iframe>
-
     describe "#embed_url" do
       it "returns the embed_url" do
         expect(video.embed_url).to eql('http://www.dailymotion.com/embed/video/x1pd4nn')

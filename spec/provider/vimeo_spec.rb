@@ -17,7 +17,7 @@ end
 
 module Lumiere
   describe Vimeo do
-    subject(:video) { Vimeo.new('VIDEO_ID') }
+    subject(:video) { Vimeo.new('https://vimeo.com/12345') }
 
     describe ".new_from_video_id" do
       it "returns a new Vimeo object with a .useable? url" do
@@ -59,24 +59,21 @@ module Lumiere
 
     describe "#api_url" do
       it "returns the url of the Vimeo api" do
-        video.stub(:video_id) { 'VIDEO_ID' }
         expect(video.api_url).
-          to eql('http://vimeo.com/api/v2/video/VIDEO_ID.json')
+          to eql('http://vimeo.com/api/v2/video/12345.json')
       end
     end
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        video.stub(:video_id) { 'VIDEO_ID' }
-        expect(video.embed_url).to eql('http://player.vimeo.com/video/VIDEO_ID')
+        expect(video.embed_url).to eql('http://player.vimeo.com/video/12345')
       end
     end
 
     describe "#embed_code" do
       it "returns the embed_code" do
-        video.stub(:video_id) { 'VIDEO_ID' }
         expect(video.embed_code).
-          to eql('<iframe src="//player.vimeo.com/video/VIDEO_ID" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>')
+          to eql('<iframe src="//player.vimeo.com/video/12345" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>')
       end
     end
 

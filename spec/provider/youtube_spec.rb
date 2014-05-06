@@ -23,7 +23,7 @@ end
 
 module Lumiere
   describe YouTube do
-    subject(:video) { YouTube.new('VIDEO_ID') }
+    subject(:video) { YouTube.new('www.youtube.com/embed/cUCSSJwO3GW') }
 
     describe ".new_from_video_id" do
       it "returns a new YouTube object with a .useable? url" do
@@ -65,24 +65,21 @@ module Lumiere
 
     describe "#api_url" do
       it "returns the url of the YouTube api" do
-        video.stub(:video_id) { 'VIDEO_ID' }
         expect(video.api_url).
-          to eql('http://gdata.youtube.com/feeds/api/videos/VIDEO_ID?v=2&alt=json')
+          to eql('http://gdata.youtube.com/feeds/api/videos/cUCSSJwO3GW?v=2&alt=json')
       end
     end
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        video.stub(:video_id) { 'VIDEO_ID' }
-        expect(video.embed_url).to eql('http://www.youtube.com/embed/VIDEO_ID')
+        expect(video.embed_url).to eql('http://www.youtube.com/embed/cUCSSJwO3GW')
       end
     end
 
     describe "#embed_code" do
       it "returns the embed_code" do
-        video.stub(:video_id) { 'VIDEO_ID' }
         expect(video.embed_code).
-          to eql('<iframe src="//www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>')
+          to eql('<iframe src="//www.youtube.com/embed/cUCSSJwO3GW" frameborder="0" allowfullscreen></iframe>')
       end
     end
 

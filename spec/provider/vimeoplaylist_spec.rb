@@ -29,7 +29,7 @@ end
 
 module Lumiere
   describe Vimeo do
-    subject(:playlist) { VimeoPlaylist.new('VIDEO_ID') }
+    subject(:playlist) { VimeoPlaylist.new('player.vimeo.com/hubnut/album/92224516') }
 
     describe ".useable?" do
       context "valid" do
@@ -75,24 +75,21 @@ module Lumiere
 
     describe "#api_url" do
       it "returns the url of the Vimeo api" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
         expect(playlist.api_url).
-          to eql('http://vimeo.com/api/v2/album/PLAYLIST_ID/info.json')
+          to eql('http://vimeo.com/api/v2/album/92224516/info.json')
       end
     end
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
-        expect(playlist.embed_url).to eql('http://player.vimeo.com/hubnut/album/PLAYLIST_ID')
+        expect(playlist.embed_url).to eql('http://player.vimeo.com/hubnut/album/92224516')
       end
     end
 
     describe "#embed_code" do
       it "returns the embed_code" do
-        playlist.stub(:playlist_id) { 'PLAYLIST_ID' }
         expect(playlist.embed_code).
-          to eql('<iframe src="//player.vimeo.com/hubnut/album/PLAYLIST_ID?autoplay=0&byline=0&portrait=0&title=0" frameborder="0"></iframe>')
+          to eql('<iframe src="//player.vimeo.com/hubnut/album/92224516?autoplay=0&byline=0&portrait=0&title=0" frameborder="0"></iframe>')
       end
     end
 
