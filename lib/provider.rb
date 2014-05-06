@@ -75,14 +75,22 @@ module Lumiere
     end
 
     def accessible?
-      code = Net::HTTP.get_response(URI(api_url)).code
-      @remote_status ||= !%w[403 404].include?(code)
+      response.is_a?(Net::HTTPSuccess)
     end
 
     def ==(other)
       if other.respond_to?(:video_id)
         video_id == other.video_id
       end
+    end
+
+    private
+
+    def response
+      uri = URI(api_url)
+      Net::HTTP.start(uri.hostname, uri.port, {use_ssl: uri.scheme == 'https'}) {|http|
+        http.request_get(uri.request_uri)
+      }
     end
   end
 end
