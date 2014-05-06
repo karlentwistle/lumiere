@@ -31,7 +31,7 @@ class Vimeo < Provider
   end
 
   def embed_url
-    "http://player.vimeo.com/video/#{video_id}"
+    "//player.vimeo.com/video/#{video_id}"
   end
 
   def embed_code

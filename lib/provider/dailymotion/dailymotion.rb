@@ -26,7 +26,7 @@ class Dailymotion < Provider
   end
 
   def embed_url
-    "http://www.dailymotion.com/embed/video/#{video_id}"
+    "//www.dailymotion.com/embed/video/#{video_id}"
   end
 
   def embed_code

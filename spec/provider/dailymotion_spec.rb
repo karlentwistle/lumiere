@@ -64,7 +64,7 @@ module Lumiere
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        expect(video.embed_url).to eql('http://www.dailymotion.com/embed/video/x1pd4nn')
+        expect(video.embed_url).to eql('//www.dailymotion.com/embed/video/x1pd4nn')
       end
     end
 

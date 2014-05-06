@@ -29,7 +29,7 @@ end
 
 module Lumiere
   describe Vimeo do
-    subject(:playlist) { VimeoPlaylist.new('player.vimeo.com/hubnut/album/92224516') }
+    subject(:playlist) { VimeoPlaylist.new('//player.vimeo.com/hubnut/album/92224516') }
 
     describe ".useable?" do
       context "valid" do
@@ -82,7 +82,7 @@ module Lumiere
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        expect(playlist.embed_url).to eql('http://player.vimeo.com/hubnut/album/92224516')
+        expect(playlist.embed_url).to eql('//player.vimeo.com/hubnut/album/92224516')
       end
     end
 

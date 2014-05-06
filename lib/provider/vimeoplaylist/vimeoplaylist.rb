@@ -29,7 +29,7 @@ class VimeoPlaylist < Provider
   end
 
   def embed_url
-    "http://player.vimeo.com/hubnut/album/#{playlist_id}"
+    "//player.vimeo.com/hubnut/album/#{playlist_id}"
   end
 
   def embed_code

@@ -32,7 +32,7 @@ class YouTubePlaylist < Provider
   end
 
   def embed_url
-    "http://youtube.com/embed/?list=#{playlist_id}"
+    "//youtube.com/embed/?list=#{playlist_id}"
   end
 
   def embed_code

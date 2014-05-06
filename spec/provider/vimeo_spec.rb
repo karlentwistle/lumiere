@@ -66,7 +66,7 @@ module Lumiere
 
     describe "#embed_url" do
       it "returns the embed_url" do
-        expect(video.embed_url).to eql('http://player.vimeo.com/video/12345')
+        expect(video.embed_url).to eql('//player.vimeo.com/video/12345')
       end
     end
 
