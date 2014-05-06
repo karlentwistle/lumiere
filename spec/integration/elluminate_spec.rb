@@ -107,5 +107,21 @@ module Lumiere
       end
     end
 
+    context "Dailymotion x1dh5lh" do
+      subject(:video) { Elluminate.new('http://www.dailymotion.com/video/x1dh11z_vintage-otis-hydraulic-elevator-at-saks-fifth-avenue-frontenac-plaza-frontenac-mo_fun') }
+
+      it do
+        expect(video.provider).to eql('Dailymotion')
+        expect(video.title).to eql('Vintage Otis Hydraulic Elevator at Saks Fifth Avenue, Frontenac Plaza, Frontenac, MO')
+        expect(video.description).to eql('[Featuring Dieselducy]  Andrew and I took a ride an an older Otis Lexan in FANTASTIC condition.')
+        expect(video.accessible?).to eql(true)
+        expect(video.video_id).to eql('x1dh11z')
+        expect(video.duration).to eql(172)
+        expect(video.thumbnail_small).to eql('http://s1.dmcdn.net/Evju5/x60-mG0.jpg')
+        expect(video.thumbnail_medium).to eql('http://s1.dmcdn.net/Evju5/x240-Dgb.jpg')
+        expect(video.thumbnail_large).to eql('http://s1.dmcdn.net/Evju5/x720-5Nl.jpg')
+      end
+    end
+
   end
 end

@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.dailymotion.com/video/x1dh11z?fields=id,title,description,duration,created_time,url,thumbnail_720_url,thumbnail_240_url,thumbnail_60_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - DMS/1.0.42
+      X-Dm-Backnode:
+      - web-085.adm.dailymotion.com:80
+      Vary:
+      - Authorization,Accept-Encoding
+      Cache-Control:
+      - private, max-age=900
+      Content-Type:
+      - application/json
+      P3p:
+      - policyref="http://www.dailymotion.com/w3c/p3p.xml", CP="IDC DSP CURa ADMa
+        DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Date:
+      - Tue, 06 May 2014 12:48:27 GMT
+      X-Dm-Lb:
+      - 195.8.215.130
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"_CTgJkA4oKiZ9WcfNhisFA"
+      X-Response-Time:
+      - 0.057074 seconds
+      Set-Cookie:
+      - ts=222605; expires=Mon, 06-May-2024 12:48:27 GMT; Max-Age=315619200; path=/;
+        domain=.dailymotion.com
+      Last-Modified:
+      - Tue, 06 May 2014 10:34:29 GMT
+      X-Dm-Page:
+      - gb.rest.rest_api
+      Content-Length:
+      - '367'
+    body:
+      encoding: UTF-8
+      string: '{"id":"x1dh11z","title":"Vintage Otis Hydraulic Elevator at Saks Fifth
+        Avenue, Frontenac Plaza, Frontenac, MO","description":"[Featuring Dieselducy]  Andrew
+        and I took a ride an an older Otis Lexan in FANTASTIC condition.","duration":172,"created_time":1393412468,"url":"http:\/\/www.dailymotion.com\/video\/x1dh11z_vintage-otis-hydraulic-elevator-at-saks-fifth-avenue-frontenac-plaza-frontenac-mo_fun","thumbnail_720_url":"http:\/\/s1.dmcdn.net\/Evju5\/x720-5Nl.jpg","thumbnail_240_url":"http:\/\/s1.dmcdn.net\/Evju5\/x240-Dgb.jpg","thumbnail_60_url":"http:\/\/s1.dmcdn.net\/Evju5\/x60-mG0.jpg"}'
+    http_version: 
+  recorded_at: Tue, 06 May 2014 12:48:19 GMT
+- request:
+    method: get
+    uri: https://api.dailymotion.com/video/x1dh11z?fields=id,title,description,duration,created_time,url,thumbnail_720_url,thumbnail_240_url,thumbnail_60_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.dailymotion.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - DMS/1.0.42
+      X-Dm-Backnode:
+      - web-082.adm.dailymotion.com:80
+      Vary:
+      - Authorization,Accept-Encoding
+      Cache-Control:
+      - private, max-age=900
+      Content-Type:
+      - application/json
+      P3p:
+      - policyref="http://www.dailymotion.com/w3c/p3p.xml", CP="IDC DSP CURa ADMa
+        DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Date:
+      - Tue, 06 May 2014 12:48:27 GMT
+      X-Dm-Lb:
+      - 195.8.215.129
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"_CTgJkA4oKiZ9WcfNhisFA"
+      X-Response-Time:
+      - 0.062092 seconds
+      Set-Cookie:
+      - ts=618128; expires=Mon, 06-May-2024 12:48:27 GMT; Max-Age=315619200; path=/;
+        domain=.dailymotion.com
+      Last-Modified:
+      - Tue, 06 May 2014 10:34:29 GMT
+      X-Dm-Page:
+      - gb.rest.rest_api
+      Content-Length:
+      - '367'
+    body:
+      encoding: UTF-8
+      string: '{"id":"x1dh11z","title":"Vintage Otis Hydraulic Elevator at Saks Fifth
+        Avenue, Frontenac Plaza, Frontenac, MO","description":"[Featuring Dieselducy]  Andrew
+        and I took a ride an an older Otis Lexan in FANTASTIC condition.","duration":172,"created_time":1393412468,"url":"http:\/\/www.dailymotion.com\/video\/x1dh11z_vintage-otis-hydraulic-elevator-at-saks-fifth-avenue-frontenac-plaza-frontenac-mo_fun","thumbnail_720_url":"http:\/\/s1.dmcdn.net\/Evju5\/x720-5Nl.jpg","thumbnail_240_url":"http:\/\/s1.dmcdn.net\/Evju5\/x240-Dgb.jpg","thumbnail_60_url":"http:\/\/s1.dmcdn.net\/Evju5\/x60-mG0.jpg"}'
+    http_version: 
+  recorded_at: Tue, 06 May 2014 12:48:19 GMT
+recorded_with: VCR 2.8.0

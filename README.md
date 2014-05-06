@@ -69,6 +69,19 @@ playlist = Elluminate.new('https://vimeo.com/album/1488772')
 # playlist.thumbnail_large  => "http://i.vimeocdn.com/video/134668334_640.jpg"
 # playlist.embed_url        => "http://player.vimeo.com/hubnut/album/1488772"
 # playlist.embed_code       => "<iframe src=\"//player.vimeo.com/hubnut/album/1488772?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
+
+video = Elluminate.new('http://www.dailymotion.com/video/x1dh11z')
+#video.provider         => 'Dailymotion'
+#video.title            => 'Vintage Otis Hydraulic Elevator at Saks Fifth Avenue, Frontenac Plaza,Frontenac, MO'
+#video.description      => '[Featuring Dieselducy]  Andrew and I took a ride an an older Otis Lexan in FANTASTIC condition.'
+#video.accessible?)     => true
+#video.video_id         => 'x1dh11z'
+#video.duration         => 172
+#video.thumbnail_small  => 'http://s1.dmcdn.net/Evju5/x60-mG0.jpg'
+#video.thumbnail_medium => 'http://s1.dmcdn.net/Evju5/x240-Dgb.jpg'
+#video.thumbnail_large  => 'http://s1.dmcdn.net/Evju5/x720-5Nl.jpg'
+#video.embed_url        => 'http://www.dailymotion.com/embed/video/x1dh11z'
+#video.embed_code       => '<iframe frameborder=\"0\" src=\"//www.dailymotion.com/embed/video/x1dh11z\" allowfullscreen></iframe>'
 ```
 
 Author
