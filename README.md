@@ -94,7 +94,8 @@ Options
 ------
 You can include a iframe_attributes hash to the embed_code method to include arbitrary attributes in the iframe embed code:
 ``` ruby
-Elluminate.new("http://www.youtube.com/watch?v=mZqGqE0D0n4").embed_code(iframe_attributes: { width: 800, height: 600, "data-key" => "value" }) => '<iframe src="//www.youtube.com/watch?v=FdDDLLHY_Kk" frameborder="0" allowfullscreen width="800" height="600" data-key="value"></iframe>
+Elluminate.new("http://www.youtube.com/watch?v=mZqGqE0D0n4").embed_code(iframe_attributes: { width: 800, height: 600, "data-key" => "value" }) => 
+#'<iframe src="//www.youtube.com/watch?v=FdDDLLHY_Kk" frameborder="0" allowfullscreen width="800" height="600" data-key="value"></iframe>
 ```
 
 Author
