@@ -30,8 +30,8 @@ module Lumiere
       context "boolean option passed" do
         context "true" do
           let(:opts) { {allowfullscreen: true} }
-          it 'returns iframe with src and boolean option set as option=option rather than option=true' do
-            expect(pages).to eql('<iframe src="/remote" allowfullscreen="allowfullscreen"></iframe>')
+          it 'returns iframe with src and boolean option set as "option" rather than "option=true"' do
+            expect(pages).to eql('<iframe src="/remote" allowfullscreen></iframe>')
           end
         end
       end

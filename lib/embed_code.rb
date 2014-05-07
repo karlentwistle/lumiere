@@ -24,10 +24,10 @@ module Lumiere
 
     def generate_object_property(key, value)
       if value.is_a?(TrueClass)
-        value = key #set as option=option rather than option=true
+        key #set as 'option' rather than 'option=true'
+      else
+        "#{key}=\"#{value}\""
       end
-
-      "#{key}=\"#{value}\""
     end
   end
 end
