@@ -12,6 +12,7 @@ require_relative 'extended_uri'
 require_relative 'provider'
 require_relative 'playlist'
 require_relative 'fetcher'
+require_relative 'embed_code'
 
 class Elluminate
   extend Forwardable

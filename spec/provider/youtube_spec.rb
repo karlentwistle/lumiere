@@ -77,9 +77,18 @@ module Lumiere
     end
 
     describe "#embed_code" do
-      it "returns the embed_code" do
-        expect(video.embed_code).
-          to eql('<iframe src="//www.youtube.com/embed/cUCSSJwO3GW" frameborder="0" allowfullscreen></iframe>')
+      context "no options" do
+        it "returns the embed_code" do
+          expect(video.embed_code).
+            to eql('<iframe src="//www.youtube.com/embed/cUCSSJwO3GW" frameborder="0" allowfullscreen></iframe>')
+        end
+      end
+
+      context "options" do
+        it "returns the embed_code with default options appended" do
+          expect(video.embed_code(iframe_attributes: {width: 800, height: 600})).
+            to eql('<iframe src="//www.youtube.com/embed/cUCSSJwO3GW" frameborder="0" allowfullscreen width="800" height="600"></iframe>')
+        end
       end
     end
 
