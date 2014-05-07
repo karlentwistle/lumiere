@@ -69,9 +69,18 @@ module Lumiere
     end
 
     describe "#embed_code" do
-      it "returns the embed_code" do
-        expect(video.embed_code).
-          to eql('<iframe frameborder="0" src="//www.dailymotion.com/embed/video/x1pd4nn" allowfullscreen></iframe>')
+      context "no options" do
+        it "returns the embed_code with the default options" do
+          expect(video.embed_code).
+            to eql('<iframe src="//www.dailymotion.com/embed/video/x1pd4nn" frameborder="0" allowfullscreen></iframe>')
+        end
+      end
+
+      context "options" do
+        it "returns the embed_code with options appended to defaults" do
+          expect(video.embed_code(iframe_attributes: {width: 800, height: 600})).
+            to eql('<iframe src="//www.dailymotion.com/embed/video/x1pd4nn" frameborder="0" allowfullscreen width="800" height="600"></iframe>')
+        end
       end
     end
 
