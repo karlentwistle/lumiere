@@ -1,6 +1,7 @@
 module Lumiere
 class Dailymotion < Provider
   attr_accessor :url
+  include EmbedCode
 
   USEABLE = ['www.dailymotion.com', 'dailymotion.com']
 
@@ -29,14 +30,11 @@ class Dailymotion < Provider
     "//www.dailymotion.com/embed/video/#{video_id}"
   end
 
-  def embed_code(opts = {})
-    default_attributes = {
+  def default_attributes
+    {
       frameborder: 0,
       allowfullscreen: true
     }
-    iframe_attributes = opts.fetch(:iframe_attributes, {})
-    options = default_attributes.merge(iframe_attributes)
-    Lumiere::EmbedCode.generate(embed_url, options)
   end
 
   def title

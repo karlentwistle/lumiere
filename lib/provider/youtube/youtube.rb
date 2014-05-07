@@ -1,6 +1,7 @@
 module Lumiere
 class YouTube < Provider
   attr_accessor :url
+  include EmbedCode
 
   USEABLE = ['www.youtube.com', 'youtube.com', 'youtu.be']
 
@@ -34,11 +35,11 @@ class YouTube < Provider
     "//www.youtube.com/embed/#{video_id}"
   end
 
-  def embed_code(opts = {})
-    default_attributes = {frameborder: 0, allowfullscreen: true}
-    iframe_attributes = opts.fetch(:iframe_attributes, {})
-    options = default_attributes.merge(iframe_attributes)
-    Lumiere::EmbedCode.generate(embed_url, options)
+  def default_attributes
+    {
+      frameborder: 0,
+      allowfullscreen: true
+    }
   end
 
   def thumbnail_small

@@ -1,6 +1,7 @@
 module Lumiere
 class Vimeo < Provider
   attr_accessor :url
+  include EmbedCode
 
   USEABLE = ['www.vimeo.com', 'vimeo.com', 'player.vimeo.com']
 
@@ -34,16 +35,13 @@ class Vimeo < Provider
     "//player.vimeo.com/video/#{video_id}"
   end
 
-  def embed_code(opts = {})
-    default_attributes = {
+  def default_attributes
+    {
       frameborder: 0,
       webkitallowfullscreen: true,
       mozallowfullscreen: true,
       allowfullscreen: true
     }
-    iframe_attributes = opts.fetch(:iframe_attributes, {})
-    options = default_attributes.merge(iframe_attributes)
-    Lumiere::EmbedCode.generate(embed_url, options)
   end
 
   def title

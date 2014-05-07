@@ -2,6 +2,12 @@ module Lumiere
   module EmbedCode
     extend self
 
+    def embed_code(opts = {})
+      iframe_attributes = opts.fetch(:iframe_attributes, {})
+      options = default_attributes.merge(iframe_attributes)
+      Lumiere::EmbedCode.generate(embed_url, options)
+    end
+
     def generate(src, opts={})
       opts ||= {}
       opts = {src: src}.merge(opts)
