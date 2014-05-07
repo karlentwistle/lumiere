@@ -1,3 +1,8 @@
+require_relative 'extended_uri'
+require_relative 'playlist'
+require_relative 'fetcher'
+require_relative 'embed_code'
+
 module Lumiere
   class Provider
 
