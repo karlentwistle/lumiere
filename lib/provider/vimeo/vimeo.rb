@@ -37,10 +37,12 @@ class Vimeo < Provider
 
   def default_attributes
     {
-      frameborder: 0,
-      webkitallowfullscreen: true,
-      mozallowfullscreen: true,
-      allowfullscreen: true
+      iframe_attributes: {
+        frameborder: 0,
+        webkitallowfullscreen: true,
+        mozallowfullscreen: true,
+        allowfullscreen: true
+      }
     }
   end
 

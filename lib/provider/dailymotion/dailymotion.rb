@@ -32,8 +32,10 @@ class Dailymotion < Provider
 
   def default_attributes
     {
-      frameborder: 0,
-      allowfullscreen: true
+      iframe_attributes: {
+        frameborder: 0,
+        allowfullscreen: true
+      }
     }
   end
 

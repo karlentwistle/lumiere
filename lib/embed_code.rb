@@ -1,21 +1,37 @@
+require 'open-uri'
+
 module Lumiere
   module EmbedCode
     extend self
 
     def embed_code(opts = {})
       iframe_attributes = opts.fetch(:iframe_attributes, {})
-      options = default_attributes.merge(iframe_attributes)
-      Lumiere::EmbedCode.generate(embed_url, options)
-    end
+      url_attributes = opts.fetch(:url_attributes, {})
 
-    def generate(src, opts={})
-      opts ||= {}
-      opts = {src: src}.merge(opts)
+      default_iframe_attributes = default_attributes.fetch(:iframe_attributes, {})
+      default_url_attributes = default_attributes.fetch(:url_attributes, {})
 
-      generate_html_object('iframe', opts)
+      object_properties = default_iframe_attributes.merge(iframe_attributes)
+      url_properties = default_url_attributes.merge(url_attributes)
+
+      generate(embed_url, url_properties, object_properties)
     end
 
     private
+
+    def generate(src, url_properties={}, object_properties={})
+      src = generate_src(src, url_properties)
+      object_properties = {src: src}.merge(object_properties)
+      generate_html_object('iframe', object_properties)
+    end
+
+    def generate_src(src, url_properties)
+      if !url_properties.empty?
+        src += "?" + URI.encode_www_form(url_properties)
+      else
+        src
+      end
+    end
 
     def generate_html_object(object_name, opts)
       html_options = generate_object_properties(opts)

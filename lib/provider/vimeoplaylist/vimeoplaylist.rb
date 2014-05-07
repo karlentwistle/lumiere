@@ -1,6 +1,7 @@
 module Lumiere
 class VimeoPlaylist < Provider
   attr_accessor :url
+  include EmbedCode
 
   USEABLE = ['vimeo.com', 'player.vimeo.com', 'www.vimeo.com']
   RESULTS_PER_REQUEST = 20
@@ -32,12 +33,11 @@ class VimeoPlaylist < Provider
     "//player.vimeo.com/hubnut/album/#{playlist_id}"
   end
 
-  def embed_code(opts = {})
-    default_attributes = { frameborder: 0 }
-    iframe_attributes = opts.fetch(:iframe_attributes, {})
-    options = default_attributes.merge(iframe_attributes)
-    url = "#{embed_url}?autoplay=0&byline=0&portrait=0&title=0"
-    Lumiere::EmbedCode.generate(url, options)
+  def default_attributes
+    {
+      iframe_attributes: { frameborder: 0 },
+      url_attributes: { autoplay: 0, byline: 0, portrait: 0, title: 0 }
+    }
   end
 
   def title
