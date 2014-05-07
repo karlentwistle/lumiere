@@ -87,9 +87,18 @@ module Lumiere
     end
 
     describe "#embed_code" do
-      it "returns the embed_code" do
-        expect(playlist.embed_code).
-          to eql('<iframe src="//player.vimeo.com/hubnut/album/92224516?autoplay=0&byline=0&portrait=0&title=0" frameborder="0"></iframe>')
+      context "no options" do
+        it "returns the embed_code with the default options" do
+          expect(playlist.embed_code).
+            to eql('<iframe src="//player.vimeo.com/hubnut/album/92224516?autoplay=0&byline=0&portrait=0&title=0" frameborder="0"></iframe>')
+        end
+      end
+
+      context "options" do
+        it "returns the embed_code with options appended to defaults" do
+          expect(playlist.embed_code(iframe_attributes: {width: 800, height: 600})).
+            to eql('<iframe src="//player.vimeo.com/hubnut/album/92224516?autoplay=0&byline=0&portrait=0&title=0" frameborder="0" width="800" height="600"></iframe>')
+        end
       end
     end
 

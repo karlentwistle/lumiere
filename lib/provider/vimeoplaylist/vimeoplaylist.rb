@@ -32,8 +32,12 @@ class VimeoPlaylist < Provider
     "//player.vimeo.com/hubnut/album/#{playlist_id}"
   end
 
-  def embed_code
-    "<iframe src=\"#{embed_url}?autoplay=0&byline=0&portrait=0&title=0\" frameborder=\"0\"></iframe>"
+  def embed_code(opts = {})
+    default_attributes = { frameborder: 0 }
+    iframe_attributes = opts.fetch(:iframe_attributes, {})
+    options = default_attributes.merge(iframe_attributes)
+    url = "#{embed_url}?autoplay=0&byline=0&portrait=0&title=0"
+    Lumiere::EmbedCode.generate(url, options)
   end
 
   def title
