@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../lib/provider'
 
 module Lumiere
   describe Provider do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../lib/fetcher'
 
 module Lumiere
   describe Fetcher do

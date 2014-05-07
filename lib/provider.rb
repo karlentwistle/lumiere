@@ -1,3 +1,5 @@
+require 'net/http'
+
 require_relative 'extended_uri'
 require_relative 'playlist'
 require_relative 'fetcher'
@@ -9,7 +11,6 @@ module Lumiere
     PROVIDERS = %w(YouTubePlaylist VimeoPlaylist YouTube Vimeo Dailymotion)
     PROVIDERS.each do |provider|
       require_relative "provider/#{provider.downcase}/#{provider.downcase}"
-      require_relative "provider/#{provider.downcase}/representer"
     end
 
     def self.delegate(url)

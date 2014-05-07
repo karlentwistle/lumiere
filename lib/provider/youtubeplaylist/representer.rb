@@ -1,3 +1,8 @@
+require 'representable'
+require 'representable/coercion'
+require 'representable/json'
+require 'representable/json/collection'
+
 require_relative '../youtube/youtube'
 require_relative '../youtube/representer'
 

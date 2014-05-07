@@ -1,4 +1,3 @@
-require 'spec_helper'
 require_relative '../../lib/provider/dailymotion/dailymotion'
 
 def valid_urls

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'lumiere'
 
 module Lumiere
   describe Elluminate, :vcr do

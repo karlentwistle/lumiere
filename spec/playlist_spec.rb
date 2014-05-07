@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../lib/playlist'
 
 module Lumiere
   describe Playlist do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../../lib/provider/youtubeplaylist/youtubeplaylist'
 
 def valid_urls
   {

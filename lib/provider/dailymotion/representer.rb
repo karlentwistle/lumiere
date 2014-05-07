@@ -1,3 +1,7 @@
+require 'representable'
+require 'representable/coercion'
+require 'representable/json'
+
 module Lumiere
   module DailymotionVideoRepresenter
     include Representable::JSON

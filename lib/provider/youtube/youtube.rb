@@ -1,3 +1,6 @@
+require_relative 'representer'
+require_relative '../../provider'
+
 module Lumiere
 class YouTube < Provider
   attr_accessor :url

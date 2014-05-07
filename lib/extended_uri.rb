@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Lumiere
   module URISchemeless
     def self.parse(url)

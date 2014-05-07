@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../lib/extended_uri'
 
 module Lumiere
   describe URISchemeless do

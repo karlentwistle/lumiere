@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../../lib/provider/vimeoplaylist/vimeoplaylist'
 
 def valid_urls
   {

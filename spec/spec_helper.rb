@@ -1,5 +1,4 @@
 require 'rspec'
-require 'lumiere'
 require 'webmock/rspec'
 require 'vcr'
 require 'active_support'

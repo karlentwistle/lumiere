@@ -1,3 +1,8 @@
+require 'representable'
+require 'representable/coercion'
+require 'representable/json'
+require 'representable/json/collection'
+
 module Lumiere
   module VimeoVideoRepresenter
     include Representable::JSON
