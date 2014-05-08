@@ -1,4 +1,4 @@
-require_relative '../lib/src'
+require_relative '../../lib/embed_code/src'
 
 module Lumiere
 

@@ -1,4 +1,5 @@
 require_relative 'src'
+require_relative 'html_object_properties'
 
 module Lumiere
   module EmbedCode
@@ -29,23 +30,13 @@ module Lumiere
       SRC
     end
 
+    def html_object_properties
+      HTMLObjectProperties
+    end
+
     def generate_html_object(object_name, opts)
-      html_options = generate_object_properties(opts)
+      html_options = html_object_properties.generate(opts)
       "<#{object_name} #{html_options}></#{object_name}>"
-    end
-
-    def generate_object_properties(opts={})
-      opts.map do |key, value|
-        generate_object_property(key, value)
-      end.join(' ')
-    end
-
-    def generate_object_property(key, value)
-      if value.is_a?(TrueClass)
-        key #set as 'option' rather than 'option=true'
-      else
-        "#{key}=\"#{value}\""
-      end
     end
   end
 end
