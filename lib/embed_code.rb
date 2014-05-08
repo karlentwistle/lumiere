@@ -1,4 +1,4 @@
-require 'open-uri'
+require_relative 'src'
 
 module Lumiere
   module EmbedCode
@@ -20,17 +20,13 @@ module Lumiere
     private
 
     def generate(src, url_properties={}, object_properties={})
-      src = generate_src(src, url_properties)
+      src = src_encoder.encode(src, url_properties)
       object_properties = {src: src}.merge(object_properties)
       generate_html_object('iframe', object_properties)
     end
 
-    def generate_src(src, url_properties)
-      if !url_properties.empty?
-        src += "?" + URI.encode_www_form(url_properties)
-      else
-        src
-      end
+    def src_encoder
+      SRC
     end
 
     def generate_html_object(object_name, opts)
