@@ -15,7 +15,7 @@ module Lumiere
       object_properties = default_iframe_attributes.merge(iframe_attributes)
       url_properties = default_url_attributes.merge(url_attributes)
 
-      src = src_encoder.encode(embed_url, url_properties)
+      src = src_encoder.(embed_url, url_properties)
       object_properties = {src: src}.merge(object_properties)
       generate_html_object('iframe', object_properties)
     end
@@ -23,7 +23,7 @@ module Lumiere
     private
 
     def generate_html_object(object_name, opts)
-      html_options = html_object_properties.generate(opts)
+      html_options = html_object_properties.(opts)
       "<iframe #{html_options}></iframe>"
     end
 

@@ -7,6 +7,7 @@ module Lumiere
         generate_object_property(key, value)
       end.join(' ')
     end
+    alias_method :call, :generate
 
     private
 

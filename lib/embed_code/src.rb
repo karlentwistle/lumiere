@@ -8,6 +8,7 @@ module Lumiere
       src += www_form(opts) unless opts.empty?
       src
     end
+    alias_method :call, :encode
 
     private
 
