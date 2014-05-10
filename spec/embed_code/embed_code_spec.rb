@@ -1,4 +1,4 @@
-require_relative '../lib/embed_code'
+require_relative '../../lib/embed_code/embed_code'
 
 module Lumiere
   class FakeVideoHost
