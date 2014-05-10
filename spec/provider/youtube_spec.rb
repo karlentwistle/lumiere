@@ -99,8 +99,9 @@ module Lumiere
       duration: '35',
     }.each do |attribute, expected_value|
       describe "##{attribute}" do
+        let(:remote_attributes) { double(attribute => expected_value) }
         it "returns the video #{attribute}" do
-          video.stub(:fetch) { double(attribute => expected_value) }
+          allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
           expect(video.send(attribute)).to eql(expected_value)
         end
       end
@@ -108,30 +109,27 @@ module Lumiere
 
     describe "#thumbnail_small" do
       let(:thumbnail_small) { 'http://example.org/small_thumb.jpg' }
+      let(:remote_attributes) { double(thumbnails:[double(url: thumbnail_small)]) }
       it "returns the video thumbnail_small" do
-        video.stub(:fetch) {
-          double(thumbnails:[double(url: thumbnail_small)])
-        }
+        allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(video.thumbnail_small).to eql(thumbnail_small)
       end
     end
 
     describe "#thumbnail_medium" do
       let(:thumbnail_medium) { 'http://example.org/medium_thumb.jpg' }
+      let(:remote_attributes) { double(thumbnails:[nil, double(url: thumbnail_medium)]) }
       it "returns the video thumbnail_medium" do
-        video.stub(:fetch) {
-          double(thumbnails:[nil, double(url: thumbnail_medium)])
-        }
+        allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(video.thumbnail_medium).to eql(thumbnail_medium)
       end
     end
 
     describe "#thumbnail_large" do
       let(:thumbnail_large) { 'http://example.org/large_thumb.jpg' }
+      let(:remote_attributes) { double(thumbnails:[nil, nil, double(url: thumbnail_large)]) }
       it "returns the video thumbnail_large" do
-        video.stub(:fetch) {
-          double(thumbnails:[nil, nil, double(url: thumbnail_large)])
-        }
+        allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(video.thumbnail_large).to eql(thumbnail_large)
       end
     end

@@ -83,7 +83,7 @@ class YouTube < Provider
   private
 
   def fetch
-    @fetch ||= Fetcher.new(self).remote_attributes
+    @fetch ||= Fetcher.remote_attributes(api_url, unpack_into)
   end
 
   def calculate_video_id

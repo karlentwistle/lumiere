@@ -112,8 +112,9 @@ module Lumiere
       total_videos: 21,
     }.each do |attribute, expected_value|
       describe "##{attribute}" do
+        let(:remote_attributes) { double(attribute => expected_value) }
         it "returns the playlist #{attribute}" do
-          playlist.stub(:fetch) { double(attribute => expected_value) }
+          allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
           expect(playlist.send(attribute)).to eql(expected_value)
         end
       end

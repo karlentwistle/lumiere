@@ -93,8 +93,9 @@ module Lumiere
       thumbnail_large: 'http://example.org/large_thumb.jpg',
     }.each do |attribute, expected_value|
       describe "##{attribute}" do
+        let(:remote_attributes) { double(attribute => expected_value) }
         it "returns the video #{attribute}" do
-          video.stub(:fetch) { double(attribute => expected_value) }
+          allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
           expect(video.send(attribute)).to eql(expected_value)
         end
       end

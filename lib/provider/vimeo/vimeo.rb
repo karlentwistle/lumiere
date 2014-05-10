@@ -85,7 +85,7 @@ class Vimeo < Provider
   private
 
   def fetch
-    @fetch ||= Fetcher.new(self).remote_attributes[0]
+    @fetch ||= Fetcher.remote_attributes(api_url, unpack_into)[0]
   end
 
   def calculate_video_id

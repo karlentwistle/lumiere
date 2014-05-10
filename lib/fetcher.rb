@@ -1,33 +1,24 @@
 require 'open-uri'
 
 module Lumiere
-class Fetcher
+  module Fetcher
+    extend self
 
-  def initialize(context)
-    @api_url = context.api_url
-    @unpack_into = context.unpack_into
-  end
-
-  def remote_attributes
-    unless request_hash[@api_url]
-      request_hash[@api_url] = unpack
+    def remote_attributes(api_url, unpack_into)
+      body = scrape(api_url)
+      unpack(body, unpack_into)
     end
-    request_hash[@api_url]
+
+    private
+
+    def unpack(body, unpack_into)
+      unpack_into.from_json(body)
+    end
+
+    def scrape(url)
+      body = open(url).read
+      body
+    end
+
   end
-
-  private
-
-  def request_hash
-    @request_hash ||= {}
-  end
-
-  def unpack
-    @unpack_into.from_json(raw_response)
-  end
-
-  def raw_response
-    open(@api_url).read
-  end
-
-end
 end

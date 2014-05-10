@@ -107,7 +107,7 @@ class YouTubePlaylist < Provider
   end
 
   def fetch!
-    Fetcher.new(self).remote_attributes
+    Fetcher.remote_attributes(api_url, unpack_into)
   end
 
   def calculate_playlist_id

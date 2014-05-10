@@ -83,7 +83,7 @@ class VimeoPlaylist < Provider
   private
 
   def fetch
-    @fetch ||= Fetcher.new(self).remote_attributes
+    @fetch ||= Fetcher.remote_attributes(api_url, unpack_into)
   end
 
   def calculate_playlist_id
@@ -131,7 +131,7 @@ class VimeoPlaylist < Provider
     end
 
     def fetch
-      Fetcher.new(self).remote_attributes
+      Fetcher.remote_attributes(api_url, unpack_into)
     end
 
     def page_count
