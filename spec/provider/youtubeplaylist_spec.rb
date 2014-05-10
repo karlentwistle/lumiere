@@ -103,6 +103,13 @@ module Lumiere
           allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
           expect(playlist.send(attribute)).to eql(expected_value)
         end
+
+        it "memomized the call to fetcher" do
+          expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
+          2.times do
+            expect(playlist.send(attribute)).to eql(expected_value)
+          end
+        end
       end
     end
 
@@ -113,6 +120,13 @@ module Lumiere
         allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(playlist.thumbnail_small).to eql(thumbnail_small)
       end
+
+      it "memomized the call to fetcher" do
+        expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
+        2.times do
+          playlist.thumbnail_small
+        end
+      end
     end
 
     describe "#thumbnail_medium" do
@@ -122,6 +136,13 @@ module Lumiere
         allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(playlist.thumbnail_medium).to eql(thumbnail_medium)
       end
+
+      it "memomized the call to fetcher" do
+        expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
+        2.times do
+          playlist.thumbnail_medium
+        end
+      end
     end
 
     describe "#thumbnail_large" do
@@ -130,6 +151,13 @@ module Lumiere
       it "returns the playlist thumbnail_large" do
         allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
         expect(playlist.thumbnail_large).to eql(thumbnail_large)
+      end
+
+      it "memomized the call to fetcher" do
+        expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
+        2.times do
+          playlist.thumbnail_large
+        end
       end
     end
 

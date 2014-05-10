@@ -117,6 +117,13 @@ module Lumiere
           allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
           expect(playlist.send(attribute)).to eql(expected_value)
         end
+
+        it "memomized the call to fetcher" do
+          expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
+          2.times do
+            playlist.send(attribute)
+          end
+        end
       end
     end
 
