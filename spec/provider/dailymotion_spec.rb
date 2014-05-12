@@ -1,3 +1,4 @@
+require_relative '../shared_examples/fetched_memoized_attribute'
 require_relative '../../lib/provider/dailymotion/dailymotion'
 
 def valid_urls
@@ -93,18 +94,7 @@ module Lumiere
       thumbnail_large: 'http://example.org/large_thumb.jpg',
     }.each do |attribute, expected_value|
       describe "##{attribute}" do
-        let(:remote_attributes) { double(attribute => expected_value) }
-        it "returns the video #{attribute}" do
-          allow(Fetcher).to receive(:remote_attributes) { remote_attributes }
-          expect(video.send(attribute)).to eql(expected_value)
-        end
-
-        it "memomized the call to fetcher" do
-          expect(Fetcher).to receive(:remote_attributes).once { remote_attributes }
-          2.times do
-            video.send(attribute)
-          end
-        end
+        it_should_behave_like "fetched memoized attribute", attribute, expected_value
       end
     end
 
