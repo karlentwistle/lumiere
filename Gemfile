@@ -5,6 +5,3 @@ gemspec
 
 gem 'coveralls', require: false
 
-group :test do
-#  gem 'pry'
-end
