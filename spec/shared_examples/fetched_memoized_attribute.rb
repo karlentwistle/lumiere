@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Lumiere
   share_examples_for "fetched memoized attribute" do |attribute, expected_value|
     let(:remote_attributes) { double(attribute => expected_value) }
