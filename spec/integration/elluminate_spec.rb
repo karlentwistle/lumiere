@@ -8,7 +8,7 @@ module Lumiere
       subject(:video) { Elluminate.new(url) }
 
       it "is useable" do
-        expect(Elluminate.useable?(url)).to be_true
+        expect(Elluminate.useable?(url)).to be true
       end
 
       it do
@@ -30,7 +30,7 @@ module Lumiere
       subject(:playlist) { Elluminate.new('https://vimeo.com/album/1488772') }
 
       it "is useable" do
-        expect(Elluminate.useable?(url)).to be_true
+        expect(Elluminate.useable?(url)).to be true
       end
 
       it do
@@ -68,7 +68,7 @@ module Lumiere
       subject(:video) { Elluminate.new(url) }
 
       it "is useable" do
-        expect(Elluminate.useable?(url)).to be_true
+        expect(Elluminate.useable?(url)).to be true
       end
 
       it do
@@ -90,7 +90,7 @@ module Lumiere
       subject(:playlist) { Elluminate.new(url) }
 
       it "is useable" do
-        expect(Elluminate.useable?(url)).to be_true
+        expect(Elluminate.useable?(url)).to be true
       end
 
       it do
@@ -137,7 +137,7 @@ module Lumiere
       subject(:video) { Elluminate.new(url) }
 
       it "is useable" do
-        expect(Elluminate.useable?(url)).to be_true
+        expect(Elluminate.useable?(url)).to be true
       end
 
       it do
