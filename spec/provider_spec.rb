@@ -41,21 +41,21 @@ module Lumiere
       context "Single Provider" do
         let(:url) { 'http://youtube.com/watch?v=XTeJ64KD5cg' }
         it "returns true" do
-          expect(Provider.useable?(url)).to be_true
+          expect(Provider.useable?(url)).to be true
         end
       end
 
       context "Multiple Providers" do
         let(:url) { 'https://www.vimeo.com/89682547' }
         it "returns true" do
-          expect(Provider.useable?(url)).to be_true
+          expect(Provider.useable?(url)).to be true
         end
       end
 
       context "Unsupported URL" do
         let(:url) { 'http://video.google.com/videoplay?docid=5547481422995115331&hl=en' }
         it "returns false" do
-          expect(Provider.useable?(url)).to be_false
+          expect(Provider.useable?(url)).to be false
         end
       end
     end
@@ -63,13 +63,13 @@ module Lumiere
     describe "#accessible?" do
       let(:api_url) { 'http://www.example.com/VIDEO-ID/remote_structure.json' }
       before do
-        provider.stub(api_url: api_url)
+        allow(provider).to receive(:api_url) { api_url }
       end
       context "private video" do
         it "returns false" do
           stub_request(:any, api_url).to_return(status: 403)
           VCR.turned_off do
-            expect(provider.accessible?).to be_false
+            expect(provider.accessible?).to be false
           end
         end
       end
@@ -78,7 +78,7 @@ module Lumiere
         it "returns false" do
           stub_request(:any, api_url).to_return(status: 403)
           VCR.turned_off do
-            expect(provider.accessible?).to be_false
+            expect(provider.accessible?).to be false
           end
         end
       end
@@ -87,7 +87,7 @@ module Lumiere
         it "returns false" do
           stub_request(:any, api_url).to_return(status: 404)
           VCR.turned_off do
-            expect(provider.accessible?).to be_false
+            expect(provider.accessible?).to be false
           end
         end
       end
@@ -96,7 +96,7 @@ module Lumiere
         it "returns true" do
           stub_request(:any, api_url).to_return(status: 200)
           VCR.turned_off do
-            expect(provider.accessible?).to be_true
+            expect(provider.accessible?).to be true
           end
         end
       end

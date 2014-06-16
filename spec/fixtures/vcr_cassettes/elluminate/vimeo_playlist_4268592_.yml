@@ -1,0 +1,224 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/1488772/info.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Mon, 16 Jun 2014 14:59:04 GMT
+      Expires:
+      - Mon, 16 Jun 2014 15:00:04 GMT
+      Content-Length:
+      - '660'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"2ea8a25eae2fc23b4eccd937d2043fef"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3598'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Wed, 15 Dec 2010 18:51:40 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '2067024314'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy3
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":1488772,"created_on":"2010-12-08 06:37:55","last_modified":"2010-12-15
+        13:51:40","title":"STEPHEN HAWKING''S UNIVERSE","description":"Descubre el
+        universo de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos
+        del Universo, la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/album\/1488772","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/134668334_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/134668334_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/134668334_640.jpg","total_videos":6,"user_id":3298490,"user_display_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490"}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:04 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/1488772/info.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Mon, 16 Jun 2014 14:59:04 GMT
+      Expires:
+      - Mon, 16 Jun 2014 15:00:04 GMT
+      Content-Length:
+      - '660'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"2ea8a25eae2fc23b4eccd937d2043fef"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3597'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Wed, 15 Dec 2010 18:51:40 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '2003410594'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy2
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":1488772,"created_on":"2010-12-08 06:37:55","last_modified":"2010-12-15
+        13:51:40","title":"STEPHEN HAWKING''S UNIVERSE","description":"Descubre el
+        universo de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos
+        del Universo, la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/album\/1488772","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/134668334_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/134668334_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/134668334_640.jpg","total_videos":6,"user_id":3298490,"user_display_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490"}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:04 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/1488772/videos.json?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '57'
+      Date:
+      - Mon, 16 Jun 2014 14:58:09 GMT
+      Expires:
+      - Mon, 16 Jun 2014 14:59:09 GMT
+      Content-Length:
+      - '7188'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"79d05fa3d62e6adca0fc9583c263f824"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3589'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Mon, 16 Jun 2014 14:51:57 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '1800253342'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy1
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":17385851,"title":"STEPHEN HAWKING''S UNIVERSE 01 Ver para
+        creer","description":"Descubre el universo de la mano de Stephen Hawking.
+        Con 6 episodios, nos explica los secretos del Universo, la formaci\u00f3n
+        de los planetas, los agujeros negros, las estrellas, el origen de nuestro
+        planeta etc.","url":"http:\/\/vimeo.com\/17385851","upload_date":"2010-12-01
+        19:31:25","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/109577668_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/109577668_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/109577668_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":7,"stats_number_of_plays":5650,"stats_number_of_comments":0,"duration":2965,"width":640,"height":480,"tags":"Stephen
+        Hawking, universo, cosmos, planetas, astrofisica, astronomia, fisica, big
+        bang, estrellas, agujeros negros","embed_privacy":"anywhere"},{"id":17384125,"title":"STEPHEN
+        HAWKING''S UNIVERSE 02 Los origenes","description":"Descubre el universo de
+        la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos del
+        Universo, la formaci\u00f3n de los planetas, los agujeros negros, las estrellas,
+        el origen de nuestro planeta etc.","url":"http:\/\/vimeo.com\/17384125","upload_date":"2010-12-01
+        18:30:27","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/107944119_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/107944119_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/107944119_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":2,"stats_number_of_plays":2668,"stats_number_of_comments":0,"duration":2922,"width":640,"height":480,"tags":"Stephen
+        Hawking, universo, cosmos, planetas, astrofisica, astronomia, fisica, big
+        bang","embed_privacy":"anywhere"},{"id":17571029,"title":"STEPHEN HAWKING''S
+        UNIVERSE 03 Agujeros negros","description":"Descubre el universo de la mano
+        de Stephen Hawking. Con 6 episodios, nos explica los secretos del Universo,
+        la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/17571029","upload_date":"2010-12-07
+        13:37:36","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/134668334_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/134668334_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/134668334_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":4,"stats_number_of_plays":2488,"stats_number_of_comments":0,"duration":2965,"width":640,"height":480,"tags":"Stephen
+        Hawking, Stephen Hawking''s universe, fisica, ciencia, agujeros negros, Big
+        Bang, estrellas planetas, einstein","embed_privacy":"anywhere"},{"id":17581126,"title":"STEPHEN
+        HAWKING''S UNIVERSE 04 Alquimia Cosmica","description":"Descubre el universo
+        de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos del
+        Universo, la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/17581126","upload_date":"2010-12-07
+        18:37:14","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/134668145_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/134668145_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/134668145_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":3,"stats_number_of_plays":1870,"stats_number_of_comments":0,"duration":2965,"width":640,"height":480,"tags":"Fisica,
+        universo, agujeros negros, estrellas, gravedad, tiempo, Stephen Hawking","embed_privacy":"anywhere"},{"id":17814855,"title":"STEPHEN
+        HAWKING''S UNIVERSE 05 En el lado oscuro","description":"Descubre el universo
+        de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos del
+        Universo, la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/17814855","upload_date":"2010-12-14
+        14:00:58","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/111271127_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/111271127_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/111271127_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":1,"stats_number_of_plays":1997,"stats_number_of_comments":0,"duration":2966,"width":640,"height":480,"tags":"Fisica,
+        universo, agujeros negros, estrellas, gravedad, tiempo, stephen hawking","embed_privacy":"anywhere"},{"id":17838622,"title":"STEPHEN
+        HAWKING''S UNIVERSE 06 Una respuesta para todo","description":"Descubre el
+        universo de la mano de Stephen Hawking. Con 6 episodios, nos explica los secretos
+        del Universo, la formaci\u00f3n de los planetas,\u2026","url":"http:\/\/vimeo.com\/17838622","upload_date":"2010-12-15
+        04:47:46","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/111539363_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/111539363_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/111539363_640.jpg","user_id":3298490,"user_name":"Hipatia","user_url":"http:\/\/vimeo.com\/user3298490","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/406555_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/406555_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/406555_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/406555_300x300.jpg","stats_number_of_likes":2,"stats_number_of_plays":2815,"stats_number_of_comments":0,"duration":2965,"width":640,"height":480,"tags":"Fisica,
+        universo, agujeros negros, estrellas, gravedad, tiempo, stephen hawking","embed_privacy":"anywhere"}]'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:05 GMT
+recorded_with: VCR 2.9.1

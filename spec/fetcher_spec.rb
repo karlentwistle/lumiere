@@ -8,7 +8,7 @@ module Lumiere
       subject(:fetcher) { Fetcher.remote_attributes(api_url, unpack_into) }
 
       it "returns the result of from_json on unpack_into" do
-        Fetcher.stub(:scrape).with(api_url) { 'body' }
+        allow(Fetcher).to receive(:scrape).with(api_url) { 'body' }
         expect(fetcher).to eql(true)
       end
     end
