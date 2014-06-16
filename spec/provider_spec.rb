@@ -63,7 +63,7 @@ module Lumiere
     describe "#accessible?" do
       let(:api_url) { 'http://www.example.com/VIDEO-ID/remote_structure.json' }
       before do
-        provider.stub(api_url: api_url)
+        allow(provider).to receive(:api_url) { api_url }
       end
       context "private video" do
         it "returns false" do
