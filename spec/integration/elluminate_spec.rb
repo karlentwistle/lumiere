@@ -99,9 +99,9 @@ module Lumiere
         expect(playlist.description).to eql("Playlist just brimming with the odd, beautiful, or interesting music videos I come across")
         expect(playlist.accessible?).to eql(true)
         expect(playlist.playlist_id).to eql('63F0C78739B09958')
-        expect(playlist.thumbnail_small).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/default.jpg')
-        expect(playlist.thumbnail_medium).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/mqdefault.jpg')
-        expect(playlist.thumbnail_large).to eql('http://i.ytimg.com/vi/nyMkLwSyOVQ/hqdefault.jpg')
+        expect(playlist.thumbnail_small).to eql('https://i1.ytimg.com/vi/nyMkLwSyOVQ/default.jpg')
+        expect(playlist.thumbnail_medium).to eql('https://i1.ytimg.com/vi/nyMkLwSyOVQ/mqdefault.jpg')
+        expect(playlist.thumbnail_large).to eql('https://i1.ytimg.com/vi/nyMkLwSyOVQ/hqdefault.jpg')
 
         expect(playlist.videos).to match_array([
           YouTube.new('http://www.youtube.com/watch?v=nyMkLwSyOVQ'),
@@ -112,15 +112,8 @@ module Lumiere
           YouTube.new('http://www.youtube.com/watch?v=vLrslkB1pG8'),
           YouTube.new('http://www.youtube.com/watch?v=JWiwuiT58Yc'),
           YouTube.new('http://www.youtube.com/watch?v=yFTvbcNhEgc'),
+          YouTube.new('http://www.youtube.com/watch?v=e4dT8FJ2GE0'),
         ])
-      end
-    end
-
-    context "YouTube Playlist PL44955DED6D0262DB" do
-      subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=PL44955DED6D0262DB') }
-
-      it do
-        expect(playlist.videos.size).to eql(199) # the deleted video doesnt count
       end
     end
 
@@ -128,7 +121,7 @@ module Lumiere
       subject(:playlist) { Elluminate.new('https://www.youtube.com/playlist?p=PLGznEl712WekhqwD9jh3YXR-cJTjSBVjQ') }
 
       it do
-        expect(playlist.videos.size).to eql(200)
+        expect(playlist.videos.size).to eql(199) # the deleted video doesnt count
       end
     end
 
@@ -147,9 +140,9 @@ module Lumiere
         expect(video.accessible?).to eql(true)
         expect(video.video_id).to eql('x1dh11z')
         expect(video.duration).to eql(172)
-        expect(video.thumbnail_small).to eql('http://s1.dmcdn.net/Evju5/x60-mG0.jpg')
-        expect(video.thumbnail_medium).to eql('http://s1.dmcdn.net/Evju5/x240-Dgb.jpg')
-        expect(video.thumbnail_large).to eql('http://s1.dmcdn.net/Evju5/x720-5Nl.jpg')
+        expect(video.thumbnail_small).to eql('http://s2.dmcdn.net/FoQqL/x60-s4Y.jpg')
+        expect(video.thumbnail_medium).to eql('http://s2.dmcdn.net/FoQqL/x240-iU8.jpg')
+        expect(video.thumbnail_large).to eql('http://s2.dmcdn.net/FoQqL/x720-uY2.jpg')
       end
     end
 
