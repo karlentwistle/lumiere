@@ -1,0 +1,603 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/2356816/info.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Mon, 16 Jun 2014 14:59:06 GMT
+      Expires:
+      - Mon, 16 Jun 2014 15:00:06 GMT
+      Content-Length:
+      - '841'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"542a75f859b76e35507f334667e17fb2"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3595'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Wed, 04 Jun 2014 21:22:51 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '2067025196'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy3
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2356816,"created_on":"2013-04-22 18:18:11","last_modified":"2014-06-04
+        17:22:51","title":"Sexy Vimeo (1)","description":"http:\/\/vimeo.com\/groups\/sexyvimeo
+        <br \/>\r\n<br \/>\r\nhttp:\/\/vimeo.com\/channels\/sexyvimeo <br \/>\r\n<br
+        \/>\r\nhttp:\/\/vimeo.com\/groups\/rinvimeo <br \/>\r\n<br \/>\r\nhttp:\/\/vimeo.com\/channels\/rinvimeo<br
+        \/>\r\n<br \/>\r\nhttp:\/\/vimeo.com\/album\/2357874 <br \/>\r\n<br \/>\r\nhttp:\/\/vimeo.com\/album\/2358077","url":"http:\/\/vimeo.com\/album\/2356816","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477297828_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477297828_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477297828_640.jpg","total_videos":702,"user_id":17880641,"user_display_name":"Best
+        Sexy Vimeo","user_url":"http:\/\/vimeo.com\/sexyvimeo"}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:05 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/2356816/videos.json?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3579'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Expires:
+      - Mon, 16 Jun 2014 14:59:11 GMT
+      Last-Modified:
+      - Fri, 13 Jun 2014 20:47:01 GMT
+      Etag:
+      - ! '"50865457271e996fda3855c5af3154ee"'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 16 Jun 2014 14:59:06 GMT
+      X-Varnish:
+      - 2213528857 2213498576
+      Age:
+      - '55'
+      Via:
+      - 1.1 varnish
+      X-Varnish-Cache:
+      - '1'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy4
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":97056314,"title":"Katrina","description":"Sensual Katrina.
+        Hot like the sun and wet like the rain. An erotic videoclip I made of this
+        wonderful sexy woman. Thanks Katrina for showing us what you got.<br \/>\r\n<br
+        \/>\r\nMusic: Motorcycle - As the Rush Comes (Gabriel & Dresden Chillout mix)","url":"http:\/\/vimeo.com\/97056314","upload_date":"2014-06-01
+        14:14:28","mobile_url":"http:\/\/vimeo.com\/m\/97056314","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477297828_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477297828_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477297828_640.jpg","user_id":22767882,"user_name":"Steve
+        Glamorous","user_url":"http:\/\/vimeo.com\/user22767882","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6642435_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6642435_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6642435_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6642435_300x300.jpg","stats_number_of_likes":147,"stats_number_of_plays":27062,"stats_number_of_comments":4,"duration":364,"width":342,"height":242,"tags":"nude,
+        glamour, sexy, erotic, models, sensual, hot, sexual","embed_privacy":"anywhere"},{"id":96973868,"title":"Topless
+        DJane Aurika-photo set in Cyprus\u0080","description":"photographer<br \/>\r\nEvgeny
+        Konasov<br \/>\r\nmodel<br \/>\r\nDJane Aurika<br \/>\r\nmusic<br \/>\r\nDeeptrak
+        feat. Emma Black - Satisfaction (Alias Rhythm Remix)","url":"http:\/\/vimeo.com\/96973868","upload_date":"2014-05-31
+        03:04:05","mobile_url":"http:\/\/vimeo.com\/m\/96973868","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477195450_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477195450_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477195450_640.jpg","user_id":3861198,"user_name":"ToplessDJaurikA","user_url":"http:\/\/vimeo.com\/user3861198","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/566163_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/566163_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/566163_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/566163_300x300.jpg","stats_number_of_likes":160,"stats_number_of_plays":69426,"stats_number_of_comments":2,"duration":101,"width":640,"height":480,"tags":"Topless
+        DJ Aurika, \u0434\u0438\u0434\u0436\u0435\u0439 \u0430\u0443\u0440\u0438\u043a\u0430,
+        DJ, Djane Aurika, sexy, girl, house, music, t-dj aurika, \u043d\u044e, \u0442\u043e\u043f\u043b\u0435\u0441,
+        \u044d\u0440\u043e\u0442\u0438\u043a\u0430, Evgeny Konasov","embed_privacy":"anywhere"},{"id":96958815,"title":"Nicole
+        Aniston - Beauty","description":"Nicole Aniston shoot for STRIPLV Magazine
+        by Santodonato","url":"http:\/\/vimeo.com\/96958815","upload_date":"2014-05-30
+        20:01:02","mobile_url":"http:\/\/vimeo.com\/m\/96958815","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477174059_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477174059_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477174059_640.jpg","user_id":27632524,"user_name":"Santodonato","user_url":"http:\/\/vimeo.com\/santodonato","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7585779_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7585779_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7585779_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7585779_300x300.jpg","stats_number_of_likes":239,"stats_number_of_plays":64973,"stats_number_of_comments":3,"duration":264,"width":1280,"height":720,"tags":"Nicole
+        Aniston, Blonde, Sexy, Girl, Striptease, Striplv, Santodonato, Nudity, big
+        boobs, Sex, Nude, Porn","embed_privacy":"anywhere"},{"id":96899837,"title":"Vimeo
+        \u0421\u0432\u043e\u0439\u0441\u0442\u0432\u0430 \u0413\u0440\u0443\u043f\u043f
+        30.05.2014","description":"","url":"http:\/\/vimeo.com\/96899837","upload_date":"2014-05-30
+        07:53:18","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477094581_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477094581_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477094581_640.jpg","user_id":28531844,"user_name":"Secret
+        \u2606 \u0421\u0435\u043a\u0440\u0435\u0442","user_url":"http:\/\/vimeo.com\/rinsecret","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7719814_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7719814_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7719814_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7719814_300x300.jpg","stats_number_of_likes":33,"stats_number_of_plays":3637,"stats_number_of_comments":0,"duration":783,"width":1280,"height":684,"tags":"RinSecret,
+        Group, Groups, function, property, Vimeo.com, Vimeo, 2014","embed_privacy":"anywhere"},{"id":96870970,"title":"Liz-Chinese
+        Bed","description":"The model is of course Liz Ashley.  See Her links and
+        other videos below.<br \/>\r\nThe music is Polish.  The singer is Karolina
+        Kozak and the song is titled <br \/>\r\nK\u00eaam Prosze K\u00eaam.  I hope
+        you enjoy her voice as much as I do and buy some of it.<br \/>\r\n<br \/>\r\nLiz
+        Ashley info:<br \/>\r\nSite:  http:\/\/www.thelizashley.com<br \/>\r\nModelling
+        Contact:  http:\/\/www.modelmayhem.com\/26159<br \/>\r\nOther videos:<br \/>\r\nhttp:\/\/vimeo.com\/96285573<br
+        \/>\r\nhttp:\/\/vimeo.com\/95660752","url":"http:\/\/vimeo.com\/96870970","upload_date":"2014-05-29
+        22:45:44","mobile_url":"http:\/\/vimeo.com\/m\/96870970","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477060624_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477060624_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477060624_640.jpg","user_id":15463960,"user_name":"Et
+        Moi","user_url":"http:\/\/vimeo.com\/user15463960","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7704137_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7704137_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7704137_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7704137_300x300.jpg","stats_number_of_likes":394,"stats_number_of_plays":52912,"stats_number_of_comments":16,"duration":186,"width":1280,"height":720,"tags":"video
+        centerfold, nude, Liz Ashley, playboy, Karolina Kozak","embed_privacy":"anywhere"},{"id":96823511,"title":"Kortney
+        Kane - Desire","description":"Kortney Kane photo shoot for STRIPLV Magazine.","url":"http:\/\/vimeo.com\/96823511","upload_date":"2014-05-29
+        12:34:13","mobile_url":"http:\/\/vimeo.com\/m\/96823511","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476991225_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476991225_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476991225_640.jpg","user_id":27632524,"user_name":"Santodonato","user_url":"http:\/\/vimeo.com\/santodonato","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7585779_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7585779_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7585779_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7585779_300x300.jpg","stats_number_of_likes":397,"stats_number_of_plays":59605,"stats_number_of_comments":6,"duration":277,"width":1280,"height":720,"tags":"Kortney
+        Kane, Sexy, Striptease, Girl, Nudity, Santodonato, Striplv, Magazine, Beautiful,
+        Woman","embed_privacy":"anywhere"},{"id":96811281,"title":"Anna S - 3","description":"","url":"http:\/\/vimeo.com\/96811281","upload_date":"2014-05-29
+        10:30:04","mobile_url":"http:\/\/vimeo.com\/m\/96811281","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476980604_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476980604_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476980604_640.jpg","user_id":28103674,"user_name":"Anna
+        S","user_url":"http:\/\/vimeo.com\/user28103674","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7644185_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7644185_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7644185_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7644185_300x300.jpg","stats_number_of_likes":521,"stats_number_of_plays":68038,"stats_number_of_comments":11,"duration":240,"width":1024,"height":576,"tags":"","embed_privacy":"anywhere"},{"id":96758103,"title":"#SimboloSoho
+        N\u00b029: Vania Bludau","description":"Les presentamos a nuestra #SimboloSoho
+        N\u00b029: Vania Bludau<br \/>\n<br \/>\nAclamada por mucho, \u00a1nuestra
+        despampanante s\u00edmbolo lo muestra todo!<br \/>\n<br \/>\n\u00a1\u00a1Con
+        Uds. el making of m\u00e1s esperado!!","url":"http:\/\/vimeo.com\/96758103","upload_date":"2014-05-28
+        19:20:33","mobile_url":"http:\/\/vimeo.com\/m\/96758103","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476907242_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476907242_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476907242_640.jpg","user_id":28574271,"user_name":"Revista
+        Soho Per\u00fa","user_url":"http:\/\/vimeo.com\/user28574271","user_portrait_small":"http:\/\/www.gravatar.com\/avatar\/cb75ea36a0c20c601a173d417a8a8b80?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_30x30.png&s=30","user_portrait_medium":"http:\/\/www.gravatar.com\/avatar\/cb75ea36a0c20c601a173d417a8a8b80?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_75x75.png&s=75","user_portrait_large":"http:\/\/www.gravatar.com\/avatar\/cb75ea36a0c20c601a173d417a8a8b80?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_100x100.png&s=100","user_portrait_huge":"http:\/\/www.gravatar.com\/avatar\/cb75ea36a0c20c601a173d417a8a8b80?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_300x300.png&s=300","stats_number_of_likes":353,"stats_number_of_plays":369686,"stats_number_of_comments":17,"duration":119,"width":1280,"height":720,"tags":"#SimboloSoho,
+        Revista Soho Per\u00fa N\u00b029, Vania Bludau","embed_privacy":"anywhere"},{"id":96470164,"title":"Ewelina
+        at the old train station - corsage Teaser","description":"Unbelievable but
+        true, sometimes nude models wear clothes too... For this shooting Ewelina
+        wore a corsage and a C string from SiaLinda. The location was an old disused
+        railway depo \u2026<br \/>\r\nmore: http:\/\/www.nude-art-models.com\/ewelina-corsage-at-the-old-train-station","url":"http:\/\/vimeo.com\/96470164","upload_date":"2014-05-26
+        03:08:07","mobile_url":"http:\/\/vimeo.com\/m\/96470164","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476529506_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476529506_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476529506_640.jpg","user_id":15545355,"user_name":"Cat''s
+        Eyes | Thomas Braun","user_url":"http:\/\/vimeo.com\/catseyes","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/4992122_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/4992122_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/4992122_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/4992122_300x300.jpg","duration":48,"width":1280,"height":720,"tags":"nude
+        model, young, girl, shooting, nackt, naked, art, boobs, breasts, ass, booty,
+        woman, Ewelina, corsage at the old train station","embed_privacy":"anywhere"},{"id":96079674,"title":"Anna
+        S -  2","description":"","url":"http:\/\/vimeo.com\/96079674","upload_date":"2014-05-22
+        09:06:44","mobile_url":"http:\/\/vimeo.com\/m\/96079674","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476163364_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476163364_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476163364_640.jpg","user_id":28103674,"user_name":"Anna
+        S","user_url":"http:\/\/vimeo.com\/user28103674","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7644185_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7644185_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7644185_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7644185_300x300.jpg","stats_number_of_likes":439,"stats_number_of_plays":29552,"stats_number_of_comments":14,"duration":240,"width":1024,"height":576,"tags":"","embed_privacy":"anywhere"},{"id":96053979,"title":"\"ISHTAR\"
+        by Pino Leone for WOLF MAGAZINE","description":"PHOTO\/DIRECTOR: PINO LEONE<br
+        \/>\r\nMODEL: ASA STENSSON AT ELITE STOCKHOLM<br \/>\r\nWOLVES: BLUSTERER
+        - DEW - AMY WOLFHOUSE WOLFDOG LAND AT L\u2019AURORA DEL LUPO <br \/>\r\nSTYLIST:
+        ROBERTO CIAPANI<br \/>\r\nMAKE-UP: GIORDANA HASSAN<br \/>\r\nHAIR: STEFANIA
+        SEMINARA<br \/>\r\nFILMING: MICHEL FRANCO<br \/>\r\nEDITING: SARA CAPPA<br
+        \/>\r\nASSISTANTS: MARCO SCICHILONE - FRANCESCO MASSELLA<br \/>\r\nClothing<br
+        \/>\r\nBODY BY LA PERLA BLACK LABEL<br \/>\r\nDRESSES BY NINO LETTIERI COUTURE
+        - CROSS BY ALDO<br \/>\r\nDRESS BY CRISTIANO BURANI<br \/>\r\nFUR BY CRISTIANO
+        BURANI<br \/>\r\nDRESS BY DANIELE CARLOTTA - PANTIES BY INTIMISSIMI<br \/>\r\nBOLERO
+        BY LA PERLA<br \/>\r\nEARRINGS BY REFASHION STYLE<br \/>\r\nJACKET BY OPERA\u2019
+        FASHION - SKIRT BY DIESEL BAG BY REFASHION STYLE<br \/>\r\nSHOES BY RALPH
+        LAUREN SKIRT BY DIESEL - SHOES BY RALPH LAUREN<br \/>\r\nBAG BY REFASHION
+        STYLE - BOOTS BY RALPH LAUREN<br \/>\r\nShot on RED EPIC MONOCHROME","url":"http:\/\/vimeo.com\/96053979","upload_date":"2014-05-22
+        02:26:49","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476131473_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476131473_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476131473_640.jpg","user_id":16156247,"user_name":"Pino
+        Leone","user_url":"http:\/\/vimeo.com\/pinoleone","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/4833144_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/4833144_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/4833144_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/4833144_300x300.jpg","stats_number_of_likes":42,"stats_number_of_plays":5719,"stats_number_of_comments":1,"duration":271,"width":1280,"height":676,"tags":"WOLF
+        Magazine","embed_privacy":"anywhere"},{"id":95989755,"title":"Playboys model
+        is posing naked in the city of Prague","description":"","url":"http:\/\/vimeo.com\/95989755","upload_date":"2014-05-21
+        12:51:25","mobile_url":"http:\/\/vimeo.com\/m\/95989755","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/476063171_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/476063171_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/476063171_640.jpg","user_id":28220819,"user_name":"Hermann","user_url":"http:\/\/vimeo.com\/user28220819","user_portrait_small":"http:\/\/www.gravatar.com\/avatar\/e09457137b7dfb922fc2bb4e420473d5?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-yellow_30x30.png&s=30","user_portrait_medium":"http:\/\/www.gravatar.com\/avatar\/e09457137b7dfb922fc2bb4e420473d5?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-yellow_75x75.png&s=75","user_portrait_large":"http:\/\/www.gravatar.com\/avatar\/e09457137b7dfb922fc2bb4e420473d5?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-yellow_100x100.png&s=100","user_portrait_huge":"http:\/\/www.gravatar.com\/avatar\/e09457137b7dfb922fc2bb4e420473d5?d=http%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-yellow_300x300.png&s=300","stats_number_of_likes":279,"stats_number_of_plays":109225,"stats_number_of_comments":6,"duration":614,"width":640,"height":360,"tags":"nude
+        public posing","embed_privacy":"anywhere"},{"id":95825732,"title":"Tiny Beach
+        Bikinis Chloe Amour behind the scenes Naked","description":"Adult video star
+        Chloe Amour in a little behind the scenes shoot in one of our shiny black
+        suspender thongs we call a \"Ceci\", that you can order thru our website!
+        The camera is a GoPro set on a tripod.<br \/>\r\nhttp:\/\/x.co\/4fWz5","url":"http:\/\/vimeo.com\/95825732","upload_date":"2014-05-20
+        00:16:45","mobile_url":"http:\/\/vimeo.com\/m\/95825732","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/475825271_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/475825271_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/475825271_640.jpg","user_id":8876976,"user_name":"Tiny
+        Beach Bikinis","user_url":"http:\/\/vimeo.com\/tinybeachbikinis","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/2646554_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/2646554_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/2646554_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/2646554_300x300.jpg","stats_number_of_likes":424,"stats_number_of_plays":107505,"stats_number_of_comments":15,"duration":236,"width":1280,"height":720,"tags":"tiny,
+        beach, bikinis, chloe, amour, suspender, thong, naked","embed_privacy":"anywhere"},{"id":95637946,"title":"Stephanie
+        Nude Body Preview","description":"This is a preview video of Stephanie''s
+        \"Nude Body\" photo shoot for Nude-Muse Magazine<br \/>\r\nTo see the full
+        length version, join us at www.nude-muse.com","url":"http:\/\/vimeo.com\/95637946","upload_date":"2014-05-18
+        04:40:16","mobile_url":"http:\/\/vimeo.com\/m\/95637946","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/475606453_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/475606453_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/475606453_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":346,"stats_number_of_plays":54517,"stats_number_of_comments":3,"duration":68,"width":1920,"height":1080,"tags":"Stephanie,
+        nude, muse, body, model, tanned, slim, skinny, perfect, natural, Aussie, Australian,
+        nudist, nudism","embed_privacy":"anywhere"},{"id":95619334,"title":"Jada Balcony
+        Nude Preview","description":"A behind the scenes preview video of Jada''s
+        \"Balcony Nude\" photo shoot for Nude-Muse Magazine.<br \/>\r\nThe full version
+        only available at www.nude-muse.com","url":"http:\/\/vimeo.com\/95619334","upload_date":"2014-05-17
+        20:15:49","mobile_url":"http:\/\/vimeo.com\/m\/95619334","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/475586960_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/475586960_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/475586960_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":243,"stats_number_of_plays":31999,"stats_number_of_comments":3,"duration":83,"width":1920,"height":1080,"tags":"Jada,
+        balcony, nude, muse, model, nudism, outdoor, long hair, brunette, curvy, natural,
+        boobs, beauty","embed_privacy":"anywhere"},{"id":95223570,"title":"Asia Wooden
+        Deck Preview","description":"This is a preview video of Asia''s \"Wooden Deck\"
+        photo shoot for Nude-Muse Magazine<br \/>\nThe full length version is only
+        at www.nude-muse.com","url":"http:\/\/vimeo.com\/95223570","upload_date":"2014-05-13
+        20:02:37","mobile_url":"http:\/\/vimeo.com\/m\/95223570","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/475086519_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/475086519_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/475086519_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":142,"stats_number_of_plays":18339,"stats_number_of_comments":5,"duration":65,"width":1920,"height":1080,"tags":"Asia,
+        wooden, deck, nude, muse, model, nudism, art, poses, natural, sunny, summer,
+        beauty","embed_privacy":"anywhere"},{"id":94597877,"title":"NAKED","description":"","url":"http:\/\/vimeo.com\/94597877","upload_date":"2014-05-08
+        20:06:42","mobile_url":"http:\/\/vimeo.com\/m\/94597877","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/474504637_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/474504637_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/474504637_640.jpg","user_id":21611821,"user_name":"Alessandra
+        Video","user_url":"http:\/\/vimeo.com\/alessandravideo","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6444034_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6444034_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6444034_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6444034_300x300.jpg","stats_number_of_likes":595,"stats_number_of_plays":93973,"stats_number_of_comments":19,"duration":179,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":93517049,"title":"Charlie
+        Kristine-Bathing Beauty","description":"Sexy hot Charlie Kristine meets you
+        in the bathroom for a little alone time. This brunette beauty has something
+        to show you \u2013 her amazing body.","url":"http:\/\/vimeo.com\/93517049","upload_date":"2014-05-01
+        14:28:55","mobile_url":"http:\/\/vimeo.com\/m\/93517049","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/473593467_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/473593467_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/473593467_640.jpg","user_id":19192160,"user_name":"OverExposedMedia","user_url":"http:\/\/vimeo.com\/overexposed","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7368605_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7368605_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7368605_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7368605_300x300.jpg","stats_number_of_likes":1105,"stats_number_of_plays":123882,"stats_number_of_comments":18,"duration":245,"width":1920,"height":960,"tags":"nude,
+        brunette, naked, bathroom, bath, shower, pussy, Charlie Kristine","embed_privacy":"anywhere"},{"id":93442958,"title":"Tiny
+        Beach Bikinis Alexis Adams undressing a one piece","description":"I guess
+        I was totally blinded by Tiny Beach Bikinis model Alexis Adams natural cuteness
+        and forgot to hit the START button on this candid video of her removing our
+        sexy one piece. Oh well. Enjoy what I was able to capture. Lol! Did I mention
+        she is blessed all natural?<br \/>\r\nYou can purchase this items by the link
+        below.<br \/>\r\nhttp:\/\/x.co\/4WVta","url":"http:\/\/vimeo.com\/93442958","upload_date":"2014-04-30
+        22:10:03","mobile_url":"http:\/\/vimeo.com\/m\/93442958","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/473509617_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/473509617_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/473509617_640.jpg","user_id":8876976,"user_name":"Tiny
+        Beach Bikinis","user_url":"http:\/\/vimeo.com\/tinybeachbikinis","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/2646554_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/2646554_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/2646554_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/2646554_300x300.jpg","stats_number_of_likes":517,"stats_number_of_plays":57002,"stats_number_of_comments":26,"duration":62,"width":1280,"height":720,"tags":"tiny,
+        beach, bikinis, alexis, adams, sexy, g-string, one, piece, see, thru","embed_privacy":"anywhere"},{"id":92911199,"title":"Sander
+        van Doorn feat. FireBeatz vs Jacob Plant - Fire Guitar (Mirjami MashUP)","description":"This
+        is Video Version of MashUP made by DJane Mirjami<br \/>\r\nHER FanPage!: www.fb.com\/DJaneMirjami
+        <br \/>\r\nAudio Version are here: https:\/\/soundcloud.com\/kinky_angel\/sander-van-doorn-feat-firebeatz-vs-jacob-plant-fire-guitar-mirjami-mashup<br
+        \/>\r\nBooking Info: m.ochman@bpmpromotion.com<br \/>\r\n<br \/>\r\nTracks
+        Used in Mix:<br \/>\r\nSander Van Doorn & Firebeatz - Guitar Track<br \/>\r\nJacob
+        Plant - Fire","url":"http:\/\/vimeo.com\/92911199","upload_date":"2014-04-25
+        03:43:15","mobile_url":"http:\/\/vimeo.com\/m\/92911199","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/472798525_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/472798525_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/472798525_640.jpg","user_id":9121791,"user_name":"Mirjami","user_url":"http:\/\/vimeo.com\/djanemirjami","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6734576_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6734576_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6734576_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6734576_300x300.jpg","stats_number_of_likes":583,"stats_number_of_plays":333716,"stats_number_of_comments":18,"duration":368,"width":1280,"height":720,"tags":"VJ,
+        DVJ, DJ, DJane, Party, GIG, Mix, Mirjami, Sander Van Doorn, Jacob Plant, Firebeatz,
+        mashup, naked, nude, girls, erotic, kinky girls, show, dancers, dance","embed_privacy":"anywhere"}]'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:06 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/2356816/videos.json?page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '2'
+      Date:
+      - Mon, 16 Jun 2014 14:59:06 GMT
+      Expires:
+      - Mon, 16 Jun 2014 15:00:07 GMT
+      Content-Length:
+      - '23913'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"50865457271e996fda3855c5af3154ee"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3586'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Fri, 13 Jun 2014 20:47:01 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '2213439941'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy4
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":92900710,"title":"Ella White Dress Preview","description":"Preview
+        video of Ella''s \"White Dress\" photo shoot for Nude-Muse Magazine<br \/>\r\nthe
+        full version is at www.nude-muse.com","url":"http:\/\/vimeo.com\/92900710","upload_date":"2014-04-24
+        23:46:00","mobile_url":"http:\/\/vimeo.com\/m\/92900710","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/472786672_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/472786672_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/472786672_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":279,"stats_number_of_plays":51818,"stats_number_of_comments":7,"duration":66,"width":1920,"height":1080,"tags":"Ella,
+        white, dress, nude, muse, model, photo shoot, tall, shaved, Australian, brunette,
+        beauty, nudity, Ella","embed_privacy":"anywhere"},{"id":92874190,"title":"Tiny
+        Beach Bikinis Chloe Amour blurred Black Lace Microkini","description":"Tiny
+        Beach Bikinis super sexy model Chloe Amour in our tiny Black Lace Microkini.
+        Chloe is wearing a #0 top and Chip-tie side g-string. You can order this top
+        and bottom in many fabrics thru our website!<br \/>\r\nwww.tinybeachbikinis.com","url":"http:\/\/vimeo.com\/92874190","upload_date":"2014-04-24
+        16:31:06","mobile_url":"http:\/\/vimeo.com\/m\/92874190","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/472746633_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/472746633_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/472746633_640.jpg","user_id":8876976,"user_name":"Tiny
+        Beach Bikinis","user_url":"http:\/\/vimeo.com\/tinybeachbikinis","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/2646554_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/2646554_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/2646554_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/2646554_300x300.jpg","stats_number_of_likes":577,"stats_number_of_plays":88877,"stats_number_of_comments":9,"duration":171,"width":1280,"height":720,"tags":"tiny,
+        beach, bikinis, chloe, amour, black, lace, microkini, g-string, nude, ass,
+        tease","embed_privacy":"anywhere"},{"id":92723270,"title":"Asia Renovate Preview","description":"A
+        preview video of Asia''s \"Renovate\" photo shoot for Nude-Muse Magazine<br
+        \/>\r\nThe full version can be found at www.nude-muse.com<br \/>\r\nMore of
+        Asia at www.nude-muse.com\/models\/Asia_stats.html","url":"http:\/\/vimeo.com\/92723270","upload_date":"2014-04-23
+        07:36:28","mobile_url":"http:\/\/vimeo.com\/m\/92723270","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/472534040_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/472534040_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/472534040_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":200,"stats_number_of_plays":47109,"stats_number_of_comments":4,"duration":80,"width":1920,"height":1080,"tags":"Asia,
+        fashion, nude, muse, model, renovate, nudism, building, natural, beauty, Aussie,
+        Austalian","embed_privacy":"anywhere"},{"id":92580788,"title":"Kristen Nicole
+        nude","description":"see her nude<br \/>\r\nsee her full nude at http:\/\/yeahonworld.tumblr.com\/","url":"http:\/\/vimeo.com\/92580788","upload_date":"2014-04-22
+        00:03:06","mobile_url":"http:\/\/vimeo.com\/m\/92580788","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/472342116_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/472342116_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/472342116_640.jpg","user_id":27155757,"user_name":"Yeah
+        Onworld","user_url":"http:\/\/vimeo.com\/user27155757","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7496704_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7496704_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7496704_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7496704_300x300.jpg","stats_number_of_likes":143,"stats_number_of_plays":14191,"stats_number_of_comments":3,"duration":132,"width":640,"height":362,"tags":"playboy,
+        nude girls, kristen nicole nude, sexy girls, nude babes, hot girls, playmates","embed_privacy":"anywhere"},{"id":90634404,"title":"Charlie
+        Kristine-Afternoon Sun","description":"Charlie enjoys stripping out of her
+        lingerie, and the bright afternoon sun through her bedroom windows.","url":"http:\/\/vimeo.com\/90634404","upload_date":"2014-04-01
+        06:45:00","mobile_url":"http:\/\/vimeo.com\/m\/90634404","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477214157_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477214157_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477214157_640.jpg","user_id":19192160,"user_name":"OverExposedMedia","user_url":"http:\/\/vimeo.com\/overexposed","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7368605_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7368605_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7368605_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7368605_300x300.jpg","stats_number_of_likes":387,"stats_number_of_plays":28583,"stats_number_of_comments":7,"duration":270,"width":1920,"height":960,"tags":"Brunette,
+        boobs, pussy, sexy, nude, naked, lingerie, Charlie Kristine, light, shadows","embed_privacy":"anywhere"},{"id":90549763,"title":"Ryan
+        Leigh","description":"Ryan comes to you from the coast of North Carolina.
+        Having modeled for five years, Ryan\u2019s been seen everywhere from the pages
+        of Vogue Italia to Playboy\u2019s Cyber Girl of the Week.  And she''s hot
+        in and out of her lingerie.","url":"http:\/\/vimeo.com\/90549763","upload_date":"2014-03-31
+        11:45:36","mobile_url":"http:\/\/vimeo.com\/m\/90549763","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/477199518_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/477199518_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/477199518_640.jpg","user_id":19192160,"user_name":"OverExposedMedia","user_url":"http:\/\/vimeo.com\/overexposed","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7368605_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7368605_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7368605_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7368605_300x300.jpg","stats_number_of_likes":247,"stats_number_of_plays":19080,"stats_number_of_comments":3,"duration":170,"width":1920,"height":800,"tags":"Playboy,
+        Cybergirl, lingerie, strip, bedroom, blonde","embed_privacy":"anywhere"},{"id":89243777,"title":"water
+        drops","description":"...\u00e8 una conta \u00e8 un racconto una goccia che
+        stilla un incanto un incontro<br \/>\r\n  \u00e8 l''ombra di un gesto \u00e8
+        qualcosa che brilla...","url":"http:\/\/vimeo.com\/89243777","upload_date":"2014-03-16
+        14:30:04","mobile_url":"http:\/\/vimeo.com\/m\/89243777","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467920565_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467920565_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467920565_640.jpg","user_id":8062993,"user_name":"JT
+        Studio","user_url":"http:\/\/vimeo.com\/user8062993","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/3014396_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/3014396_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/3014396_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/3014396_300x300.jpg","stats_number_of_likes":377,"stats_number_of_plays":40970,"stats_number_of_comments":6,"duration":237,"width":1280,"height":720,"tags":"Eros,
+        Erotic, Sexy, Rain, Naked, Nude, Girl, John, Toda, Music, Art, Beauty, Shower,
+        Lyrics, Samba, Agua, Brazil, Brasil, Aguas de Marco","embed_privacy":"anywhere"},{"id":89235743,"title":"Tiara
+        Pearl","description":"Beauty Boots Modeling Agency for booking 203-727-5878","url":"http:\/\/vimeo.com\/89235743","upload_date":"2014-03-16
+        11:59:44","mobile_url":"http:\/\/vimeo.com\/m\/89235743","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/468106643_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/468106643_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/468106643_640.jpg","user_id":2668084,"user_name":"rafeese","user_url":"http:\/\/vimeo.com\/user2668084","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/733838_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/733838_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/733838_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/733838_300x300.jpg","stats_number_of_likes":186,"stats_number_of_plays":18607,"stats_number_of_comments":5,"duration":90,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":89221007,"title":"PASSION\/ANXIETY","description":"https:\/\/www.facebook.com\/AmyHeatherModel<br
+        \/>\r\n<br \/>\r\nhttps:\/\/soundcloud.com\/strictface","url":"http:\/\/vimeo.com\/89221007","upload_date":"2014-03-16
+        04:41:46","mobile_url":"http:\/\/vimeo.com\/m\/89221007","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467886642_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467886642_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467886642_640.jpg","user_id":14114914,"user_name":"Sebastian
+        Petrovski","user_url":"http:\/\/vimeo.com\/sebastianpetrovski","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6898975_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6898975_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6898975_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6898975_300x300.jpg","stats_number_of_likes":119,"stats_number_of_plays":9377,"stats_number_of_comments":3,"duration":110,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":89168257,"title":"don
+        omar taboo (lambada)adultvercion","description":"","url":"http:\/\/vimeo.com\/89168257","upload_date":"2014-03-15
+        02:33:45","mobile_url":"http:\/\/vimeo.com\/m\/89168257","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/468222801_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/468222801_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/468222801_640.jpg","user_id":21598944,"user_name":"hector
+        gallardo","user_url":"http:\/\/vimeo.com\/user21598944","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6441582_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6441582_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6441582_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6441582_300x300.jpg","stats_number_of_likes":1155,"stats_number_of_plays":136167,"stats_number_of_comments":9,"duration":297,"width":640,"height":480,"tags":"brazil,
+        brasil, taboo, don omar, nice pussy, very hot","embed_privacy":"anywhere"},{"id":89157511,"title":"Nicole
+        Nude Interview 1080 HD","description":"Nude Interview with Nicole for Nude-Muse
+        Magazine www.nude-muse.com","url":"http:\/\/vimeo.com\/89157511","upload_date":"2014-03-14
+        20:51:14","mobile_url":"http:\/\/vimeo.com\/m\/89157511","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467800554_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467800554_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467800554_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":101,"stats_number_of_plays":22389,"stats_number_of_comments":1,"duration":634,"width":1920,"height":1080,"tags":"Nicole,
+        nude, interview, muse, model, talk, chat, sitting","embed_privacy":"anywhere"},{"id":89131833,"title":"Absolution
+        Trailer #2 (Public Viewing For Limited Time)","description":"Absolution<br
+        \/>\r\nTrailer Music: Carmina Burana by Carl Off<br \/>\r\nFeaturing: Clokwork
+        Calamity & Freshie Juice<br \/>\r\nDirected By Anthony Red<br \/>\r\n<br \/>\r\nThis
+        Project is in production","url":"http:\/\/vimeo.com\/89131833","upload_date":"2014-03-14
+        14:35:36","mobile_url":"http:\/\/vimeo.com\/m\/89131833","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467831856_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467831856_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467831856_640.jpg","user_id":25441532,"user_name":"Anthony
+        Red","user_url":"http:\/\/vimeo.com\/user25441532","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7245019_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7245019_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7245019_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7245019_300x300.jpg","stats_number_of_likes":84,"stats_number_of_plays":25070,"stats_number_of_comments":2,"duration":155,"width":960,"height":540,"tags":"","embed_privacy":"anywhere"},{"id":89129713,"title":"Vintage
+        Vixens Teaser 2","description":"short showcase of erotic pin up projects in
+        a retro exploitation style","url":"http:\/\/vimeo.com\/89129713","upload_date":"2014-03-14
+        14:11:46","mobile_url":"http:\/\/vimeo.com\/m\/89129713","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467768160_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467768160_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467768160_640.jpg","user_id":6429619,"user_name":"eat
+        cake & worship satan","user_url":"http:\/\/vimeo.com\/user6429619","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/1819566_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/1819566_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/1819566_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/1819566_300x300.jpg","stats_number_of_likes":364,"stats_number_of_plays":77437,"stats_number_of_comments":10,"duration":163,"width":1280,"height":720,"tags":"sexy,
+        sex, erotic, vintage, nude, stripper, porn, fetish, retro sex, naked, breasts,
+        tits, pussy, exploitation","embed_privacy":"anywhere"},{"id":89039458,"title":"Rachel
+        Gets Muddy - BTS","description":"Here is some behind the scenes footage of
+        Rachel''s first nude art shoot.  We got some great shots that I will share
+        with you all later.  Thanks!<br \/>\r\n<br \/>\r\nhttp:\/\/www.NudePhotography.org<br
+        \/>\r\n<br \/>\r\nFor more erotic content, please visit http:\/\/www.AmateurModelSite.com","url":"http:\/\/vimeo.com\/89039458","upload_date":"2014-03-13
+        16:33:21","mobile_url":"http:\/\/vimeo.com\/m\/89039458","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467644816_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467644816_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467644816_640.jpg","user_id":25480178,"user_name":"Nude
+        Photography","user_url":"http:\/\/vimeo.com\/nudephotography","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7166442_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7166442_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7166442_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7166442_300x300.jpg","duration":273,"width":1280,"height":720,"tags":"nude
+        model, nude modeling, amateur, tan lines, nude photography","embed_privacy":"anywhere"},{"id":89022096,"title":"Culissimo","description":"Trailer
+        of Francesca Felucci for Ass Lovers  ;-)<br \/>\r\nThe full length and FULL
+        HD version can be seen on <br \/>\r\nwww.karllouis.com and www.francesca-felucci.com","url":"http:\/\/vimeo.com\/89022096","upload_date":"2014-03-13
+        13:44:22","mobile_url":"http:\/\/vimeo.com\/m\/89022096","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467619030_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467619030_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467619030_640.jpg","user_id":3070918,"user_name":"karl
+        louis","user_url":"http:\/\/vimeo.com\/user3070918","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/313893_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/313893_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/313893_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/313893_300x300.jpg","duration":52,"width":1280,"height":720,"tags":"ass,
+        butt, shaking, sexy, nude, dancing, francesca felucci","embed_privacy":"anywhere"},{"id":88922585,"title":"Carbon
+        Secrets","description":"The apartment that I had moved to had just been broken
+        into, many things were stolen, and everybody except one person stayed; my
+        friend at the time. I moved into this bedroom and found that the police had
+        left their mark on the doors of my closet; the carbon powder they use for
+        discovering fingerprints. This video reenacts my personal struggle with living
+        in this environment at the time and how vulnerable I felt.","url":"http:\/\/vimeo.com\/88922585","upload_date":"2014-03-12
+        16:10:07","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467498373_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467498373_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467498373_640.jpg","user_id":8785843,"user_name":"Johanna
+        Maureen","user_url":"http:\/\/vimeo.com\/user8785843","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/2772159_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/2772159_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/2772159_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/2772159_300x300.jpg","stats_number_of_likes":65,"stats_number_of_plays":11055,"stats_number_of_comments":2,"duration":114,"width":1280,"height":720,"tags":"vulnerability,
+        short film, nudity, girl, secrets, experimental","embed_privacy":"anywhere"},{"id":88918130,"title":"Sexy
+        Movie Scenes: Part 1 (Uncensored)","description":"","url":"http:\/\/vimeo.com\/88918130","upload_date":"2014-03-12
+        15:30:23","mobile_url":"http:\/\/vimeo.com\/m\/88918130","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467503506_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467503506_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467503506_640.jpg","user_id":16904115,"user_name":"TheLeopard81","user_url":"http:\/\/vimeo.com\/theleopard81","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6767571_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6767571_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6767571_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6767571_300x300.jpg","stats_number_of_likes":446,"stats_number_of_plays":172347,"stats_number_of_comments":7,"duration":212,"width":1280,"height":720,"tags":"sexy,
+        movie, scene, hot, film, girl, woman, nude, beach, bikini, bed, kiss, strip,
+        actress, striptease, showgirls, perfect","embed_privacy":"anywhere"},{"id":88822048,"title":"ZOI
+        GORMAN | PLAYBOY","description":"ZOI GORMAN | PLAYBOY <br \/>\r\n<br \/>\r\nVideo:
+        Os Tais (https:\/\/vimeo.com\/ostaisdovideo)<br \/>\r\nPhotography: Ana Dias<br
+        \/>\r\nAssistant: Gon\u00e7alo Jorge<br \/>\r\nModel: Zoi Gorman<br \/>\r\nMake
+        up by: Ana Duarte<br \/>\r\nHairstyle by: Clarisse Fernandes","url":"http:\/\/vimeo.com\/88822048","upload_date":"2014-03-11
+        19:27:38","mobile_url":"http:\/\/vimeo.com\/m\/88822048","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/467393200_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/467393200_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/467393200_640.jpg","user_id":14967397,"user_name":"Ana
+        Dias","user_url":"http:\/\/vimeo.com\/anadiasphotography","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/4581251_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/4581251_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/4581251_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/4581251_300x300.jpg","stats_number_of_likes":420,"stats_number_of_plays":121897,"stats_number_of_comments":3,"duration":97,"width":960,"height":540,"tags":"playboy,
+        zoi gorman, south africa, os tais, ana dias, nude, woman, beauty, sexy, bang,
+        romania","embed_privacy":"anywhere"},{"id":87702449,"title":"BUDApest","description":"THIS
+        CITY.... THIS GIRL...... A PERFECT MATCH A TOUCH OF MYSTERY","url":"http:\/\/vimeo.com\/87702449","upload_date":"2014-02-26
+        14:58:47","mobile_url":"http:\/\/vimeo.com\/m\/87702449","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465891332_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465891332_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465891332_640.jpg","user_id":21611821,"user_name":"Alessandra
+        Video","user_url":"http:\/\/vimeo.com\/alessandravideo","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6444034_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6444034_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6444034_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6444034_300x300.jpg","stats_number_of_likes":1811,"stats_number_of_plays":266548,"stats_number_of_comments":41,"duration":299,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":87610633,"title":"EVA
+        AL DESNUDO","description":"www.erickdevasconcelos.com<br \/>\r\nA hotel room.
+        An impersonable place by definition. It could be anywhere in the world. Eva
+        could be any woman, but she''s not. She knows what she wants and where she
+        is going to. What about you ? Do you? <br \/>\r\n<br \/>\r\nDIRECTOR\/DP\/EDITOR<br
+        \/>\r\nErick De Vasconcelos<br \/>\r\n<br \/>\r\nMODEL<br \/>\r\nEva Rodriguez<br
+        \/>\r\n<br \/>\r\nSTYLING<br \/>\r\nY\u00e1skara Monteiro<br \/>\r\n<br \/>\r\nMAKE
+        UP<br \/>\r\nMarco Diniz<br \/>\r\n<br \/>\r\nMUSIC<br \/>\r\nTRICKY -  Bonnie
+        & Clyde","url":"http:\/\/vimeo.com\/87610633","upload_date":"2014-02-25 16:18:18","mobile_url":"http:\/\/vimeo.com\/m\/87610633","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465738891_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465738891_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465738891_640.jpg","user_id":1409295,"user_name":"Erick
+        De Vasconcelos","user_url":"http:\/\/vimeo.com\/erickdevasconcelos","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7205593_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7205593_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7205593_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7205593_300x300.jpg","duration":62,"width":1280,"height":720,"tags":"Boudoir,
+        Jewelry, Sexy, Lingerie, GQ, Playboy, Maxime","embed_privacy":"anywhere"}]'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:07 GMT
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/album/2356816/videos.json?page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Mon, 16 Jun 2014 14:59:08 GMT
+      Expires:
+      - Mon, 16 Jun 2014 15:00:08 GMT
+      Content-Length:
+      - '24505'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"50865457271e996fda3855c5af3154ee"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3592'
+      X-Ratelimit-Reset:
+      - '1402933916'
+      Last-Modified:
+      - Fri, 13 Jun 2014 20:47:01 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '2003413029'
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy2
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":87544513,"title":"Asia Fashion Nude Preview","description":"A
+        preview video of Asia''s \"Fashion Nude\" Photo shoot. To see the full length
+        video and all the photos<br \/>\r\ngo to Nude-Muse Magazine www.nude-muse.com<br
+        \/>\r\nmore of Asia coming on www.nude-muse.com\/models\/Asia_stats.html","url":"http:\/\/vimeo.com\/87544513","upload_date":"2014-02-25
+        01:21:29","mobile_url":"http:\/\/vimeo.com\/m\/87544513","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465644000_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465644000_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465644000_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":178,"stats_number_of_plays":31649,"stats_number_of_comments":3,"duration":79,"width":1920,"height":1080,"tags":"Asia,
+        fashion, nude, muse, model, beach, nudism, umbrella, high heels, beauty, Aussie,
+        Austalian","embed_privacy":"anywhere"},{"id":87543932,"title":"Dannii coming
+        this week 25-02-2014","description":"We have Dannii  keeping you informed
+        about what is happening at <br \/>\r\nNude-Muse magazine nude-muse.com for
+        this week starting 18th February 2014","url":"http:\/\/vimeo.com\/87543932","upload_date":"2014-02-25
+        01:10:05","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465642973_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465642973_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465642973_640.jpg","user_id":5950288,"user_name":"NudeMuse","user_url":"http:\/\/vimeo.com\/nudemusemagazine","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5943968_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5943968_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5943968_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5943968_300x300.jpg","stats_number_of_likes":71,"stats_number_of_plays":14113,"stats_number_of_comments":1,"duration":52,"width":1920,"height":1080,"tags":"Dannii,
+        Kimberley, this week, nude muse, model, tv, celebrity","embed_privacy":"anywhere"},{"id":87536671,"title":"Tu
+        Reflejo","description":"El Aire ya no es aire, sino aliento;<br \/>\r\nel
+        agua ya no es agua, sino espejo,<br \/>\r\nporque el agua es apenas tu reflejo<br
+        \/>\r\ny ruta de tu voz es s\u00f3lo el viento. <br \/>\r\n<br \/>\r\nYa mi
+        verso no es verso, sino acento;<br \/>\r\nya mi andar no es andar, sino cortejo,<br
+        \/>\r\nporque vuelvo hacia a ti cuando te dejo <br \/>\r\ny es sombra de tu
+        luz mi pensamiento.<br \/>\r\n<br \/>\r\nYa la herida es floral deshojadura<br
+        \/>\r\ny la muerte es fluencia de ternura <br \/>\r\nque a ti me liga con
+        perpetuos lazos:<br \/>\r\n<br \/>\r\ntorn\u00f3se en rosa espl\u00e9ndida
+        la herida<br \/>\r\ny ya no es muerte, sino dulce vida,<br \/>\r\nla muerte
+        que me das entre tus brazos. <br \/>\r\n<br \/>\r\n- Miguel Otero Silva (Venezolano)","url":"http:\/\/vimeo.com\/87536671","upload_date":"2014-02-24
+        22:33:11","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465639443_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465639443_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465639443_640.jpg","user_id":12285071,"user_name":"Franco
+        Assenza","user_url":"http:\/\/vimeo.com\/francoassenza","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7447941_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7447941_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7447941_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7447941_300x300.jpg","stats_number_of_likes":43,"stats_number_of_plays":8093,"stats_number_of_comments":1,"duration":50,"width":1280,"height":720,"tags":"poema,
+        laputaverdad, abstraction, black and white, fine art, body, girl, nudity,
+        contrast","embed_privacy":"anywhere"},{"id":87491477,"title":"Brandon Jordan
+        x OnlySweetDee- Trappin out the Gladstone","description":"Brandon Jordan x
+        @Onlysweetdee<br \/>\r\nMusic: Future- Move that dope x Young Lean- kyoto<br
+        \/>\r\n<br \/>\r\nA quick vid I did between Shots during our photo session,
+        a little long but I owe yall.","url":"http:\/\/vimeo.com\/87491477","upload_date":"2014-02-24
+        13:11:10","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465619328_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465619328_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465619328_640.jpg","user_id":7012554,"user_name":"Brandon
+        Jordan","user_url":"http:\/\/vimeo.com\/brandonjordanpics","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5389682_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5389682_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5389682_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5389682_300x300.jpg","stats_number_of_likes":113,"stats_number_of_plays":9296,"stats_number_of_comments":1,"duration":229,"width":1280,"height":720,"tags":"Brandon
+        Jordan","embed_privacy":"anywhere"},{"id":87443110,"title":"Nakkie Dinner
+        Time","description":"I was doing a sexy lettuce dance while cooking dinner
+        earlier and totally got caught by my spirit dad. :P Haha","url":"http:\/\/vimeo.com\/87443110","upload_date":"2014-02-24
+        01:11:15","mobile_url":"http:\/\/vimeo.com\/m\/87443110","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465501431_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465501431_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465501431_640.jpg","user_id":16275943,"user_name":"Phoenix
+        Floe","user_url":"http:\/\/vimeo.com\/harlequinhappenings","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5108590_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5108590_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5108590_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5108590_300x300.jpg","stats_number_of_likes":126,"stats_number_of_plays":27885,"stats_number_of_comments":6,"duration":65,"width":1280,"height":720,"tags":"nudist,
+        nudity, body hair, hairy, nudism, naturism, goofy, NSFW, nude, hirsute","embed_privacy":"anywhere"},{"id":87439642,"title":"Kate:
+        Blonde Beauty","description":"I photographed Kate in 2008 at the Rivington
+        Hotel in New York City. She came in from Baltimore, with her husband and new
+        boobs, just to shoot with me. I was flattered and happy. Kate had seen me
+        on Playboy TV and wanted to shoot. It was great just to get know her, through
+        video. Kate seems like a sweet country gal, but has more of a fetish side,
+        which allows her to dress up for the \"fetish and fantasy ball\" in San Francisco,
+        as well as kiss boys and girls on the side. This is the beginning of a long
+        days shoot, where we explored the bright hotel room, bathroom, and balcony.
+        Kate used to be a Baltimore Ravens cheerleader, but don''t ask her about it
+        if you see her. She''s moved onto greener pastures. In or out of yellow dresses.
+        You can find Kate in my Naked Coast to Coast book on Amazon.   ~ Andrew","url":"http:\/\/vimeo.com\/87439642","upload_date":"2014-02-23
+        23:49:11","mobile_url":"http:\/\/vimeo.com\/m\/87439642","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465499502_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465499502_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465499502_640.jpg","user_id":4741234,"user_name":"Naked
+        Happy Girls","user_url":"http:\/\/vimeo.com\/nakedhappygirls","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/1752584_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/1752584_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/1752584_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/1752584_300x300.jpg","stats_number_of_likes":727,"stats_number_of_plays":180294,"stats_number_of_comments":12,"duration":183,"width":1920,"height":1080,"tags":"Naked,
+        Naked Happy Girls, Kate, Cheerleaders, New York, Rivington hotel, Andrew Einhorn,
+        Photography, Big boobs, Hotels, laughter, boobs, breasts, candid, sexy, fun","embed_privacy":"anywhere"},{"id":87364812,"title":"Anastasia","description":"Video:
+        Vitalii Lysak justmalina.com<br \/>\r\nSong: Emperor-Tonight","url":"http:\/\/vimeo.com\/87364812","upload_date":"2014-02-22
+        17:38:05","mobile_url":"http:\/\/vimeo.com\/m\/87364812","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465402044_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465402044_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465402044_640.jpg","user_id":9065165,"user_name":"Vitaliy
+        Lisak","user_url":"http:\/\/vimeo.com\/user9065165","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7163167_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7163167_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7163167_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7163167_300x300.jpg","stats_number_of_likes":414,"stats_number_of_plays":41620,"stats_number_of_comments":6,"duration":81,"width":1280,"height":720,"tags":"nude,
+        erotic, girl","embed_privacy":"anywhere"},{"id":87334370,"title":"Aya Luv
+        Project","description":"Aya Luv  Project - 1940 Remix - Contains Nudity!","url":"http:\/\/vimeo.com\/87334370","upload_date":"2014-02-22
+        03:21:44","mobile_url":"http:\/\/vimeo.com\/m\/87334370","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465358052_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465358052_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465358052_640.jpg","user_id":19538768,"user_name":"BlueStrobePhoto","user_url":"http:\/\/vimeo.com\/user19538768","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7089488_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7089488_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7089488_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7089488_300x300.jpg","stats_number_of_likes":281,"stats_number_of_plays":23363,"stats_number_of_comments":5,"duration":209,"width":1280,"height":720,"tags":"Aya
+        Luv","embed_privacy":"anywhere"},{"id":87331889,"title":"Glass Olive - Black
+        & Grey Magazine  [NSFW] - (Brooklyn)","description":"Video & Edit : Allen
+        Henson<br \/>\r\nModel : Glass Olive<br \/>\r\nhttp:\/\/www.blackandgreymagazine.com\/<br
+        \/>\r\n<br \/>\r\nShort black hair, red lips...<br \/>\r\n<br \/>\r\nShot
+        in Brooklyn, NY<br \/>\r\n<br \/>\r\nMusic : Jack White - Wasting My Time<br
+        \/>\r\n<br \/>\r\nbooking@allenhenson.com<br \/>\r\n\u00a9 2014 allenhenson.com","url":"http:\/\/vimeo.com\/87331889","upload_date":"2014-02-22
+        01:35:49","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465491683_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465491683_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465491683_640.jpg","user_id":9746054,"user_name":"Allen
+        Henson","user_url":"http:\/\/vimeo.com\/allenhenson","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6625509_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6625509_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6625509_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6625509_300x300.jpg","stats_number_of_likes":86,"stats_number_of_plays":6891,"stats_number_of_comments":6,"duration":142,"width":1280,"height":720,"tags":"glass
+        olive, brooklyn, new york, allen henson, www.allenhenson.com, blackandgreymagazine","embed_privacy":"anywhere"},{"id":87299574,"title":"Eliteluck
+        poker girls","description":"A sneak peek at some of the action on EliteLuck.com.  Check
+        out more and play yourself here!<br \/>\r\nhttp:\/\/www.elitemate.com\/myJsp\/join.jsp?id=32323&path=R&pageid=344","url":"http:\/\/vimeo.com\/87299574","upload_date":"2014-02-21
+        14:28:33","mobile_url":"http:\/\/vimeo.com\/m\/87299574","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465328083_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465328083_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465328083_640.jpg","user_id":15773179,"user_name":"Jacob
+        A","user_url":"http:\/\/vimeo.com\/user15773179","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7144713_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7144713_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7144713_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7144713_300x300.jpg","stats_number_of_likes":437,"stats_number_of_plays":61745,"stats_number_of_comments":9,"duration":188,"width":1280,"height":720,"tags":"strip
+        poker, poker girl, eliteluck, elitegamble","embed_privacy":"anywhere"},{"id":87265900,"title":"Royal
+        Fantasy - NSFW (Contains Nudity)","description":"model: @macynicoled<br \/>\r\nphotog:
+        @tonyellisnyc<br \/>\r\n<br \/>\r\nSee photos at yumemag.net","url":"http:\/\/vimeo.com\/87265900","upload_date":"2014-02-21
+        07:18:19","mobile_url":"http:\/\/vimeo.com\/m\/87265900","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465395746_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465395746_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465395746_640.jpg","user_id":11896815,"user_name":"Tony
+        Ellis","user_url":"http:\/\/vimeo.com\/tonyellisnyc","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6983441_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6983441_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6983441_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6983441_300x300.jpg","stats_number_of_likes":213,"stats_number_of_plays":25253,"stats_number_of_comments":4,"duration":72,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":87259793,"title":"Katie
+        fame girls video 34","description":"Katie fame girls video 34 is here, Katie
+        is undressing for us from her white pantyhose and showing us her body, the
+        video is available at http:\/\/bit.ly\/16gFJJR or if you want more news about
+        Katie go to http:\/\/www.thefamegirls.net","url":"http:\/\/vimeo.com\/87259793","upload_date":"2014-02-21
+        05:22:56","mobile_url":"http:\/\/vimeo.com\/m\/87259793","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465250343_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465250343_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465250343_640.jpg","user_id":19433350,"user_name":"Fame
+        Girls","user_url":"http:\/\/vimeo.com\/famegirls","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5971558_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5971558_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5971558_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5971558_300x300.jpg","stats_number_of_likes":111,"stats_number_of_plays":15818,"stats_number_of_comments":2,"duration":30,"width":1280,"height":720,"tags":"katie
+        fame girls, katie fame girls set, katie fame girls video 34, katie fame girls
+        video, fame girls","embed_privacy":"anywhere"},{"id":87199145,"title":"Cheap
+        Hotels. Revisited.","description":"","url":"http:\/\/vimeo.com\/87199145","upload_date":"2014-02-20
+        12:27:52","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/465163744_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/465163744_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/465163744_640.jpg","user_id":7090484,"user_name":"Justin
+        Penn","user_url":"http:\/\/vimeo.com\/user7090484","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/4020112_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/4020112_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/4020112_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/4020112_300x300.jpg","stats_number_of_likes":85,"stats_number_of_plays":10871,"stats_number_of_comments":2,"duration":66,"width":1280,"height":520,"tags":"","embed_privacy":"anywhere"},{"id":87040015,"title":"Transilvania","description":"Yan
+        Mcline. Backstage 2013<br \/>\r\nEditor: Anatoly Toor & Ekaterina Kiseleva","url":"http:\/\/vimeo.com\/87040015","upload_date":"2014-02-18
+        18:23:43","mobile_url":"http:\/\/vimeo.com\/m\/87040015","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/464948364_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/464948364_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/464948364_640.jpg","user_id":11373965,"user_name":"Toor
+        Anatoly","user_url":"http:\/\/vimeo.com\/user11373965","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6340534_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6340534_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6340534_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6340534_300x300.jpg","stats_number_of_likes":314,"stats_number_of_plays":35416,"stats_number_of_comments":10,"duration":260,"width":1280,"height":600,"tags":"Yan
+        Mcline","embed_privacy":"anywhere"},{"id":86096336,"title":"Dancing Rachelle","description":"","url":"http:\/\/vimeo.com\/86096336","upload_date":"2014-02-07
+        04:35:34","mobile_url":"http:\/\/vimeo.com\/m\/86096336","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/463645827_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/463645827_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/463645827_640.jpg","user_id":17661757,"user_name":"Jaydee","user_url":"http:\/\/vimeo.com\/user17661757","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6085350_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6085350_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6085350_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6085350_300x300.jpg","duration":147,"width":1280,"height":720,"tags":"","embed_privacy":"nowhere"},{"id":85125535,"title":"Alexis
+        & Leena \/\/ \"Gone Baby Gone\"","description":"Models: Alexis & Leena<br
+        \/>\r\nMUA: Zarina","url":"http:\/\/vimeo.com\/85125535","upload_date":"2014-01-27
+        00:01:38","mobile_url":"http:\/\/vimeo.com\/m\/85125535","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/462294835_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/462294835_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/462294835_640.jpg","user_id":1608598,"user_name":"enigmatt","user_url":"http:\/\/vimeo.com\/enigmattvideos","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7053604_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7053604_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7053604_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7053604_300x300.jpg","stats_number_of_likes":257,"stats_number_of_plays":92552,"stats_number_of_comments":0,"duration":124,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":84922039,"title":"Do
+        I wanna know?","description":"song by the Arctic Monkeys","url":"http:\/\/vimeo.com\/84922039","upload_date":"2014-01-23
+        21:41:39","mobile_url":"http:\/\/vimeo.com\/m\/84922039","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/462033194_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/462033194_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/462033194_640.jpg","user_id":16531893,"user_name":"Lola
+        Fran\u00e7oise de Sade","user_url":"http:\/\/vimeo.com\/user16531893","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/4962127_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/4962127_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/4962127_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/4962127_300x300.jpg","stats_number_of_likes":197,"stats_number_of_plays":46548,"stats_number_of_comments":7,"duration":109,"width":1280,"height":720,"tags":"","embed_privacy":"anywhere"},{"id":84757062,"title":"LAST
+        CHANCE","description":"Director: Anton Polygalov (DEEPSTEPSTUDIO)<br \/>\r\nModel:
+        Leenah Zass<br \/>\r\nMusic: Kaskade & Project 46 - Last Chance (Dirtyphonics
+        Remix)<br \/>\r\n<br \/>\r\nMore at www.DeepstepStudio.com<br \/>\r\n<br \/>\r\nFACEBOOK:
+        www.facebook.com\/DeepstepStudio<br \/>\r\nINSTAGRAM: www.instagram.com\/deepstep_studio<br
+        \/>\r\nTUMBLR: www.deepstepstudio.tumblr.com<br \/>\r\nTWITTER: www.twitter.com\/deepstepstudio","url":"http:\/\/vimeo.com\/84757062","upload_date":"2014-01-22
+        05:21:12","mobile_url":"http:\/\/vimeo.com\/m\/84757062","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/461747496_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/461747496_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/461747496_640.jpg","user_id":13459776,"user_name":"DeepstepStudio","user_url":"http:\/\/vimeo.com\/deepstepstudio","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/7288016_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/7288016_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/7288016_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/7288016_300x300.jpg","stats_number_of_likes":452,"stats_number_of_plays":105192,"stats_number_of_comments":9,"duration":107,"width":1280,"height":720,"tags":"hot
+        girl, sexy girl, lingerie video, lingerie girl, model video, anton polygalov,
+        deepstepstudio, dub step, above & beyond, hot model, sexy model","embed_privacy":"anywhere"},{"id":84657798,"title":"Ella
+        fame girls video 30","description":"Ella fame girls video 30 is here, Ella
+        is in her pajama and shes dressing up for her daily things, enjoy this short
+        version of the sexy Ella and if you want to enjoy her more go to http:\/\/bit.ly\/16gFJJR
+        and for more Fame Girls go to http:\/\/www.thefamegirls.net","url":"http:\/\/vimeo.com\/84657798","upload_date":"2014-01-21
+        03:37:22","mobile_url":"http:\/\/vimeo.com\/m\/84657798","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/461607183_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/461607183_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/461607183_640.jpg","user_id":19433350,"user_name":"Fame
+        Girls","user_url":"http:\/\/vimeo.com\/famegirls","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/5971558_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/5971558_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/5971558_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/5971558_300x300.jpg","stats_number_of_likes":259,"stats_number_of_plays":56007,"stats_number_of_comments":6,"duration":30,"width":1280,"height":720,"tags":"ella
+        fame girls, ella fame girls set, ella fame girls video 30, ella fame girls
+        video, fame girls","embed_privacy":"anywhere"},{"id":83920164,"title":"Roarie
+        Yum","description":"A short video I made during a photoshoot with an amazing
+        model we all know as Roarie Yum. Thanks Roarie for your wonderful cooperation.<br
+        \/>\r\n<br \/>\r\nMusic: Deadmau5 & Kaskade - I Remember (Mr FijiWiji Remix
+        ft. Laura Brehm)","url":"http:\/\/vimeo.com\/83920164","upload_date":"2014-01-11
+        09:21:31","mobile_url":"http:\/\/vimeo.com\/m\/83920164","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/474620342_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/474620342_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/474620342_640.jpg","user_id":22767882,"user_name":"Steve
+        Glamorous","user_url":"http:\/\/vimeo.com\/user22767882","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6642435_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6642435_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6642435_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6642435_300x300.jpg","stats_number_of_likes":138,"stats_number_of_plays":23625,"stats_number_of_comments":2,"duration":338,"width":320,"height":240,"tags":"nude,
+        erotic, music, sensual, sexy","embed_privacy":"anywhere"}]'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 14:59:08 GMT
+recorded_with: VCR 2.9.1
